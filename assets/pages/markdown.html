@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Olá, este é meu site teste">
+    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Meu Guia markdown</title>
+</head>
+<body>
+    <header>
+        <img src="../img/HTML5-logo.png" alt="Logo HTML5" id="logoHeader">
+        <h1>Markdown</h1>
+        <un>
+            <li><a href="index.html">HTML5</a></li>
+            <li><a href="css3.html" rel="next">CSS3</a></li>
+            <li><a href="javascript.html">javaScript</a></li>
+        </un>
+        <form>
+            <img src="#" alt="#" id="imgPerfil">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome"><br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha"><br>
+            <input type="submit" value="Entrar">
+            <input type="button" value="Cadastrar">
+        </form>
+    </header>
+    <main>
+        <h2>TAGS markdown:</h2>
+        <table>
+            <tr>
+                <th>TAG</th>
+                <th>Função</th>
+                <th>Observação</th>
+            </tr>
+            <tr>
+                <td><code>**...**</code></td>
+                <td>Deixa em Negrito</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td><code>__...__</code></td>
+                <td>Deixa em Negrito</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td><code>*...*</code></td>
+                <td>Deixa em Itálico</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td><code>~~...~~</code></td>
+                <td>Risca a Palavra</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td><code>#</code></td>
+                <td>Título nível 1</td>
+                <td>Usa uma vez no início da linha, equivalente a <code>&lt;h1&gt;...&lt;/h1&gt;</code> </td>
+            </tr>
+            <tr>
+                <td><code>##</code></td>
+                <td>Título nível 2</td>
+                <td>Usa uma vez no início da linha, equivalente a <code>&lt;h2&gt;...&lt;/h2&gt;</code> </td>
+            </tr>
+            <tr>
+                <td><code>###</code></td>
+                <td>Título nível 3</td>
+                <td>Usa uma vez no início da linha, equivalente a <code>&lt;h3&gt;...&lt;/h3&gt;</code> assim em diante...</td>
+            </tr>
+            <tr>
+                <td><code>1.</code></td>
+                <td>Cria Lista Ordenada</td>
+                <td>Pode ser qualquer número seguido de um ponto</td>
+            </tr>
+            <tr>
+                <td><pre><code>   .1</code></pre></td>
+                <td>Cria Sub-item em uma lista ordenada</td>
+                <td>Digita-se 3 espaços</td>
+            </tr>
+            <tr>
+                <td><code>*...</code></td>
+                <td>Cria item de uma lista não ordenada</td>
+                <td>Usa-se um asterisco no início</td>
+            </tr>
+            <tr>
+                <td><code>-...</code></td>
+                <td>Cria item de uma lista não ordenada</td>
+                <td>Usa-se um traço no início</td>
+            </tr>
+            <tr>
+                <td><pre><code>   *...</code></pre></td>
+                <td>Cria sub-item de uma lista não ordenada</td>
+                <td>3 espaços e asterísco</td>
+            </tr>
+            <tr>
+                <td><pre><code>   -...</code></pre></td>
+                <td>Cria sub-item de uma lista não ordenada</td>
+                <td>3 espaços e traço</td>
+            </tr>
+            <tr>
+                <td><pre><code>- [ ] ...</code></pre></td>
+                <td>Cria um checkbox</td>
+                <td>traço, espaço, abre colchetes, espaço, fecha colchetes, espaço, texto. Para colocar como checked, escrever um "x" entre os colchetes</td>
+            </tr>
+            <tr>
+                <td><code>![descrição](url)</code></td>
+                <td>Adicionar Imagem</td>
+                <td>Para adicionar imagem, arrastar a imagem até a caixa de texto</td>
+            </tr>
+            <tr>
+                <td><code>[texto](url)</code></td>
+                <td>Cria um link</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td><code>`...`</code></td>
+                <td>Coloca em formato de Código</td>
+                <td>Linha Única</td>
+            </tr>
+            <tr>
+                <td><code>```...```</code></td>
+                <td>Coloca Bloco inteiro em forma de Código</td>
+                <td>Bloco de Linhas <td>
+            </tr>
+            <tr>
+                <td><pre><code>    </code></pre></td>
+                <td>Tab</td>
+                <td>Cada tab, é 4 espaços</td>
+            </tr>
+            <tr>
+                <td><code>:...:</code></td>
+                <td>Adicionar Emoji</td>
+                <td>O nome do emoji vai dentro dos dois pontos <br> <code>github.com/ikatyang</code> > tem um repositório que mostra todos os nomes dos emojis</td>
+            </tr>
+            <tr>
+                <td><code>></code></td>
+                <td>Cria uma citação</td>
+                <td>Clicar nas opções de uma postagem e clicar em quote Reply faz iss também</td>
+            </tr>
+        </table>
+
+
+        <p>
+            Para criar uma tabela com markown, usa-se " | " para fazer as linhas da tabela. E os --- vai dizer quantas celulas tem a tabela.
+        </p>
+        <span>Exemplo:</span>
+        <pre>
+            <code>
+
+    Nome | Idade | Letra 
+    ---|---|---|         
+    Lucas | 21 | A       
+    Shay | 15 | B        
+    Heitor | 33 | C      
+
+            </code>
+        </pre>
+
+        <p>
+            Guia PDF Markdown por Gustavo Guanabara:
+            <a href="https://github.com/gustavoguanabara/git-github/blob/master/manuais-PDF/guia-markdown.pdf">Clique aqui para acessar</a>
+            GitHub Gustavo Guanabara : <code><a href="github.com/gustavoguanabara">github.com/gustavoguanabara</a></code>
+        </p>
+    </main>
+    
+    <footer>
+        <p>&copy;LucasTombely</p>
+        <img class="footerImg"src="../img/HTML5-logo.png" alt="Logo HTML5">
+        <img class="footerImg" src="../img/CSS3-logo.png" alt="Logo CSS3">
+        <img class="footerImg" src="../img/javascript-logo.png" alt="Logo javaScript">
+        <img class="footerImg" src="../img/Instagram-Logo.png" alt="Logo Instragram">
+        <img class="footerImg" src="../img/facebook-logo.png" alt="Logo Facebook">
+    </footer>
+</body>
+</html>

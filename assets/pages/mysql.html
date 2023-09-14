@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Olá, este é meu site teste">
+    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>My MySQL Guide</title>
+</head>
+<body>
+    <header>
+        <img src="../img/mysql-logo.png" alt="Logo CSS3" id="logoHeader">
+        <h1>MySQL</h1>
+        <form>
+            <img src="#" alt="#" id="imgPerfil">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome"><br>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha"><br>
+            <input type="submit" value="Entrar">
+            <input type="button" value="Cadastrar">
+        </form>
+    </header>
+    <nav>
+        <a href="html5.html" rel="prev">HTML5</a>
+        <a href="css3.html">CSS3</a></li>
+        <a href="javascript.html">javaScript</a>
+    </nav>
+    <main>
+        <section id="instalation">
+            <h2>Instalação:</h2>
+            <ul>
+                <li>Instalar MySQL Workbench;</li>
+                <li>Instalar WampServer.</li>
+            </ul>
+        </section>
+        <section id="primitiveTypes">
+            <h2>Tipos Primitivos <abbr title="My Structured Query Language">MySQL</abbr>:</h2>
+            <ol>
+                <li>
+                    <h3>Numéricos</h3>
+                </li>
+                <ul>
+                    <li>Inteiros</li>
+                    <ul>
+                        <li>TinyInt</li>
+                        <li>SmallInt</li>
+                        <li>Int</li>
+                        <li>MediumInt</li>
+                        <li>BigInt</li>
+                    </ul>
+                    <li>Reais</li>
+                    <ul>
+                        <li>Decimal (__,__) > (número de casas, casas depois da vírgula)</li>
+                        <li>Float</li>
+                        <li>Double</li>
+                        <li>Real</li>
+                    </ul>
+                    <li>Lógicos (true/false)</li>
+                    <ul>
+                        <li>Bit</li>
+                        <li>Boolean</li>
+                    </ul>
+                </ul>
+                <li><h3>Data/Tempo:</h3></li>
+                <ul>
+                    <li>Date (Data Completa)</li>
+                    <li>DateTime (Datas + horas e outros)</li>
+                    <li>TimeStamp (Datas + horas e outros)</li>
+                    <li>Time (somente hora)</li>
+                    <li>Year (somente ano)</li>
+                </ul>
+                <li><h3>Literal:</h3></li>
+                <ul>
+                    <li>Caractere</li>
+                    <ul>
+                        <li>Char</li>
+                        <li>VarChar</li>
+                    </ul>
+                    <li>Texto</li>
+                    <ul>
+                        <li>TinyText</li>
+                        <li>Text</li>
+                        <li>MediumText</li>
+                        <li>LongText</li>
+                    </ul>
+                    <li>Binário</li>
+                    <ul>
+                        <li>TinyBlob</li>
+                        <li>Blob</li>
+                        <li>MediumBlob</li>
+                        <li>LongBlob</li>
+                    </ul>
+                    <li>Coleção</li>
+                    <ul>
+                        <li>Enum ('__') > Aceita somente o valor dentro do parâmetro</li>
+                        <li>Set</li>
+                    </ul>
+                </ul>
+                <li><h3>Espacial</h3></li>
+                <ul>
+                    <li>Geometry</li>
+                    <li>Point</li>
+                    <li>Polygon</li>
+                    <li>MultiPolygon</li>
+                </ul>
+            </ol>
+        </section>     
+        <section id="constraints">
+            <h2><abbr title="Regras">Constraints</abbr></h2>
+            <ul>
+                <li>NOT NULL</li>
+                <li>DEFAULT '---'</li>
+                <li>AUTO_INCREMENT > Primeiro a cadastras será o 1, segundo o 2...</li>
+                <li>PRIMARY KEY (__) > parâmetro recebe o nome do campo criado. Primary key impede que tenha outro cadastro com a mesma informação</li>
+                <li>UNIQUE</li>
+                <li>UNSIGNED > Faz com que o valor seja obrigatoriamente positivo</li>
+            </ul>
+        </section>
+        <section id="DDLCommands">
+            <h2>Comandos <abbr title="Data Definition Language">DDL</abbr> MySQL</h2>
+            <table>
+                <tr>
+                    <th>COMANDO</th>
+                    <th>Função</th>
+                    <th>Caraceterística</th>
+                </tr>
+                <tr>
+                    <td><code>CREATE DATABASE ---;</code></td>
+                    <td>Cria um banco de dados</td>
+                    <td>O Parâmetro recebe o nome do BD que se quer criar</td>
+                </tr>
+                <tr>
+                    <td><code>USE ---;</code></td>
+                    <td>Seleciona qual banco vai receber o comando</td>
+                    <td>Usar esse comando ou clicar no banco para selecioná-lo</td>
+                </tr>
+                <tr>
+                    <td><code>CREATE TABLE ---( --- );</code></td>
+                    <td>Cria uma Tabela</td>
+                    <td>Primeiro Parâmetro recebe o nome da tabela. Segundo recebe as características dos registros</td>
+                </tr>
+                <tr>
+                    <td><code>DESCRIBE ---;</code></td>
+                    <td>Descreve uma tabela</td>
+                    <td>O Parâmetro recebe o nome da tabela existente a descrever</td>
+                </tr>
+                <tr>
+                    <td><code>SHOW DATABASES;</code></td>
+                    <td>Mostra quais DB temos criados</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><code>STATUS;</code></td>
+                    <td>Mostra o status do banco selecionado</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><code>DROP DATABASE ---;</code></td>
+                    <td>Deleta banco de nome ---</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><code>DEFAULT CHARACTER SET utf8</code></td>
+                    <td>Faz com que o tipo de letra do DB seja UTF-8</td>
+                    <td>Esse comando se coloca ao criar o DB após o nome do DB</td>
+                </tr>
+                <tr>
+                    <td><code>DEFAULT COLLATE utf8_general_ci</code></td>
+                    <td>Define os caracteres, o collatio do DB</td>
+                    <td>Usa-se ao criar o DB após o nome dele</td>
+                </tr>
+            </table>
+            <h2>Command Examples:</h2>
+            <code>
+                <pre>
+                    <h3>Create Database:</h3>
+            
+            CREATE DATABASE cadastro
+            DEFAULT CHARACTER SET utf8
+            DEFAULT COLLATE utf8_general_ci;
+                    <h3>Create Table:</h3>
+            
+            CREATE TABLE pessoas(
+                id int NOT NULL AUTO_INCREMENT,
+                nome varchar(30) NOT NULL,
+                nascimento date,
+                sexo enum('M','F'),
+                peso decimal(5,2),
+                altura decimal(3,2),
+                nacionalidade varchar(20) DEFAULT 'Brasil',
+                PRIMARY KEY (id)
+            )DEFAULT CHARSET = utf8;
+                </pre>
+            </code>
+        </section>
+        <section id="DMLCommands">
+            <h2>Comandos <abbr title="Data Manipulation Language">DML</abbr></h2>
+
+            <table>
+                <tr>
+                    <th>COMANDO</th>
+                    <th>Função</th>
+                    <th>Características</th>
+                </tr>
+                <tr>
+                    <td><code>INSERT INTO tabela<sup>1</sup> (colunas_da_tabela)<sup>2</sup> VALUES (valores)<sup>3</sup>;</code></td>
+                    <td>Insere na tabela pessoas com características (__)<sup>2</sup> os valores de (__)<sup>3</sup></td>
+                    <td>___<sup>1</sup> Recebe o nome da tabela. Caso o dado esteja já predefinido na criação da tabela, não é necessário colocar o dado.</td>
+                </tr>
+                <tr>
+                    <td><code>INSERT INTO tabela<sup>1</sup> VALUES (valores)<sup>2</sup>;</code></td>
+                    <td>Inserir na tabela ___<sup>1</sup> os dados (__)<sup>2</sup></td>
+                    <td>Caso os dados estejam completos, pode-se abreviar dessa forma.</td>
+                </tr>
+                <tr>
+                    <td><code>SELECT _<sup>1</sup> FROM ___<sup>2</sup></code></td>
+                    <td>Seleciona -<sup>1 da tabela ___<sup>2</sup></td>
+                    <td>Se colocar * no _<sup>1</sup>, seleciona todos</td>
+                </tr>
+                <tr>
+                    <td><code>ALTER TABLE ___</code></td>
+                    <td>Diz qu vai alterar uma tabela</td>
+                    <td>Passar o comando a se fazer em seguida</td>
+                </tr>
+                <tr>
+                    <td><code>ADD COLUMN nome_coluna (tipo_primitivo)</code></td>
+                    <td>Adiciona um novo campo no banco</td>
+                    <td>Necessário digitar ALTER TABLE __ antes. Column significa campo em MySQL</td>
+                </tr>
+                <tr>
+                    <td><code>DROP COLUMN nome_coluna</code></td>
+                    <td>Deleta coluna</td>
+                    <td>Necessário usar ALTER TABLE __ antes</td>
+                </tr>
+                <tr>
+                    <td><code>MODIFY COLUMN nome_coluna tipo_primitivo</code></td>
+                    <td>Modifica tipo primitivo ou constraints</td>
+                    <td>Usa-se após ALTER TABLE __. Column pode ser omitido</td>
+                </tr>
+                <tr>
+                    <td><code>CHANGE COLUMN nome_antigo nome_novo tipo_primitivo constraints</code></td>
+                    <td>Altera o nome de uma tabela</td>
+                    <td>Usa-se com ALTER TABLE</td>
+                </tr>
+                <tr>
+                    <td><code>RENAME TO novo_nome;</code></td>
+                    <td>Renomea o nome de uma tabela</td>
+                    <td>Usa-se com ALTER TABLE</td>
+                </tr>
+                <tr>
+                    <td><code>AFTER nome_coluna_anterior</code></td>
+                    <td>Inserir uma nova coluna em um lugar específico</td>
+                    <td>Para fazer com que seja a primeira coluna, usa-se se <code>FIRST</code> ao invés de <code>AFTER</code></td>
+                </tr>
+                <tr>
+                    <td><code>CREATE TABLE IF NOT EXISTS</code></td>
+                    <td>Se não existir, cria tabela</td>
+                    <td>IF NOT EXIST ou IF EXISTS são complementos para CREATE</td>
+                </tr>
+            </table>
+
+            <h2>Command Examples:</h2>
+
+            <h3>INSERT INTO:</h3>
+
+            <code>
+                <pre>
+            INSERT INTO pessoas
+            (id, nome, nascimento, sexo, peso, altura, nacionalidade)
+            VALUES
+            (DEFAULT, 'Lucas Tombely', '2002-02-01', 'M', '65.0', '1.78', 'DEFAULT');
+
+            </pre>
+        </code>
+            <h3>INSERT INTO abreviado:</h3>
+
+            <code>
+                <pre>
+            INSERT INTO pessoas VALUES
+            (DEFAULT, 'Lucas Tombely', '2002-02-01', 'M', '65.0', '1.78', 'DEFAULT');
+                </pre>
+            </code>
+            <h3>INSERT INTO múltiplos dados:</h3>
+            <code>
+                <pre>
+            INSERT INTO pessoas VALUES
+            (DEFAULT, 'Lucas Tombely', '2002-02-01', 'M', '65.0', '1.78', 'DEFAULT'),
+            (DEFAULT, 'Shayera Alexsandra Silva de Souza', '2007-10-15', 'F', '50.0', '1.51', DEFAULT);
+                </pre>
+            </code>
+
+            <h3>ALTER TABLE </h3>
+
+            <code>
+                <pre>
+            ALTER TABLE pessoas
+            ADD COLUMN profissao VARCHAR(20) AFTER sexo;
+
+            ALTER TABLE pessoas
+            DROP COLUMN profissao;
+
+            ALTER TABLE pessoas
+            MODIFY COLUMN profissao VARCHAR(30);
+
+            ALTER TABLE pessoas
+            CHANGE COLUMN profissao profession VARCHAR(30) NOT NULL;
+
+            ALTER TABLE pessoas
+            RENAME TO people;
+                </pre>
+            </code>
+        </section>
+     </main>
+    <footer>
+        <p>&copy;LucasTombely</p>
+        <img class="footerImg"src="../img/HTML5-logo.png" alt="Logo HTML5">
+        <img class="footerImg" src="../img/CSS3-logo.png" alt="Logo CSS3">
+        <img class="footerImg" src="../img/javascript-logo.png" alt="Logo javaScript">
+        <img class="footerImg" src="../img/Instagram-Logo.png" alt="Logo Instragram">
+        <img class="footerImg" src="../img/facebook-logo.png" alt="Logo Facebook">
+    </footer>
+</body>
+</html>

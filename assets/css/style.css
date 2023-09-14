@@ -1,53 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+}
+
 body{
-    background-color: rgb(34, 34, 34);
+    background-color: #494949;
     color:white;
-    font: normal 12pt Arial;
-}
-form{
-    position:absolute;
-    right:15px;
-    top:25px;
-
-}
-input{
-    background-color: rgba(129, 129, 129, 0.664);
-    border-radius: 5px;
-    padding:2px;
-    border:solid black 1px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.616);
 }
 
-th, td{
-    border: 1px solid  black;
-    padding:8px;
+/*HEADER*/
+
+body > header{
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    background-color: #191919;
+    padding: 1rem;
+    font-size: 0.5rem;
 }
-img{
-    width:50px;
+body > header > img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
 }
-header, footer{
-    background-color: rgb(25, 25, 25);
-    height:90px;
+
+/*NAVBAR*/
+
+body > nav{
+    background-color: #333333;
+    padding: 0.8rem;
 }
-img#logoHeader{
-    position:absolute;
-    left:25px;
-    top: 25px;
+body > nav > a{
+    color: #ffffff;
+    text-decoration: none;
 }
-h1{
-    position:absolute;
-    left: 100px;
-}
-img#imgPerfil{
-    position:absolute;
-    top: 10px;
-    right:220px;
-}
-code{
-    background-color: rgb(25, 25, 25);
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    bottom: 0;
     width:100%;
-    
-}
-img.footerImg{
-    width:40px;
-    margin-left:200px;
+    height: 2rem;
 }

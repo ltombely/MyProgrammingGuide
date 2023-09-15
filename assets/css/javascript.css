@@ -1,6 +1,6 @@
 @import url('style.css');
 
-body > main > div{
+body > main > section{
     overflow-x: auto;
 }
 

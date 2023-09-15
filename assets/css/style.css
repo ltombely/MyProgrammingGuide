@@ -45,6 +45,7 @@ body > main{
 }    
 
 /*FOOTER*/
+
 footer{
     display: flex;
     justify-content: center;
@@ -52,3 +53,21 @@ footer{
     background-color: #191919;
     height: 2rem;
 }
+
+/*GENERAL*/
+
+h2{
+    padding: 1rem;
+    color: rgb(63, 255, 63);
+}
+h3{
+    padding: 0.8rem;
+    color: rgb(98, 86, 255);
+}
+h4{
+    color:rgb(255, 61, 61);
+}
+p{
+    color: violet;
+}
+

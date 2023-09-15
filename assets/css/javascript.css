@@ -12,3 +12,14 @@ body > main > div > table > th, td{
 td{
     text-align: center;
 }
+/*SECTIONS*/
+
+section{
+    background-color: #333333;
+    margin:0.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+section > img{
+    border-radius: 2rem;
+}

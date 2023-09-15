@@ -12,18 +12,20 @@
 </head>
 <body>
     <main>
-
-        <input type="text" id="text">
-        <input type="submit" onclick="funcionar()">
+        
+        <ul id="ul">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
     </main>
 
     <script>
+        let ul = document.getElementById('ul')
+        let li = document.createElement('li')
+        li.innerText = 4
+        ul.insertBefore(li, ul.firstChild);
 
-        function funcionar(){
-
-            let text = document.getElementById('text').value
-            document.write(text)
-        }
     </script>
 </body>
 </html>

@@ -6,9 +6,9 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="Olá, este é meu site teste">
     <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
-    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/javascript.css">
-    <title>Guia de Programação - HTML5</title>
+    <title>Guia de Programação - JavaScript</title>
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
         <a href="#"><span>JavaScript</span></a>
     </nav>
     <main> 
-        <section>
+        <section id="bibliotecas">
             <h2>Biliotecas JavaScript:</h2>
             <ul>
                 <li>JQuery</li>
@@ -41,7 +41,7 @@
                 <li>CraftyJs</li>
             </ul>
         </section>
-        <section>
+        <section id="tiposPrimitivos">
             <h2>Tipos Primitivos JavaScript</h2>
 
             <ul>
@@ -54,7 +54,7 @@
                 <li>BigInt</li>
             </ul>
         </section>
-        <section>
+        <section id="tabelaComandosJS">
             <h2>COMANDOS JavaScript:</h2>
             <table>
                 <tr>
@@ -187,12 +187,51 @@
                     <td>Adiciona um event listener</td>
                     <td><hr></td>
                 </tr>
+                <tr>
+                    <td><sub>checkbox</sub>.checked</td>
+                    <td>.checked conferete se um input radio ou input checkbox está marcado, retornando true caso esteja.</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>document.createElement('<sub>nome_da_tag')</sub></td>
+                    <td>Cria um elemento HTML através do JavaScript</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>elemento</sub>.setAttribute('<sub>atributo</sub>', '<sub>valor</sub>')</td>
+                    <td>Adiciona um atributo a um elemento HTML através do JavaScript</td>
+                    <td>Atributos: id, class, src, href, data,</td>
+                </tr>
+                <tr>
+                    <td><sub>elementoPai</sub>.appendChild(<sub>elementoCriado</sub>)</td>
+                    <td>Inserir elemento html criado por JavaScript no DOM</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>elementoPai</sub>.insertBefore(<sub>elementoCriado</sub>, <sub>antesDeQual</sub>)</td>
+                    <td>Insere um elemento antes de outro</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>elemento</sub>.innerText = '<sub>texto</sub>'</td>
+                    <td>Insere texto dentro de um elemento</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>elemento</sub>.textContent = '<sub>texto</sub>'</td>
+                    <td>Insere texto dentro de um elemento</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>elemento</sub>.HTML = '<sub>HTML text</sub>'</td>
+                    <td>Insere HTML dentro de elemento</td>
+                    <td><hr></td>
+                </tr>
+
+
             </table>
         </section>
-
-        ! COMANDO PARA DINHEIRO: n.toLocaleString('pt-BR',{style:'currency', currency:'BRL'})
-
-        <section>
+        <section id="operadorTernario">
             <h2>Operador Ternário</h2>
             <h3>Forma:</h3>
             <span>teste?true:false</span>
@@ -203,14 +242,15 @@
             </pre>
 
         </section>
-        <section>
+        <section id="DOM">
             <h2>Árvore <abbr title="Document Object Model">DOM</abbr></h2>
-            <img src="../img/dom.jpg" alt="Foto Imagem DOM">
+            <img src="../img/dom.jpg" alt="Foto Imagem DOM"><br>
+            <span>Fonte: Curso em Video JavaScript - Gustavo Guanabara</span>
 
             <p>Dentro de window.document existem inúmeras funções, ex:</p>
             <span>window.document.URL -> retorna URL do site</span>
         </section>
-        <section>
+        <section id="condicoes">
             <h2>Condições</h2>
             <h3>Condição Simples:</h3>
             <p>A condição simples possui apenas um if, sem else. Ex:</p>
@@ -256,10 +296,11 @@
     }
             </pre>
         </section>
-        <section>
+        <section id="datas">
             <h2>Datas</h2>
             <p>Existe uma função da biblioteca padrão JS que pega data e hora atuais, Date()</p>
             <pre>
+
     let dataAtual = new Date()
     console.log(dataAtual)
             </pre>
@@ -306,15 +347,246 @@
     console.log(segundos)
             </pre>
         </section>
-        <section>
+        <section id="repeticoes">
+            <h2>Repetições JavaScript</h2>
+            <h3>WHILE</h3>
+            <p>While é uma estrutura de repetição em que o teste lógico se faz no Início, antes de executar o bloco</p>
+            <img src="../img/while.jpg" alt="Foto While"><br>
+            <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara  </span>
+            <pre>
 
+    while(<sub>condição</sub>){
+        alert('Repetir este bloco')
+    }
+
+    let n = 10
+    while(n > 0){
+        console.log(n)
+        n--
+    }
+            </pre>
+
+            <h3>DO-WHILE</h3>
+            <p>DO-WHILE é uma estrutura de repetição que faz o teste lógico no final, após executar o bloco</p>
+            <img src="../img/do-while.jpg" alt="Foto Do-While"><br>
+            <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara  </span>
+            <pre>
+
+    do{
+        alert('Repetir este bloco')
+    }while(<sub>Condição</sub>)
+
+    do{
+        
+    }
+            </pre>
+
+            <h3>FOR</h3>
+            <p>FOR é uma estrutura de repetição que possue dentro da sua estrutura uma variável que define quantas vezes será executado o bloco</p>
+            <img src="../img/for.jpg" alt="Foto FOR"><br>
+            <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara  </span>
+            <pre>
+
+    for(<sub>declarar variável</sub>; <sub>Condição para a variável</sub>; <sub>O que fazer com a variável</sub>){
+
+    }
+
+    for(let n = 1; n &lt; 10; n++){
+        console.log(n)
+    }
+            </pre>
         </section>
+        <section id="arrays">
+            <h2>ARRAYS / VARIÁVEIS COMPOSTAS / VETORES</h2>
+            <h3>Formas de declarar:</h3>
+            <h4>Abrindo e Fechando colchetes:</h4>
+            <pre>
+    let array = []
+            </pre>
+            <h4>Com Array + parenteses</h4>
+            <pre>
+    let array = Array()
+            </pre>
+            <p>Caso dentro dos parenteses seja passado um único valor numérico e inteiro, esse número indica a quantidade de elementos dentro do array.</p>
 
+            <h2>Comandos para Arrays:</h2>
 
+            <h3>Comandos de Acesso e Verificação de Dados:</h3>
+            <table>
+                <tr>
+                  <th>COMANDO</th>
+                  <th>Função</th>
+                  <th>Característica</th>
+                </tr>
+                <tr>
+                  <td>array[i]</td>
+                  <td>Retorna o valor do array com índice i</td>
+                  <td>let array = [1, 2, 3, 4, 5]<br>console.log(array[2])</td>
+                </tr>
+                <tr>
+                  <td>array.indexOf(par)</td>
+                  <td>VERIFICAR índice do primeiro elemento com este valor</td>
+                  <td>
+                    par recebe o valor do elemento. Caso não encontre o elemento, retorna -1<br>
+                    let array = [4, 3, 2, 1]<br>
+                    array.indexOf(2)
+                    </td>
+                </tr>
+                <tr>
+                    <td>array.lastIndexOf(par)</td>
+                    <td>VERIFICAR índice do último elemento com este valor</td>
+                    <td>
+                        caso não encontre o elemento, retorna -1
+                        par recebe o valor do elemento<br>
+                        let array = [4, 3, 2, 1]<br>
+                        array.indexOf(2)
+                    </td>
+                </tr>
+                <tr>
+                    <td>array.length</td>
+                    <td>VERIFICAR comprimento do Array</td>
+                    <td>let array = [1, 2, 3, 4]<br>console.log(array.length)</td>
+                </tr>
+                <tr>
+                    <td>array.includes(par)</td>
+                    <td>Verificar se o parâmetro está incluido dentro do array, retorna Boolean</td>
+                    <td>
+                        let array = ['Lucas', 'Ivan', 'Maria']<br>
+                        array.includes('Ivan')
+                    </td>
+                </tr>
+              </table>
+              
+            <h3>Comandos de Inserção e Remoção de dados:</h3>
+            <table>
+                <tr>
+                  <th>COMANDO</th>
+                  <th>Função</th>
+                  <th>Característica</th>
+                </tr>
+                <tr>
+                  <td>array.push(par)</td>
+                  <td>ADICIONAR ao fim da lista</td>
+                  <td>let array = [1, 2, 3, 4, 5]<br>array.push(6)</td>
+                </tr>
+                <tr>
+                  <td>array.pop()</td>
+                  <td>REMOVER último item da Lista</td>
+                  <td>let array = [1, 2, 3, 4, 5]<br>array.pop()</td>
+                </tr>
+                <tr>
+                  <td>array.unshift(par)</td>
+                  <td>ADICIONAR ao início da Lista</td>
+                  <td>let array = [1, 2, 3, 4, 5]<br>array.unshift(0)</td>
+                </tr>
+                <tr>
+                  <td>array.shift()</td>
+                  <td>REMOVER primeiro item da Lista</td>
+                  <td>let array = [1, 2, 3, 4, 5]<br>array.shift()</td>
+                </tr>
+                <tr>
+                    <td>array.splice(par1, par2)</td>
+                    <td>REMOVER de uma posição específica em diante</td>
+                    <td>par1 recebe o índice inicial, par2 recebe quantos elementos remover apartir daquele índice<br>let array = [3, 6, 1, 9]<br>array.splice(1, 2)</td>
+                  </tr>
+              </table>
+              
+              <h3>Comandos de Manipulação de Arrays:</h3>
+              <table>
+                <tr>
+                  <th>COMANDO</th>
+                  <th>Função</th>
+                  <th>Característica</th>
+                </tr>
+                <tr>
+                    <td>array.slice(par1, par2)</td>
+                    <td>COPIAR de uma posição específica em diante</td>
+                    <td>par1 recebe o índice inicial, par2 recebe quantos elementos copiar apartir daquele índice<br>let array = [1, 2, 3, 4]<br>array.slice(0,2)</td>
+                </tr>
+                <tr>
+                  <td>...array</td>
+                  <td>ADICIONAR um array a outro array</td>
+                  <td>let array1 = [1, 2, 3, 4]<br>let array2 = [...array1, 5, 6]</td>
+                </tr>
+                <tr>
+                    <td>array1.concat(array2)</td>
+                    <td>Soma 2 arrays ou mais</td>
+                    <td>
+                        let array1 = [1, 2, 3]<br>
+                        let array2 = [4, 5, 6]<br>
+                        let array3 = arra1.concat(array2)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Array.isArray(array)</td>
+                    <td>Verifica se o elemento dentro dos parenteses é um array e retorna Boolean</td>
+                    <td>
+                        let array = [1, 2, 3]<br>
+                        console.log(Array.isArray(array))
+                    </td>
+                </tr>
+                <tr>
+                    <td>array.join()</td>
+                    <td>Imprime os elementos de um array de forma concatenada</td>
+                    <td>
+                        Por padrão é concatenado com uma vírgula, se quiser mudar a concatenação coloca-se entre aspas dentro do parenteses.<br>
+                        let countries = ['Brazil', 'Russia', 'Japan']<br>
+                        let res = countries.join()
+                        console.log(res)
+                    </td>
+                </tr>
+                <tr>
+                    <td>array.reverse()</td>
+                    <td>Inverte a ordem dos elementos do array</td>
+                    <td>
+                        let array = [1, 2, 3, 4, 5]<br>
+                        array.reverse()<br>
+                        console.log(array)
+                    </td>
+                </tr>
+                <tr>
+                    <td>array.sort()</td>
+                    <td>Deixa o array em ordem alfabetica</td>
+                    <td>
+                        let names = ['Lucas', 'Shayera', 'Amanda', 'Felipe']<br>
+                        names.sort()<br>
+                        console.log(names)
+                    </td>
+                </tr>
+                <tr>
+                    <td>array.flat(_)</td>
+                    <td>Faz com que todos os arrays dentro deste array, sejam unidos em um único array</td>
+                    <td>
+                        Por padrão ele fará isso com 1 array, passar nos parâmetros quantas vezes quer que ele faça isso. podemos passar o parâmetro Infinity<br>
+                        let array = [1, [2, [3, [4, [5]]]]]<br>
+                        array.flat(Infinity)<br>
+                        console.log(array)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Array.from(string)</td>
+                    <td>Transforma todos os caracteres de uma string em um elemento de um array</td>
+                    <td>
+                        let str = '1234567'<br>
+                        let array = Array.from(str)<br>
+                        console.log(array)
+                    </td>
+                </tr>
+              </table>
+        </section>
+        <section id="especiais">
+            <h2>Formatar Dinheiro:</h2>
+            <span>
+                <sub>valor</sub>.toLocaleString('pt-BR',{style:'currency', currency:'BRL'})
+            </span>
+            <pre>
 
-
-
-        <section>
+    let dinheiro = 80.50
+    dinheiro = dinheiro.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+    console.log(dinheiro)
+            </pre>
+        </section>
+        <section id="proximosPassos">
             <h2>Próximos passos JavaScript:</h2>
             <ul>
                 <li>Functions</li>
@@ -326,9 +598,11 @@
                 <li>Node.js</li>
             </ul>
         </section>
+
     </main>
     <footer>
         <p>&copy;LucasTombely</p>
     </footer>
 </body>
 </html>
+

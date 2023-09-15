@@ -1,3 +1,4 @@
-const dataAtual = new Date();
-const milissegundosDesde1970 = dataAtual.getTime();
-console.log(milissegundosDesde1970);
+const str = 'Lucas'
+
+const res = Array.from(str)
+console.log(res)

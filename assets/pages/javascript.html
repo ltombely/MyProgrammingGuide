@@ -54,9 +54,7 @@
                 <li>BigInt</li>
             </ul>
         </section>
-
         <section>
-
             <h2>COMANDOS JavaScript:</h2>
             <table>
                 <tr>
@@ -149,6 +147,46 @@
                     <td>Troca todos os X da variável por Y</td>
                     <td>Somente usado em Strings. <br> let n = '53.40' <br> let nform = n.replace('.',',')</td>
                 </tr>
+                <tr>
+                    <td>getELemetsByTagName('<sub>nome_tag</sub>')[<sub>i</sub>]</td>
+                    <td>Seleciona o elemento com determinada tag que tenha índice i</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>getElementsByName('<sub>nome</sub>')[<sub>i</sub>]</td>
+                    <td>Seleciona elemento pelo nome</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>getElementsByClass('<sub>class_name</sub>')[<sub>i</sub>]</td>
+                    <td>Seleciona elemento por classe</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>getElementById('<sub>id</sub>')</td>
+                    <td>Seleciona um elemento pelo id</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>querySelector('<sub>id ou class</sub>')</td>
+                    <td>Seleciona elemento por id ou classe</td>
+                    <td>Se for id, usa-se # antes do nome, se for class . antes de nome</td>
+                </tr>
+                <tr>
+                    <td>querySelector('[name = "<sub>nome</sub>"]')</td>
+                    <td>Seleciona elemento por nome</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>querySelectorAll('')</td>
+                    <td>Seleciona todos os elementos correspondentes</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>addEventListener('<sub>evento</sub>', <sub>função</sub>)</td>
+                    <td>Adiciona um event listener</td>
+                    <td><hr></td>
+                </tr>
             </table>
         </section>
 
@@ -164,6 +202,129 @@
     media >= 6? console.log('aprovado'):console.log('reprovado')
             </pre>
 
+        </section>
+        <section>
+            <h2>Árvore <abbr title="Document Object Model">DOM</abbr></h2>
+            <img src="../img/dom.jpg" alt="Foto Imagem DOM">
+
+            <p>Dentro de window.document existem inúmeras funções, ex:</p>
+            <span>window.document.URL -> retorna URL do site</span>
+        </section>
+        <section>
+            <h2>Condições</h2>
+            <h3>Condição Simples:</h3>
+            <p>A condição simples possui apenas um if, sem else. Ex:</p>
+            <pre>
+
+    if(vel>60){
+
+        document.write('Você foi multado')
+    }
+    document.write('Dirija sempre com cinto de segurança')
+            </pre>
+            <h3>Condição Normal:</h3>
+            <p>Para uma condição if else ou com else if Ex:</p>
+            <pre>
+
+    if(nota>=6){
+
+        document.write('Aprovado')
+    }else if(nota>=5 && nota &lt; 6){
+
+        document.write('Decidido no conselho de classe')
+    }else{
+        document.write('Reprovado')
+    }
+            </pre>
+            <h3>Condição Múltipla, Switch Case:</h3>
+            <p>Para muitas opções</p>
+            <pre>
+
+    switch(<sub>expressão</sub>){
+        case valor1:
+            console.log('valor1')
+            break
+        case valor2:
+            console.log('valor2')
+            break
+        case valor3:
+            console.log('valor3')
+            break
+        default:
+            console.log('valor4')
+            break
+    }
+            </pre>
+        </section>
+        <section>
+            <h2>Datas</h2>
+            <p>Existe uma função da biblioteca padrão JS que pega data e hora atuais, Date()</p>
+            <pre>
+    let dataAtual = new Date()
+    console.log(dataAtual)
+            </pre>
+            <h3>Ano</h3>
+            <pre>
+    let dataAtual = new Date()
+    let ano = dataAtual.getFullYear()
+    console.log(ano)
+            </pre>
+            <h3>Mês</h3>
+            <pre>
+    let dataAtual = new Date()
+    let mes = dataAtual.getMonth() +1 //Retorna de 0-11
+    console.log(mes)
+            </pre>
+            <h3>Dia do Mês</h3>
+            <pre>
+    let dataAtual = new Date()
+    let diaMes = dataAtual.getDate()
+    console.log(dia)
+            </pre>
+            <h3>Dia da Semana</h3>
+            <pre>
+    let dataAtual = new Date()
+    let diaSemana = dataAtual.getDay()
+    console.log(diaSemana)
+            </pre>
+            <h3>Hora</h3>
+            <pre>
+    let dataAtual = new Date()
+    let hora = dataAtual.getHours()
+    console.log(hora)
+            </pre>
+            <h3>Minutos</h3>
+            <pre>
+    let dataAtual = new Date()
+    let minutos = dataAtual.getMinutes()
+    console.log(minutos)
+            </pre>
+            <h3>Segundos</h3>
+            <pre>
+    let dataAtual = new Date()
+    let segundos = dataAtual.getSeconds() + 1 //Retorna de 0-59
+    console.log(segundos)
+            </pre>
+        </section>
+        <section>
+
+        </section>
+
+
+
+
+
+        <section>
+            <h2>Próximos passos JavaScript:</h2>
+            <ul>
+                <li>Functions</li>
+                <li>Objects</li>
+                <li>Modularização</li>
+                <li>RegEx</li>
+                <li>JSON</li>
+                <li>AJAX</li>
+                <li>Node.js</li>
+            </ul>
         </section>
     </main>
     <footer>

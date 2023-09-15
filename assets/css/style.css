@@ -38,6 +38,13 @@ body > nav > a{
     color: #ffffff;
     text-decoration: none;
 }
+
+/*MAIN*/
+body > main{
+    margin:1rem;
+}    
+
+/*FOOTER*/
 footer{
     display: flex;
     justify-content: center;

@@ -10,7 +10,7 @@
    
 ### Lista de tarefas
 
-- [ ] Página Index
+- [x] Página Index
 - [x] Página HTML5
 - [ ] Página CSS3
 - [ ] Página JavaScript

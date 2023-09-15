@@ -6,229 +6,214 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="Olá, este é meu site teste">
     <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>MEU GUIA HTML5</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/html5.css">
+    <title>Guia de Programação - HTML5</title>
 </head>
 <body>
     <header>
-        <img src="../img/HTML5-logo.png" alt="Logo HTML5" id="logoHeader">
-        <h1>CSS3</h1>
-        <un>
-            <li><a href="index.html">HTML5</a></li>
-            <li><a href="css3.html" rel="next">CSS3</a></li>
-            <li><a href="javascript.html">javaScript</a></li>
-        </un>
-        <form>
-            <img src="#" alt="#" id="imgPerfil">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome"><br>
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha"><br>
-            <input type="submit" value="Entrar">
-            <input type="button" value="Cadastrar">
-        </form>
+        <img src="../img/favicon.png" alt="Logo do site">
+        <h1>Programmer Guide - HTML5</h1>
     </header>
-
+    <nav>
+        <a href="../index.html"><span>Página Inicial</span></a>
+        <span>></span>
+        <a href="#"><span>HTML5</span></a>
+    </nav>
     <main>
-        <h2>Este é meu guia HTML5</h2>
-        
-        <h3>TAGS META:</h3>
-        <pre>
+        <section>
+            <h2>TAGS META:</h2>
             <code>
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;meta name="robots" content="index, follow"&gt;
-&lt;meta name="description" content=" "&gt;
-&lt;meta name="keywords" content=" "&gt;
+                <span>&lt;meta charset="UTF-8"&gt;</span><br>
+                <span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span><br>
+                <span>&lt;meta name="robots" content="index, follow"&gt;</span><br>
+                <span>&lt;meta name="description" content=" "&gt;</span><br>
+                <span>&lt;meta name="keywords" content=" "&gt;</span>
             </code>
-        </pre>
+        </section>
     
         <h2>TAGS:</h2>
-        <table>
-            <tr>
-                <th>TAG</th>
-                <th>Função</th>
-                <th>Observação</th>
-                <th>Exemplo:</th>
-            </tr>
-            <tr>
-                <td><code>&lt;hr&gt;</code></td>
-                <td>Cria uma linha que cobre toda a tela</td>
-                <td> <hr> </td>
-                <td> <hr> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;b&gt;...&lt;/b&gt;</code></td>
-                <td>Deixa em Negrito</td>
-                <td>Não Semântico</td>
-                <td> <b>Texto em Negrito</b> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;strong&gt;...&lt;/strong&gt;</code></td>
-                <td>Deixa em Negrito</td>
-                <td>Semântico</td>
-                <td> <strong>Texto com Strong</strong> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;i&gt;...&lt;/i&gt;</code></td>
-                <td>Deixa em Itálico</td>
-                <td>Não Semântico</td>
-                <td> <i>Texto em Itálico</i> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;em&gt;...&lt;/em&gt;</code></td>
-                <td>Deixa em Itálico</td>
-                <td>Semântico</td>
-                <td> <em>Texto com em</em> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;u&gt;...&lt;/u&gt;</code></td>
-                <td>Deixa Sublinhado</td>
-                <td>Não Semântico</td>
-                <td> <u>Texto Sublinhado</u> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;ins&gt;...&lt;/ins&gt;</code></td>
-                <td>Deixa Sublinhado</td>
-                <td>Semântico</td>
-                <td> <ins>Texto com ins</ins> </td>
-            </tr> 
-            <tr>
-                <td><code>&lt;code&gt;...&lt;/code&gt;</code></td>
-                <td>Deixa o texto com visual de código mono-espaçado</td>
-                <td> <hr> </td>
-                <td> <code>Texto com code</code> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;del&gt;...&lt;/del&gt;</code></td>
-                <td>Risca o Texto</td>
-                <td> <hr> </td>
-                <td> <del>Texto riscado</del></td>
-            </tr>
-            <tr>
-                <td><code>&lt;mark&gt;...&lt;/mark&gt;</code></td>
-                <td>Marca o texto com Marca-Texto</td>
-                <td> <hr> </td>
-                <td> <mark>Texto marcado</mark></td>
-            </tr>
-            <tr>
-                <td><code>&lt;adress&gt;...&lt;/adress&gt;</code></td>
-                <td>Criar endereço em itálico</td>
-                <td> <hr> </td>
-                <td> <address>Texto com Address</address> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;sup&gt;...&lt;/sup&gt;</code></td>
-                <td>Deixa o texto elevado</td>
-                <td> <hr> </td>
-                <td>2<sup>10</sup></td>
-            </tr>
-            <tr>
-                <td><code>&lt;sub&gt;...&lt;/sub&gt;</code></td>
-                <td>Deixa o texto abaixo</td>
-                <td> <hr> </td>
-                <td>H<sub>2</sub>0</td>
-            </tr>
-            <tr>
-                <td><code>&lt;q&gt;...&lt;/q&gt;</code></td>
-                <td>Texto citação</td>
-                <td> <hr> </td>
-                <td><q>Texto citação</q></td>
-            </tr>
-            <tr>
-                <td><code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code></td>
-                <td>Citação feita em um bloco</td>
-                <td> <hr> </td>
-                <td> <blockquote>Citação em bloco</blockquote> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;bdo&gt;...&lt;/bdo&gt;</code></td>
-                <td>Inverte o Texto</td>
-                <td> Atributos: <code>dir="ltr" ou dir="rtl"</code></td>
-                <td> <bdo dir="rtl">Texto Invertido</bdo> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;pre&gt;...&lt;/pre&gt;</code></td>
-                <td>Considera todos os espaços e quebras de linha da TAG</td>
-                <td> <hr> </td>
-                <td> <pre>Texto com pre</pre> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;small&gt;...&lt;/small&gt;</code></td>
-                <td>Deixa o texto menor</td>
-                <td> <hr> </td>
-                <td> <small>Texto small</small> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;ol&gt;...&lt;/ol&gt;</code></td>
-                <td>Cria Lista Ordenada</td>
-                <td>Atributos: <code>type=" "</code></td>
-                <td> <ol>Lista Ordenada</ol> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;ul&gt;...&lt;/ul&gt;</code></td>
-                <td>Cria Lista Desordenada</td>
-                <td> <hr> </td>
-                <td> <ul>Lista Desordenada</ul></td>
-            </tr>
-            <tr>
-                <td><code>&lt;li&gt;...&lt;/li&gt;</code></td>
-                <td>Cria Item da Lista</td>
-                <td> Fechamento opcional </td>
-                <td> <ol>Lista:<li>Item</li></ol></td>
-            </tr>
-            <tr>
-                <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
-                <td>Cria Tabela</td>
-                <td> <hr> </td>
-                <td> <hr> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;tr&gt;...&lt;/tr&gt;</code></td>
-                <td>Cria Linha da Tabela</td>
-                <td>Table Row</td>
-                <td> <hr> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;th&gt;...&lt;/th&gt;</code></td>
-                <td>Cria Cabeçalho da Tabela</td>
-                <td>Table Header</td>
-                <td> <hr> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;td&gt;...&lt;/td&gt;</code></td>
-                <td>Cria Célula da Tabela</td>
-                <td>Table Data</td>
-                <td> <hr> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;df&gt;...&lt;/df&gt;</code></td>
-                <td>Lista de Definições</td>
-                <td>Definition List</td>
-                <td> <df>Lista de Definições</df></td>
-            </tr>
-            <tr>
-                <td><code>&lt;dt&gt;...&lt;/dt&gt;</code></td>
-                <td>Termo da Lista</td>
-                <td>Dentro do <code>&lt;df&gt;</code></td>
-                <td> <df>Lista de Definições <dt>Termo</dt></df> </td>
-            </tr>
-            <tr>
-                <td><code>&lt;dd&gt;...&lt;/dd&gt;</code></td>
-                <td>Descrição do Termo</td>
-                <td>Dentro do <code>&lt;dt&gt;</code></td>
-                <td> <df>Lista de Definições <dt>Termo <dd>Definição do Termo</dd></dt></df></td>
-            </tr>
-        </table>
+        <div id="table">
+            <table>
+                <tr>
+                    <th>TAG</th>
+                    <th>Função</th>
+                    <th>Observação</th>
+                    <th>Exemplo:</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;hr&gt;</code></td>
+                    <td>Cria uma linha que cobre toda a tela</td>
+                    <td> <hr> </td>
+                    <td> <hr> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;b&gt;...&lt;/b&gt;</code></td>
+                    <td>Deixa em Negrito</td>
+                    <td>Não Semântico</td>
+                    <td> <b>Texto em Negrito</b> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;strong&gt;...&lt;/strong&gt;</code></td>
+                    <td>Deixa em Negrito</td>
+                    <td>Semântico</td>
+                    <td> <strong>Texto com Strong</strong> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;i&gt;...&lt;/i&gt;</code></td>
+                    <td>Deixa em Itálico</td>
+                    <td>Não Semântico</td>
+                    <td> <i>Texto em Itálico</i> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;em&gt;...&lt;/em&gt;</code></td>
+                    <td>Deixa em Itálico</td>
+                    <td>Semântico</td>
+                    <td> <em>Texto com em</em> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;u&gt;...&lt;/u&gt;</code></td>
+                    <td>Deixa Sublinhado</td>
+                    <td>Não Semântico</td>
+                    <td> <u>Texto Sublinhado</u> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ins&gt;...&lt;/ins&gt;</code></td>
+                    <td>Deixa Sublinhado</td>
+                    <td>Semântico</td>
+                    <td> <ins>Texto com ins</ins> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;code&gt;...&lt;/code&gt;</code></td>
+                    <td>Deixa o texto com visual de código mono-espaçado</td>
+                    <td> <hr> </td>
+                    <td> <code>Texto com code</code> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;del&gt;...&lt;/del&gt;</code></td>
+                    <td>Risca o Texto</td>
+                    <td> <hr> </td>
+                    <td> <del>Texto riscado</del></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;mark&gt;...&lt;/mark&gt;</code></td>
+                    <td>Marca o texto com Marca-Texto</td>
+                    <td> <hr> </td>
+                    <td> <mark>Texto marcado</mark></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;adress&gt;...&lt;/adress&gt;</code></td>
+                    <td>Criar endereço em itálico</td>
+                    <td> <hr> </td>
+                    <td> <address>Texto com Address</address> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;sup&gt;...&lt;/sup&gt;</code></td>
+                    <td>Deixa o texto elevado</td>
+                    <td> <hr> </td>
+                    <td>2<sup>10</sup></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;sub&gt;...&lt;/sub&gt;</code></td>
+                    <td>Deixa o texto abaixo</td>
+                    <td> <hr> </td>
+                    <td>H<sub>2</sub>0</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;q&gt;...&lt;/q&gt;</code></td>
+                    <td>Texto citação</td>
+                    <td> <hr> </td>
+                    <td><q>Texto citação</q></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code></td>
+                    <td>Citação feita em um bloco</td>
+                    <td> <hr> </td>
+                    <td> <blockquote>Citação em bloco</blockquote> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;bdo&gt;...&lt;/bdo&gt;</code></td>
+                    <td>Inverte o Texto</td>
+                    <td> Atributos: <code>dir="ltr" ou dir="rtl"</code></td>
+                    <td> <bdo dir="rtl">Texto Invertido</bdo> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;pre&gt;...&lt;/pre&gt;</code></td>
+                    <td>Considera todos os espaços e quebras de linha da TAG</td>
+                    <td> <hr> </td>
+                    <td> <pre>Texto com pre</pre> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;small&gt;...&lt;/small&gt;</code></td>
+                    <td>Deixa o texto menor</td>
+                    <td> <hr> </td>
+                    <td> <small>Texto small</small> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ol&gt;...&lt;/ol&gt;</code></td>
+                    <td>Cria Lista Ordenada</td>
+                    <td>Atributos: <code>type=" "</code></td>
+                    <td> <ol>Lista Ordenada</ol> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ul&gt;...&lt;/ul&gt;</code></td>
+                    <td>Cria Lista Desordenada</td>
+                    <td> <hr> </td>
+                    <td> <ul>Lista Desordenada</ul></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;li&gt;...&lt;/li&gt;</code></td>
+                    <td>Cria Item da Lista</td>
+                    <td> Fechamento opcional </td>
+                    <td> <ol>Lista:<li>Item</li></ol></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+                    <td>Cria Tabela</td>
+                    <td> <hr> </td>
+                    <td> <hr> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;tr&gt;...&lt;/tr&gt;</code></td>
+                    <td>Cria Linha da Tabela</td>
+                    <td>Table Row</td>
+                    <td> <hr> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;th&gt;...&lt;/th&gt;</code></td>
+                    <td>Cria Cabeçalho da Tabela</td>
+                    <td>Table Header</td>
+                    <td> <hr> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;td&gt;...&lt;/td&gt;</code></td>
+                    <td>Cria Célula da Tabela</td>
+                    <td>Table Data</td>
+                    <td> <hr> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;df&gt;...&lt;/df&gt;</code></td>
+                    <td>Lista de Definições</td>
+                    <td>Definition List</td>
+                    <td> <df>Lista de Definições</df></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;dt&gt;...&lt;/dt&gt;</code></td>
+                    <td>Termo da Lista</td>
+                    <td>Dentro do <code>&lt;df&gt;</code></td>
+                    <td> <df>Lista de Definições <dt>Termo</dt></df> </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;dd&gt;...&lt;/dd&gt;</code></td>
+                    <td>Descrição do Termo</td>
+                    <td>Dentro do <code>&lt;dt&gt;</code></td>
+                    <td> <df>Lista de Definições <dt>Termo <dd>Definição do Termo</dd></dt></df></td>
+                </tr>
+            </table>
+        </div>
     </main>
     <footer>
         <p>&copy;LucasTombely</p>
-        <img class="footerImg"src="../img/HTML5-logo.png" alt="Logo HTML5">
-        <img class="footerImg" src="../img/CSS3-logo.png" alt="Logo CSS3">
-        <img class="footerImg" src="../img/javascript-logo.png" alt="Logo javaScript">
-        <img class="footerImg" src="../img/Instagram-Logo.png" alt="Logo Instragram">
-        <img class="footerImg" src="../img/facebook-logo.png" alt="Logo Facebook">
     </footer>
 </body>
 </html>

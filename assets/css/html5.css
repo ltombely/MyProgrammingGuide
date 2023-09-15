@@ -1,0 +1,28 @@
+@import url('style.css');
+
+/*TABLE*/
+
+body > main > div{
+    overflow-x: auto;
+}
+
+body > main > div > table > th, td{
+    border: 0.1rem solid black;
+    padding:0.5rem;
+}
+
+td{
+    text-align: center;
+}
+
+/*SECTION*/
+
+body > main > section > span{
+    padding: 2rem;
+}
+
+/*GENERAL*/
+code{
+    background-color: #363636;
+
+}

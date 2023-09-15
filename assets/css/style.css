@@ -33,6 +33,7 @@ img#logoHeader{
     left:25px;
     top: 25px;
 }
+<<<<<<< Updated upstream
 h1{
     position:absolute;
     left: 100px;
@@ -44,6 +45,23 @@ img#imgPerfil{
 }
 code{
     background-color: rgb(25, 25, 25);
+=======
+
+
+/*MAIN*/
+
+body > main{
+    margin: 1.5rem;
+}
+/*FOOTER*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    bottom: 0;
+>>>>>>> Stashed changes
     width:100%;
     
 }

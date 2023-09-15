@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Olá, este é meu site teste">
+    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/javascript.css">
+    <title>Guia de Programação - HTML5</title>
+</head>
+<body>
+    <header>
+        <img src="../img/favicon.png" alt="Logo do site">
+        <h1>Programmer Guide - JavaScript</h1>
+    </header>
+    <nav>
+        <a href="../index.html"><span>Página Inicial</span></a>
+        <span>></span>
+        <a href="#"><span>JavaScript</span></a>
+    </nav>
+    <main> 
+        <section>
+            <h2>Biliotecas JavaScript:</h2>
+            <ul>
+                <li>JQuery</li>
+                <li>Angular (Criado pelo Google)</li>
+                <li>React (Criado pelo Facebook)</li>
+                <li>vue (Angular melhorado)</li>
+                <li>Electron</li>
+                <li>Ionic</li>
+                <li>Cordova</li>
+            </ul>
+            <h3>Bibliotecas para Jogos JavaScript:</h3>
+            <ul>
+                <li>Phaser</li>
+                <li>PixiJS</li>
+                <li>ImpactJS</li>
+                <li>melon.js</li>
+                <li>CraftyJs</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Tipos Primitivos JavaScript</h2>
+
+            <ul>
+                <li>Number</li>
+                <li>String</li>
+                <li>Boolean</li>
+                <li>Undefined</li>
+                <li>Null</li>
+                <li>Symbol</li>
+                <li>BigInt</li>
+            </ul>
+        </section>
+
+        <section>
+
+            <h2>COMANDOS JavaScript:</h2>
+            <table>
+                <tr>
+                    <th>COMANDO</th>
+                    <th>Função</th>
+                    <th>Característica</th>
+                </tr>
+                <tr>
+                    <td><code>window.alert('<sub>mensagem</sub>');</code></td>
+                    <td>Cria caixa de alerta</td>
+                    <td>Mensagem vai entre as aspas</td>
+                </tr>
+                <tr>
+                    <td><code>window.confirm('<sub>mensagem</sub>')</code></td>
+                    <td>Cria caixa de confirmação</td>
+                    <td>Para armazenar a reposta, usa-se uma variável - let res = confirm('');</td>
+                </tr>
+                <tr>
+                    <td>window.prompt('<sub>mensagem</sub>')</td>
+                    <td>Cria caixa prompt de inserção de texto</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>typeof <sub>primitivo</sub></td>
+                    <td>Exibe o tipo primitivo do dado</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>parseInt(<sub>converter</sub>)</td>
+                    <td>Converte o número do parâmetro em Inteiro</td>
+                    <td>let num = '5'<br> let numInteiro = parseInt(num)</td>
+                </tr>
+                <tr>
+                    <td>parseFloat(<sub>converter</sub>)</td>
+                    <td>Converte para Float (decimal)</td>
+                    <td>let num = 5; <br> let numFloat = parseFloat(num)</td>
+                </tr>
+                <tr>
+                    <td>Number(<sub>converter</sub>)</td>
+                    <td>Converte para número</td>
+                    <td>let num = '42' <br> let numero = Number(num)</td>
+                </tr>
+                <tr>
+                    <td>String(<sub>converter</sub>)</td>
+                    <td>Converte em String</td>
+                    <td>let num = 51 <br> let numString = String(num)</td>
+                </tr>
+                <tr>
+                    <td>toString()</td>
+                    <td>Converte em String</td>
+                    <td>let num = 14 <br> let str = num.toString()</td>
+                </tr>
+                <tr>
+                    <td>Boolean(<sub>converter</sub>)</td>
+                    <td>Converte em Booleano</td>
+                    <td>Todo valor que não seja 0, NaN, Null, Undefined, false ou string vazia retorna true. let boolValue = Boolean(41)</td>
+                </tr>
+                <tr>
+                    <td>JSON.parse(<sub>converter</sub>)</td>
+                    <td>Converte String JSON em um objeto JavaScript</td>
+                    <td>let jsonString = '{"nome": "João", "idade": "30"}'<br> let obj = JSON.parse(jsonString)</td>
+                </tr>
+                <tr>
+                    <td>JSON.stringify(<sub>converter</sub>)</td>
+                    <td>Converte objeto JavaScript em JSON</td>
+                    <td>let obj = {nome: 'Maria', idade: 25} <br> let jsonString = JSON.strigify(obj)</td>
+                </tr>
+                <tr>
+                    <td><sub>var</sub>.toUpperCase()</td>
+                    <td>Transforma todas as letras em maiúsculas</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>var</sub>.toLowerCase()</td>
+                    <td>Transforma todas as letras em minúsculas</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>var</sub>.length</td>
+                    <td>Mostra número de caracteres</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td>.toFixed(<sub>x</sub>)</td>
+                    <td><sub>var</sub>X define o número de casas decimais</td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td><sub>var</sub>.replace('<sub>x</sub>','<sub>y</sub>')</td>
+                    <td>Troca todos os X da variável por Y</td>
+                    <td>Somente usado em Strings. <br> let n = '53.40' <br> let nform = n.replace('.',',')</td>
+                </tr>
+            </table>
+        </section>
+
+        ! COMANDO PARA DINHEIRO: n.toLocaleString('pt-BR',{style:'currency', currency:'BRL'})
+
+        <section>
+            <h2>Operador Ternário</h2>
+            <h3>Forma:</h3>
+            <span>teste?true:false</span>
+            <span>Exemplo:</span>
+            <pre>
+    let media = 5.9
+    media >= 6? console.log('aprovado'):console.log('reprovado')
+            </pre>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy;LucasTombely</p>
+    </footer>
+</body>
+</html>

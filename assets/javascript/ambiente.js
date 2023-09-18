@@ -1,5 +1,1 @@
-let str = 'testes'
-
-str = str.repeat(5)
-
-console.log(str)
+console.log(window.prompt('Olá'))

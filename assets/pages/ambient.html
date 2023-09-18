@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button.subscribe-button{
+            padding: 1rem;
+            font-size:20pt;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color:white;
+            background-color: red;
+            border-radius: 2.5rem;
+        }
+
+        .button{
+            padding: 1rem;
+            font-size:20pt;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color:white;
+            background-color: green;
+            border-radius: 1rem;
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <button class="subscribe-button"">Subscribe!</button>
+    
+
+    <h1>Cara - Coroa</h1>
+
+    <button class="button" id="cara" onclick="play('cara')">CARA</button>
+    <button class="button" id="coroa" onclick="play('coroa')">COROA</button>
+    <p></p>
+
+    <script>
+        let subscribeButtonElement = document.querySelector('.subscribe-button')
+        subscribeButtonElement.addEventListener('click', subscribed)
+        function subscribed(){
+            if(subscribeButtonElement.innerText == 'Subscribe!'){
+                subscribeButtonElement.style.background = 'gray'
+                subscribeButtonElement.innerText = 'Subscribed!'
+            }else{
+                subscribeButtonElement.style.background = 'red'
+                subscribeButtonElement.innerText = 'Subscribe!'
+            }
+        }
+
+        //---------------------------------------------------------------
+
+        let caraButtonElement = document.querySelector('#cara')
+        let coroaButtonElement = document.querySelector('#coroa')
+        let p = document.querySelector('p')
+        
+        let score = localStorage.getItem('score')
+        JSON.parse(score)
+
+        if(!score){
+            score = {
+                clicks: 0,
+                wins: 0,
+                losses: 0
+            }
+        }else{
+        
+        p.innerText = `Played times : ${score.clicks}
+                Wins: ${score.wins} 
+                Losses: ${score.losses}` 
+
+
+        function play(parameter){
+
+            let result = Math.random()
+
+            if(parameter == 'cara' && result <= 0.5){
+                score.wins++
+                score.clicks++
+                p.innerText = `Played times : ${clicks}
+                Wins: ${score.wins} 
+                Losses: ${score.losses}` 
+
+            }else{
+                score.losses++
+                score.clicks++
+                p.innerText = `Played times : ${clicks}
+                Wins: ${score.wins} 
+                Losses: ${score.losses}` 
+            }
+
+            localStorage.setItem('score', JSON.stringify(score))
+        }
+    }
+
+
+    </script>
+</body>
+</html>

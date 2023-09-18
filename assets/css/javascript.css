@@ -38,7 +38,7 @@ h4{
 h5{
     margin-top: 0.4rem;
 }
-pre{
+pre, code, td:nth-child(1){
     color:yellow;
 }
 div#JSON-JS-imgs{
@@ -46,4 +46,11 @@ div#JSON-JS-imgs{
 }
 div#JSON-JS-imgs > div{
     padding: 1rem;
+}
+
+div#event-listener-table{
+    display:flex;
+}
+div#event-listener-table > table{
+    margin:0.5rem;
 }

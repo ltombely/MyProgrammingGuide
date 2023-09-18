@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="robots" content="index, follow"/>
-    <meta name="description" content="Olá, este é meu site teste"/>
-    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end"/>
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="../css/javascript.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Olá, este é meu site teste" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, programação, programar, programas, web, front-end"
+    />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/javascript.css" />
     <title>Guia de Programação - JavaScript</title>
   </head>
   <body>
@@ -21,24 +24,23 @@
       <a href="#"><span>JavaScript</span></a>
     </nav>
     <main>
-        <section id="pageIndex">
-            <h2>Page Index</h2>
-            <h5><a href="#libraries">Bibliotecas JavaScript</a></h5>
-            <h5><a href="#primitiveTypes">Tipos Primitivos</a></h5>
-            <h5><a href="#jsCommandTable">Tabela de Comandos JavaScript</a></h5>
-            <h5><a href="#ternaryOperator">Operadores Ternários</a></h5>
-            <h5><a href="#DOM">DOM - Document Object Model</a></h5>
-            <h5><a href="#conditions">Condições JavaScript</a></h5>
-            <h5><a href="#dates">Datas</a></h5>
-            <h5><a href="#loops">Repetições</a></h5>
-            <h5><a href="#arrays">Array / Variáveis Compostas / Vetores</a></h5>
-            <h5><a href="#functions">Operadores Ternarios</a></h5>
-            <h5><a href="#objects">Objetos JavaScript e JSON</a></h5>
-            <h5><a href="#usefulCommands">Comandos Úteis</a></h5>
-            <h5><a href="#nextSteps">Próximos Passos</a></h5>
-
-        </section>
-        <section id="libraries">
+      <section id="pageIndex">
+        <h2>Page Index</h2>
+        <h5><a href="#libraries">Bibliotecas JavaScript</a></h5>
+        <h5><a href="#primitiveTypes">Tipos Primitivos</a></h5>
+        <h5><a href="#jsCommandTable">Tabela de Comandos JavaScript</a></h5>
+        <h5><a href="#ternaryOperator">Operadores Ternários</a></h5>
+        <h5><a href="#DOM">DOM - Document Object Model</a></h5>
+        <h5><a href="#conditions">Condições JavaScript</a></h5>
+        <h5><a href="#dates">Datas</a></h5>
+        <h5><a href="#loops">Repetições</a></h5>
+        <h5><a href="#arrays">Array / Variáveis Compostas / Vetores</a></h5>
+        <h5><a href="#functions">Operadores Ternarios</a></h5>
+        <h5><a href="#objects">Objetos JavaScript e JSON</a></h5>
+        <h5><a href="#usefulCommands">Comandos Úteis</a></h5>
+        <h5><a href="#nextSteps">Próximos Passos</a></h5>
+      </section>
+      <section id="libraries">
         <h2>Biliotecas JavaScript:</h2>
         <ul>
           <li>JQuery</li>
@@ -57,8 +59,8 @@
           <li>melon.js</li>
           <li>CraftyJs</li>
         </ul>
-        </section>
-        <section id="primitiveTypes">
+      </section>
+      <section id="primitiveTypes">
         <h2>Tipos Primitivos JavaScript</h2>
 
         <ul>
@@ -70,8 +72,8 @@
           <li>Symbol</li>
           <li>BigInt</li>
         </ul>
-        </section>
-        <section id="jsCommandTable">
+      </section>
+      <section id="jsCommandTable">
         <h2>COMANDOS JavaScript:</h2>
         <table>
           <tr>
@@ -201,122 +203,291 @@
             <td>hr</td>
           </tr>
           <tr>
-            <td>getELemetsByTagName('<sub>nome_tag</sub>')[<sub>i</sub>]</td>
-            <td>Seleciona o elemento com determinada tag que tenha índice i</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>getElementsByName('<sub>nome</sub>')[<sub>i</sub>]</td>
-            <td>Seleciona elemento pelo nome</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>getElementsByClass('<sub>class_name</sub>')[<sub>i</sub>]</td>
-            <td>Seleciona elemento por classe</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>getElementById('<sub>id</sub>')</td>
-            <td>Seleciona um elemento pelo id</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>querySelector('<sub>id ou class</sub>')</td>
-            <td>Seleciona elemento por id ou classe</td>
-            <td>
-              Se for id, usa-se # antes do nome, se for class . antes de nome
-            </td>
-          </tr>
-          <tr>
-            <td>querySelector('[name = "<sub>nome</sub>"]')</td>
-            <td>Seleciona elemento por nome</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>querySelectorAll('')</td>
-            <td>Seleciona todos os elementos correspondentes</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>addEventListener('<sub>evento</sub>', <sub>função</sub>)</td>
-            <td>Adiciona um event listener</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
             <td><sub>checkbox</sub>.checked</td>
-            <td>
-              .checked conferete se um input radio ou input checkbox está
-              marcado, retornando true caso esteja.
-            </td>
-            <td><hr /></td>
+                <td>
+                  .checked conferete se um input radio ou input checkbox está
+                  marcado, retornando true caso esteja.
+                </td>
+                <td><hr /></td>
           </tr>
-          <tr>
-            <td>document.createElement('<sub>nome_da_tag')</sub></td>
-            <td>Cria um elemento HTML através do JavaScript</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>
-              <sub>elemento</sub>.setAttribute('<sub>atributo</sub>',
-              '<sub>valor</sub>')
-            </td>
-            <td>
-              Adiciona um atributo a um elemento HTML através do JavaScript
-            </td>
-            <td>Atributos: id, class, src, href, data,</td>
-          </tr>
-          <tr>
-            <td>
-              <sub>elementoPai</sub>.appendChild(<sub>elementoCriado</sub>)
-            </td>
-            <td>Inserir elemento html criado por JavaScript no DOM</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td>
-              <sub>elementoPai</sub>.insertBefore(<sub>elementoCriado</sub>,
-              <sub>antesDeQual</sub>)
-            </td>
-            <td>Insere um elemento antes de outro</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td><sub>elemento</sub>.innerText = '<sub>texto</sub>'</td>
-            <td>Insere texto dentro de um elemento</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td><sub>elemento</sub>.textContent = '<sub>texto</sub>'</td>
-            <td>Insere texto dentro de um elemento</td>
-            <td><hr /></td>
-          </tr>
-          <tr>
-            <td><sub>elemento</sub>.HTML = '<sub>HTML text</sub>'</td>
-            <td>Insere HTML dentro de elemento</td>
-            <td><hr /></td>
-          </tr>
+          
         </table>
-        </section>
-        <section id="ternaryOperator">
-        <h2>Operador Ternário</h2>
-        <h3>Forma:</h3>
-        <span>teste?true:false</span>
-        <span>Exemplo:</span>
-        <pre>
-    let media = 5.9
-    media >= 6? console.log('aprovado'):console.log('reprovado')
-            </pre
-        >
-        </section>
-        <section id="DOM">
+      </section>
+      <section id="DOM">
         <h2>DOM - Document Object Model</h2>
+        <h3>O que é</h3>
+
+        <p>DOM é um Built-in Object que faz com que possamos selecionar, adicionar, alterar e remover elementos HTML através do JavaScript</p>
+        <p>DOM -> Document Object Model -> Modelo de Objeto de Documento. É o modelo ao qual o documento foi construído.</p>
+        <p>A maioria dos comandos DOM começa com a palavra document.</p>
+
+        <h3>Árvore DOM</h3>
         <img src="../img/dom.jpg" alt="Foto Imagem DOM" /><br />
         <span>Fonte: Curso em Video JavaScript - Gustavo Guanabara</span>
 
         <p>Dentro de window.document existem inúmeras funções, ex:</p>
         <span>window.document.URL -> retorna URL do site</span>
-        </section>
-        <section id="conditions">
+        <h3>Comandos DOM</h3>
+        <table>
+            <tr>
+                <th>COMANDO</th>
+                <th>Função</th>
+                <th>Característica</th>
+            </tr>
+            <tr>
+                <td>document.getELemetsByTagName('<sub>nome_tag</sub>')[<sub>i</sub>]</td>
+                <td>Seleciona o elemento com determinada tag que tenha índice i</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>document.getElementsByName('<sub>nome</sub>')[<sub>i</sub>]</td>
+                <td>Seleciona elemento pelo nome</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>document.getElementsByClass('<sub>class_name</sub>')[<sub>i</sub>]</td>
+                <td>Seleciona elemento por classe</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>document.getElementById('<sub>id</sub>')</td>
+                <td>Seleciona um elemento pelo id</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>document.querySelector('<sub>id ou class</sub>')</td>
+                <td>Seleciona elemento por id ou classe</td>
+                <td>
+                  Se for id, usa-se # antes do nome, se for class . antes de nome
+                </td>
+              </tr>
+              <tr>
+                <td>document.querySelector('[name = "<sub>nome</sub>"]')</td>
+                <td>Seleciona elemento por nome</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>document.querySelectorAll('')</td>
+                <td>Seleciona todos os elementos correspondentes</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>document.addEventListener('<sub>evento</sub>', <sub>função</sub>)</td>
+                <td>Adiciona um event listener</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                
+              </tr>
+              <tr>
+                <td>document.createElement('<sub>nome_da_tag')</sub></td>
+                <td>Cria um elemento HTML através do JavaScript</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>
+                  <sub>elemento</sub>.setAttribute('<sub>atributo</sub>',
+                  '<sub>valor</sub>')
+                </td>
+                <td>
+                  Adiciona um atributo a um elemento HTML através do JavaScript
+                </td>
+                <td>Atributos: id, class, src, href, data,</td>
+              </tr>
+              <tr>
+                <td>
+                  <sub>elementoPai</sub>.appendChild(<sub>elementoCriado</sub>)
+                </td>
+                <td>Inserir elemento html criado por JavaScript no DOM</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td>
+                  <sub>elementoPai</sub>.insertBefore(<sub>elementoCriado</sub>,
+                  <sub>antesDeQual</sub>)
+                </td>
+                <td>Insere um elemento antes de outro</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td><sub>elemento</sub>.innerText = '<sub>texto</sub>'</td>
+                <td>Insere texto dentro de um elemento</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td><sub>elemento</sub>.textContent = '<sub>texto</sub>'</td>
+                <td>Insere texto dentro de um elemento</td>
+                <td><hr /></td>
+              </tr>
+              <tr>
+                <td><sub>elemento</sub>.HTML = '<sub>HTML text</sub>'</td>
+                <td>Insere HTML dentro de elemento</td>
+                <td>Podemos criar tags dentro do html à vontade</td>
+              </tr>
+              <tr>
+                <td>document.title = '___' </td>
+                <td>Muda o nome do docuento para o valor entre aspas</td>
+                <td><hr></td>
+              </tr>
+        </table>
+
+        <h3>Event Listeners Mais Usados:</h3>
+        <div id="event-listener-table">
+            <table>
+                <tr>
+                    <th>Evento</th>
+                    <th>Função</th>
+                </tr>
+                <tr>
+                    <td>onclick</td>
+                    <td>Ao clicar</td>
+                </tr>
+                <tr>
+                    <td>onmouseenter</td>
+                    <td>Ao mouse entrar</td>
+                </tr>
+                <tr>
+                    <td>onmouseleave</td>
+                    <td>Ao mouse sair</td>
+                </tr>
+                <tr>
+                    <td>onmousedown</td>
+                    <td>Quando o botão do mouse estiver clicado</td>
+                </tr>
+                <tr>
+                    <td>onmouseup</td>
+                    <td>Quando o botão do mouse levantar</td>
+                </tr>
+                <tr>
+                    <td>onmousemove</td>
+                    <td>Quando o mouse se move pelo elemento</td>
+                </tr>
+                <tr>
+                    <td>onkeydown</td>
+                    <td>Quando as telcas do tecla estiverem baixadas</td>
+                </tr>
+                <tr>
+                    <td>onkeyup</td>
+                    <td>Quando as teclas do teclado levantarem</td>
+                </tr>
+                <tr>
+                    <td>onscroll</td>
+                    <td>Ao rolar a tela para baixo</td>
+                </tr>
+                <tr>
+                    <td>onload</td>
+                    <td>Ao carregar o elemento da página</td>
+                </tr>
+                <tr>
+                    <td>onunload</td>
+                    <td>Ao descarregar elemento da página.<br>
+                    (Normalmente quando fechamos a página)</td>
+                </tr>
+                <tr>
+                    <td>onbeforeunload</td>
+                    <td>Antes de descarregar a página</td>
+                </tr>
+                <tr>
+                    <td>onloadstart</td>
+                    <td>Ao começar a carregar</td>
+                </tr>
+                <tr>
+                    <td>onloadend</td>
+                    <td>Ao finalizar o carregamento</td>
+                </tr>
+                <tr>
+                    <td>onloadprogress</td>
+                    <td>durante o carregamento</td>
+                </tr>
+                <tr>
+                    <td>onerror</td>
+                    <td>Ao falhar o carregamento</td>
+                </tr>
+                <tr>
+                    <td>onsubmit</td>
+                    <td>Normalmente adicionado à formulários</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Evento</th>
+                    <th>Função</th>
+                </tr>
+                <tr>
+                    <td>onchange</td>
+                    <td>Ao mudar. Usado em Selects ou prompts</td>
+                </tr>
+                <tr>
+                    <td>onfocus</td>
+                    <td>Quando o elemento recebe um foco.<br> (O usuário navega até o elemento ou clica nele)</td>
+                </tr>
+                <tr>
+                    <td>onblur</td>
+                    <td>Quando um elemento perde o foco</td>
+                </tr>
+                <tr>
+                    <td>onresize</td>
+                    <td>Quando a janela do navegador é redimencionada</td>
+                </tr>
+                <tr>
+                    <td>oncontextmenu</td>
+                    <td>Quando o botão direito do mouse é clicado</td>
+                </tr>
+                <tr>
+                    <td>ondbclick</td>
+                    <td>Quando o elemento recebe dois cliques consecutivos</td>
+                </tr>
+                <tr>
+                    <td>onselect</td>
+                    <td>Quando o elemento é selecionado</td>
+                </tr>
+                <tr>
+                    <td>oninput</td>
+                    <td>Ao valor de uma entrada ser alterado</td>
+                </tr>
+                <tr>
+                    <td>ondrag</td>
+                    <td>Ao arrastar um elemento da página</td>
+                </tr>
+                <tr>
+                    <td>ondragstart</td>
+                    <td>Ao começar a arrastar um elemento de uma página</td>
+                </tr>
+                <tr>
+                    <td>ondragend</td>
+                    <td>Ao largar o elemento arrastado</td>
+                </tr>
+                <tr>
+                    <td>onhashchange</td>
+                    <td>Ao mudar o hash da URL<br> Usada ao navegar dentro de páginas do mesmo site</td>
+                </tr>
+
+                <tr>
+                    <td>ontouch</td>
+                    <td>Quando tocar na tela (touchscreen)</td>
+                </tr>
+                <tr>
+                    <td>ontouchstart</td>
+                    <td>Quando tocar na tela (touchscreen)</td>
+                </tr>
+                <tr>
+                    <td>ontouchend</td>
+                    <td>Quando remover o dedo do da tela (touchscreen)</td>
+                </tr>
+                <tr>
+                    <td>ontouchmove</td>
+                    <td>Quando o dedo for arrastado na tela (touchscreen)</td>
+                </tr>
+            </table>
+        </div>
+        <h3>Características</h3>
+        <p>Quando se pega um elemento HTMl com DOM, para o JavaScript ele é um objeto</p>
+        <p>Sempre que pegarmos um valor com DOM, este valor será uma String</p>
+        <p>Há diferença entre Event e Event Listener. Click é um evento, onclick é um Event Listener, porcausa do on na frente</p>
+      
+    
+    </section>
+      <section id="conditions">
         <h2>Condições</h2>
         <h3>Condição Simples:</h3>
         <p>A condição simples possui apenas um if, sem else. Ex:</p>
@@ -327,8 +498,7 @@
         document.write('Você foi multado')
     }
     document.write('Dirija sempre com cinto de segurança')
-            </pre
-        >
+        </pre>
         <h3>Condição Normal:</h3>
         <p>Para uma condição if else ou com else if Ex:</p>
         <pre>
@@ -342,8 +512,7 @@
     }else{
         document.write('Reprovado')
     }
-            </pre
-        >
+        </pre>
         <h3>Condição Múltipla, Switch Case:</h3>
         <p>Para muitas opções</p>
         <pre>
@@ -362,10 +531,19 @@
             console.log('valor4')
             break
     }
+        </pre>
+        <h3>Operador Ternário</h3>
+        <h4>Forma:</h4>
+        <code>teste ? iftrue : iffalse</code><br>
+        <span>ex:</span>
+        <pre>
+
+    let media = 5.9
+    media >= 6? console.log('aprovado'):console.log('reprovado')
             </pre
         >
-        </section>
-        <section id="dates">
+      </section>
+      <section id="dates">
         <h2>Datas</h2>
         <p>
           Existe uma função da biblioteca padrão JS que pega data e hora atuais,
@@ -375,51 +553,59 @@
 
     let dataAtual = new Date()
     console.log(dataAtual)
-            </pre>
+            </pre
+        >
         <h3>Ano</h3>
         <pre>
     let dataAtual = new Date()
     let ano = dataAtual.getFullYear()
     console.log(ano)
-            </pre>
+            </pre
+        >
         <h3>Mês</h3>
         <pre>
     let dataAtual = new Date()
     let mes = dataAtual.getMonth() +1 //Retorna de 0-11
     console.log(mes)
-            </pre>
+            </pre
+        >
         <h3>Dia do Mês</h3>
         <pre>
     let dataAtual = new Date()
     let diaMes = dataAtual.getDate()
     console.log(dia)
-            </pre>
+            </pre
+        >
         <h3>Dia da Semana</h3>
         <pre>
     let dataAtual = new Date()
     let diaSemana = dataAtual.getDay()
     console.log(diaSemana)
-            </pre>
+            </pre
+        >
         <h3>Hora</h3>
         <pre>
     let dataAtual = new Date()
     let hora = dataAtual.getHours()
     console.log(hora)
-            </pre>
+            </pre
+        >
         <h3>Minutos</h3>
         <pre>
     let dataAtual = new Date()
     let minutos = dataAtual.getMinutes()
     console.log(minutos)
-            </pre>
+            </pre
+        >
         <h3>Segundos</h3>
         <pre>
     let dataAtual = new Date()
     let segundos = dataAtual.getSeconds() + 1 //Retorna de 0-59
     console.log(segundos)
-            </pre>
-        </section>
-        <section id="loops">
+            </pre
+        >
+      </section>
+      <section id="loops">
         <h2>Repetições JavaScript</h2>
         <h3>WHILE</h3>
         <p>
@@ -439,7 +625,8 @@
         console.log(n)
         n--
     }
-            </pre>
+            </pre
+        >
 
         <h3>DO-WHILE</h3>
         <p>
@@ -457,7 +644,8 @@
     do{
         
     }
-            </pre>
+            </pre
+        >
 
         <h3>FOR</h3>
         <p>
@@ -476,18 +664,20 @@
         console.log(n)
     }
             </pre>
-        </section>
-        <section id="arrays">
+      </section>
+      <section id="arrays">
         <h2>ARRAYS / VARIÁVEIS COMPOSTAS / VETORES</h2>
         <h3>Formas de declarar:</h3>
         <h4>Abrindo e Fechando colchetes:</h4>
         <pre>
     let array = []
-            </pre>
+            </pre
+        >
         <h4>Com Array + parenteses</h4>
         <pre>
     let array = Array()
-            </pre>
+            </pre
+        >
         <p>
           Caso dentro dos parenteses seja passado um único valor numérico e
           inteiro, esse número indica a quantidade de elementos dentro do array.
@@ -681,15 +871,27 @@
             </td>
           </tr>
         </table>
-        </section>
-        <section id="functions">
+      </section>
+      <section id="functions">
         <h2>Funções</h2>
         <h3>Como Funcionam:</h3>
 
-        <p>É um bloco de código que é executado somente quando nós chamarmos a função.</p>
-        <p>Para definir uma função usa-se a palavra function, seguida do nome da função, abre-fecha parenteses, abre-fecha chaves function andar(){}.</p>
-        <p>O que está dentro dos parênteses se chama parâmetro, o que está dentro das chaves, bloco, é o que será executado quando a função for chamada.</p>
-        <p>Para chamar uma função, basta escrever o nome dela seguido de abre-fecha parenteses.</p>
+        <p>
+          É um bloco de código que é executado somente quando nós chamarmos a
+          função.
+        </p>
+        <p>
+          Para definir uma função usa-se a palavra function, seguida do nome da
+          função, abre-fecha parenteses, abre-fecha chaves function andar(){}.
+        </p>
+        <p>
+          O que está dentro dos parênteses se chama parâmetro, o que está dentro
+          das chaves, bloco, é o que será executado quando a função for chamada.
+        </p>
+        <p>
+          Para chamar uma função, basta escrever o nome dela seguido de
+          abre-fecha parenteses.
+        </p>
 
         <span>ex:</span>
         <pre>
@@ -697,14 +899,18 @@
         window.alert('andou')
     }
     andar()
-            </pre>
+            </pre
+        >
         <p>
           Qualquer variável criada dentro do escopo de uma função só existe
-          dentro dele. 
+          dentro dele.
         </p>
         <h3>return:</h3>
         <p>
-            Para tirar um valor de dentro de uma função usa-se return. Quando uma função é chamada, ela ecexuta o que tem dentro do bloco, e o valor de retorno o valor colocado no return. O comando return finaliza a função. Nada escrito após o return será lido.
+          Para tirar um valor de dentro de uma função usa-se return. Quando uma
+          função é chamada, ela ecexuta o que tem dentro do bloco, e o valor de
+          retorno o valor colocado no return. O comando return finaliza a
+          função. Nada escrito após o return será lido.
         </p>
         <pre>
 
@@ -717,7 +923,8 @@
         </pre>
         <h3>Parâmetro:</h3>
         <p>
-            O parâmetro é uma variável que é criada dentro da função e é passado no momento que se chama a função
+          O parâmetro é uma variável que é criada dentro da função e é passado
+          no momento que se chama a função
         </p>
         <span>ex:</span>
         <pre>
@@ -739,7 +946,11 @@
     console.log(multiplicar(3, 6)) | Resultado: 18
         </pre>
 
-        <p>Quando se coloca dentro dos parenteses que um parâmetro recebe algo, isso significa que caso o valor não seja definido, será considerado este passado dentro dos parâmetros</p>
+        <p>
+          Quando se coloca dentro dos parenteses que um parâmetro recebe algo,
+          isso significa que caso o valor não seja definido, será considerado
+          este passado dentro dos parâmetros
+        </p>
 
         <pre>
 
@@ -749,8 +960,8 @@
     }
     console.log(somar(4)) | Resultado: 4
         </pre>
-        </section>
-        <section id="objects">
+      </section>
+      <section id="objects">
         <h2>Objetos JavaScript e JSON</h2>
 
         <h3>Como Declarar:</h3>
@@ -765,7 +976,13 @@
     }
         </pre>
 
-        <p>Objetos possuem dentro de si propriedades e um Valor. Podemos chamar um objeto e os valores dos objetos com o comado 'nome_do_objet.nome_da_propriedade' ou 'nome_do_objeto['nome_da_propriedade']'. Uma propriedade com um valor é chamada de 'Propery-Value Pair'</p>
+        <p>
+          Objetos possuem dentro de si propriedades e um Valor. Podemos chamar
+          um objeto e os valores dos objetos com o comado
+          'nome_do_objet.nome_da_propriedade' ou
+          'nome_do_objeto['nome_da_propriedade']'. Uma propriedade com um valor
+          é chamada de 'Propery-Value Pair'
+        </p>
 
         <span>ex:</span>
         <pre>
@@ -782,13 +999,19 @@
     console.log(product.price) ou console.log(product['price']) | Resultado: 100
         </pre>
 
-        <p>Isso serve para não ocorrer conflitos em algumas propriedades que tenha o caractere menos no nome, para que o javascript entenda que não é uma subtração</p>
+        <p>
+          Isso serve para não ocorrer conflitos em algumas propriedades que
+          tenha o caractere menos no nome, para que o javascript entenda que não
+          é uma subtração
+        </p>
         <h3>Manipulação de Propriedades e Valores</h3>
 
         <h4>Adicionar e Remover uma Propriedade:</h4>
 
         <p>Basta nomeá-la que será inserida</p>
-        <p>Para deletar usa-se o comando delete antes e seleciona a propriedade</p>
+        <p>
+          Para deletar usa-se o comando delete antes e seleciona a propriedade
+        </p>
         <span>ex:</span>
 
         <pre>
@@ -804,10 +1027,10 @@
         </pre>
 
         <h4>Alterar um Valor:</h4>
-        
+
         <p>Podemos alterar um valor de uma propriedade assim:</p>
         <span>ex:</span>
-        
+
         <pre>
 
     let person = {
@@ -845,43 +1068,86 @@
     }       
     console.log(person.fun()) 
         </pre>
-        
+
         <p>Toda função dentro de um objeto é chamada Method, método</p>
 
         <h3>Built-in Objects</h3>
 
-        <p>O comando Console do JavaScript é um objeto. console.log é uma função salva dentro do objeto console.</p>
-        <p>Quando existem objetos que fazem parte da própria linguagem nativa, é chamado de Buil-in objects</p>
+        <p>
+          O comando Console do JavaScript é um objeto. console.log é uma função
+          salva dentro do objeto console.
+        </p>
+        <p>
+          Quando existem objetos que fazem parte da própria linguagem nativa, é
+          chamado de Buil-in objects
+        </p>
 
         <h3>JSON - JavaScript Object Notation</h3>
-        <p>JSON é uma syntax muito similar com objetos de javascript, porém com menos recursos</p>
+        <p>
+          JSON é uma syntax muito similar com objetos de javascript, porém com
+          menos recursos
+        </p>
         <span>ex:</span>
 
         <div id="JSON-JS-imgs">
-            <div>
-                <h4>Objeto JavaScript</h4>
-                <img src="../img/javascript_object.jpg" alt="Foto de um Objeto Javascript">
-                <span>Fonte: <a href="https://www.youtube.com/@SuperSimpleDev">SuperSimplesDev</a> - JavaScript Full Course</span>
-            </div>
-            <div>
-                <h4>JSON</h4>
-                <img src="../img/json.jpg" alt="Foto de um Objeto JSON">
-                <span>Fonte: <a href="https://www.youtube.com/@SuperSimpleDev">SuperSimplesDev</a> - JavaScript Full Course</span>
-            </div>
+          <div>
+            <h4>Objeto JavaScript</h4>
+            <img
+              src="../img/javascript_object.jpg"
+              alt="Foto de um Objeto Javascript"
+            />
+            <span
+              >Fonte:
+              <a href="https://www.youtube.com/@SuperSimpleDev"
+                >SuperSimplesDev</a
+              >
+              - JavaScript Full Course</span
+            >
+          </div>
+          <div>
+            <h4>JSON</h4>
+            <img src="../img/json.jpg" alt="Foto de um Objeto JSON" />
+            <span
+              >Fonte:
+              <a href="https://www.youtube.com/@SuperSimpleDev"
+                >SuperSimplesDev</a
+              >
+              - JavaScript Full Course</span
+            >
+          </div>
         </div>
 
         <h4>Características JSON</h4>
         <ul>
-            <li>Todas as propriedades e valores devem receber aspas duplas;</li>
-            <li>Não suporta funções;</li>
-            <li>Quase todas linguagens de programação conseguem entender JSON</li>
-            <li>Usa-se JSON para trocar dados entre computadores</li>
-            <li>JSON também é usado  para guardar dados</li>
-            <li>JSON é uma String</li>
+          <li>Todas as propriedades e valores devem receber aspas duplas;</li>
+          <li>Não suporta funções;</li>
+          <li>Quase todas linguagens de programação conseguem entender JSON</li>
+          <li>Usa-se JSON para trocar dados entre computadores</li>
+          <li>JSON também é usado para guardar dados</li>
+          <li>JSON é uma String</li>
         </ul>
         <h4>JavaScript Object &lt;---&gt; JSON</h4>
-        <p>Para converter um objeto JavaScript em JSON usa-se o comando: JSON.stringify(objeto_jacscript)</p>
-        <span>ex:</span>
+        
+        <h5>Comandos:</h5>
+        <table>
+            <tr>
+                <th>COMANDO</th>
+                <th>Função</th>
+                <th>Característica</th>
+            </tr>
+            <tr>
+                <td>JSON.stringify(objeto_javascript)</td>
+                <td>Converte Objeto JavaScript em String JSON</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td>JSON.parse(string_JSON)</td>
+                <td>Converte String JSON em Objeto JavaScript</td>
+                <td><hr></td>
+            </tr>
+        </table>
+
+        <span>Objeto JavaSCript para JSON:</span>
         <pre>
 
     let object = {
@@ -894,9 +1160,7 @@
 
     console.log(jsonString) | Resultado: {"name":"Lucas","age":21,"height":"178cm"}
         </pre>
-
-        <p>Para transformar um JSON em objeto JavaScript utiliza-se o comando: JSON.parse(<sub>JSON</sub>)</p>
-        <span>ex:</span>
+        <span>String JSON para Objeto Javascript:</span>
         <pre>
 
         {"name":"Lucas","age":21,"height":"178cm"} // name = jsonString
@@ -910,36 +1174,59 @@
 
         <h4>Como Fuciona:</h4>
 
-        <p>O Built-in object localStorage é usado para salvar dados permanentemente. Quando fechamos uma aba de um site, ele automaticamente zera todos os dados gerados no site. Quando salvamos estes dados no localStorage, mesmo após fechar e abrir a página os dados continuam.</p>
-        
+        <p>
+          O Built-in object localStorage é usado para salvar dados
+          permanentemente. Quando fechamos uma aba de um site, ele
+          automaticamente zera todos os dados gerados no site. Quando salvamos
+          estes dados no localStorage, mesmo após fechar e abrir a página os
+          dados continuam.
+        </p>
+
         <h4>Comandos</h4>
 
         <table>
-            <tr>
-                <th>COMANDO</th>
-                <th>Função</th>
-                <th>Característica</th>
-            </tr>
-            <tr>
-                <td>localStorage.setItem('par1', 'par2')</td>
-                <td>Salva um dado no localStorage</td>
-                <td>Os parâmetros suportam apenas Strings, então tem que se converter variáveis e objetos em String ao salvar. O primeiro é o nome do parâmetro, o segundo é o que ele vai armazenar</td>
-            </tr>
-            <tr>
-                <td>localStorage.getItem('par')</td>
-                <td>Retorna o valor salvo no localStorage. O nome do valor salvo tem que ser passado no parâmetro</td>
-                <td><hr></td>
-            </tr>
-            <tr>
-                <td>localStorage.removeItem('par')</td>
-                <td>Remove o item do local storage com nome passado no argumento</td>
-                <td><hr></td>
-            </tr>
+          <tr>
+            <th>COMANDO</th>
+            <th>Função</th>
+            <th>Característica</th>
+          </tr>
+          <tr>
+            <td>localStorage.setItem('par1', 'par2')</td>
+            <td>Salva um dado no localStorage</td>
+            <td>
+              Os parâmetros suportam apenas Strings, então tem que se converter
+              variáveis e objetos em String ao salvar. O primeiro é o nome do
+              parâmetro, o segundo é o que ele vai armazenar
+            </td>
+          </tr>
+          <tr>
+            <td>localStorage.getItem('par')</td>
+            <td>
+              Retorna o valor salvo no localStorage. O nome do valor salvo tem
+              que ser passado no parâmetro
+            </td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>localStorage.removeItem('par')</td>
+            <td>
+              Remove o item do local storage com nome passado no argumento
+            </td>
+            <td><hr /></td>
+          </tr>
         </table>
-        
+
         <h3>Características de Objetos</h3>
-        <p>Objetos são referências. Isso significa que o nome da variável não recebe os valores do objeto, ela é uma referência que guia até onde está o valor da variável. Isso significa que um objeto declarado com CONST pode ter seu valor alterado.</p>
-        <p>Podemos remover propriedades de um objeto e salvá-las em variáveis, por exemplo, isso se chama 'Destructuring':</p>
+        <p>
+          Objetos são referências. Isso significa que o nome da variável não
+          recebe os valores do objeto, ela é uma referência que guia até onde
+          está o valor da variável. Isso significa que um objeto declarado com
+          CONST pode ter seu valor alterado.
+        </p>
+        <p>
+          Podemos remover propriedades de um objeto e salvá-las em variáveis,
+          por exemplo, isso se chama 'Destructuring':
+        </p>
 
         <pre>
     
@@ -964,9 +1251,12 @@
     console.log(product)
     console.log(price)
         </pre>
-    
-        <p>Caso queiramos colocar uma variável externa em um objeto podemos fazer isso simplesmente passando o nome da variável como valor</p>
-        
+
+        <p>
+          Caso queiramos colocar uma variável externa em um objeto podemos fazer
+          isso simplesmente passando o nome da variável como valor
+        </p>
+
         <pre>
 
     let message = 'Good Job!'
@@ -974,7 +1264,10 @@
         message: message
     }
         </pre>
-        <span>Quando uma propriedade recebe um valor de mesmo nome podemos abreviar isso:</span>
+        <span
+          >Quando uma propriedade recebe um valor de mesmo nome podemos abreviar
+          isso:</span
+        >
         <pre>
 
     let message = 'Good Job!'
@@ -993,7 +1286,11 @@
     }
     object.myFunction()
         </pre>
-        <span>Para isso há um atalho. Não é necessário passar a propriedade, basta escrever o nome da função abre-fecha parenteses abre-fecha chaves</span>
+        <span
+          >Para isso há um atalho. Não é necessário passar a propriedade, basta
+          escrever o nome da função abre-fecha parenteses abre-fecha
+          chaves</span
+        >
         <pre>
 
     let object = {
@@ -1004,8 +1301,8 @@
     }
     object.myFunction()
         </pre>
-        </section>
-        <section id="usefulCommands">
+      </section>
+      <section id="usefulCommands">
         <h2>Comandos Úteis</h2>
         <h3>Formatar Dinheiro:</h3>
         <span>
@@ -1018,22 +1315,27 @@
     dinheiro = dinheiro.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
     console.log(dinheiro)
         </pre>
-        <p>Sempre que for fazer operações com cálculos com dinheiro, para que haja precisão deve-se calcular com o dinheiro convertido em centavos, e então depois passar novamente para o formato normal. Para passar de reias para centavos é só multiplicar por 100.</p>
-        </section>
-        <section id="nextSteps">
+        <p>
+          Sempre que for fazer operações com cálculos com dinheiro, para que
+          haja precisão deve-se calcular com o dinheiro convertido em centavos,
+          e então depois passar novamente para o formato normal. Para passar de
+          reias para centavos é só multiplicar por 100.
+        </p>
+      </section>
+      <section id="nextSteps">
         <h2>Próximos passos JavaScript</h2>
         <ul>
-            <li>Functions</li>
-            <li>Objects</li>
-            <li>Modularização</li>
-            <li>RegEx</li>
-            <li>JSON</li>
-            <li>AJAX</li>
-            <li>Typescript</li>
-            <li>Node.js</li>
-            <li>MongoDB</li>
+          <li>Functions</li>
+          <li>Objects</li>
+          <li>Modularização</li>
+          <li>RegEx</li>
+          <li>JSON</li>
+          <li>AJAX</li>
+          <li>Typescript</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
         </ul>
-        </section>
+      </section>
     </main>
     <footer>
       <p>&copy;LucasTombely</p>

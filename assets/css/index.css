@@ -58,7 +58,9 @@ body > main > section:nth-child(4) > a > article{
 body > main > section:nth-child(5) > a > article{
     background-image: url('../img/sql.jpg');
 }
-
+body > main > section:nth-child(6) > a > article{
+    background-image: url('../img/visual-studio.jpg');
+}
 
 body > main > section > a > article > header{
     background-color: #3b3b3bab;

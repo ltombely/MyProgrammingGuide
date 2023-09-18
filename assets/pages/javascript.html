@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="description" content="Olá, este é meu site teste" />
     <meta
-      name="keywords"
+       name="keywords"
       content="HTML, CSS, JS, programação, programar, programas, web, front-end"
     />
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
@@ -481,9 +481,11 @@
             </table>
         </div>
         <h3>Características</h3>
-        <p>Quando se pega um elemento HTMl com DOM, para o JavaScript ele é um objeto</p>
-        <p>Sempre que pegarmos um valor com DOM, este valor será uma String</p>
-        <p>Há diferença entre Event e Event Listener. Click é um evento, onclick é um Event Listener, porcausa do on na frente</p>
+        <p>Quando se pega um elemento HTMl com DOM, para o JavaScript ele é um objeto.</p>
+        <p>Sempre que pegarmos um valor com DOM, este valor será uma String.</p>
+        <p>Há diferença entre Event e Event Listener. Click é um evento, onclick é um Event Listener, porcausa do on na frente.</p>
+        <p>Os eventos são objetos.</p>
+        <p>Dentro de um evento existe um objeto chamado event, e ele possue várias informações sobre o evento.</p>
       
     
     </section>
@@ -663,7 +665,26 @@
     for(let n = 1; n &lt; 10; n++){
         console.log(n)
     }
-            </pre>
+        </pre>
+
+        <h3>FOR IN</h3>
+        <p>For in é um loop especial para arrays, que faz com que repita o loop de ac acordo à quantidade de elementos de um array.</p>
+        <span>Estrutura:</span>
+        <pre>
+
+    for (__ in __){
+
+    }
+        </pre>
+        <p>O primeiro parâmetro recebe a declaração de uma variável,  segundo recebe o nome do array.</p>
+        <span>ex:</span>
+        <pre>
+
+    let array = [1, 8, 3, 8]
+    for(i in array){
+        console.log(array[i])
+    }
+        </pre>
       </section>
       <section id="arrays">
         <h2>ARRAYS / VARIÁVEIS COMPOSTAS / VETORES</h2>
@@ -811,6 +832,7 @@
               Boolean
             </td>
             <td>
+                Quando escrevemos typeof array, ele retorna objeto, então para verificar se é um array usa-se essa função.<br>
               let array = [1, 2, 3]<br />
               console.log(Array.isArray(array))
             </td>
@@ -871,6 +893,21 @@
             </td>
           </tr>
         </table>
+
+        <h4>Padrão acumulador</h4>
+        <p>Para acumular valores com um array, é necessário armazenar o valor em uma variável e ir somando</p>
+
+        <pre>
+
+    let result = 0
+
+    let numbers = [1, 2, 3, 4]
+    for(i in array){
+        result += numbers[i]
+    }
+
+    console.log(result) | Resultado: 10
+        </pre>
       </section>
       <section id="functions">
         <h2>Funções</h2>
@@ -1342,3 +1379,4 @@
     </footer>
   </body>
 </html>
+ 

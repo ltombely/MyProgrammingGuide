@@ -1,270 +1,337 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Olá, este é meu site teste">
-    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/javascript.css">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="description" content="Olá, este é meu site teste"/>
+    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end"/>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/javascript.css"/>
     <title>Guia de Programação - JavaScript</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="../img/favicon.png" alt="Logo do site">
-        <h1>Programmer Guide - JavaScript</h1>
+      <img src="../img/favicon.png" alt="Logo do site" />
+      <h1>Programmer Guide - JavaScript</h1>
     </header>
     <nav>
-        <a href="../index.html"><span>Página Inicial</span></a>
-        <span>></span>
-        <a href="#"><span>JavaScript</span></a>
+      <a href="../index.html"><span>Página Inicial</span></a>
+      <span>></span>
+      <a href="#"><span>JavaScript</span></a>
     </nav>
-    <main> 
-        <section id="bibliotecas">
-            <h2>Biliotecas JavaScript:</h2>
-            <ul>
-                <li>JQuery</li>
-                <li>Angular (Criado pelo Google)</li>
-                <li>React (Criado pelo Facebook)</li>
-                <li>vue (Angular melhorado)</li>
-                <li>Electron</li>
-                <li>Ionic</li>
-                <li>Cordova</li>
-            </ul>
-            <h3>Bibliotecas para Jogos JavaScript:</h3>
-            <ul>
-                <li>Phaser</li>
-                <li>PixiJS</li>
-                <li>ImpactJS</li>
-                <li>melon.js</li>
-                <li>CraftyJs</li>
-            </ul>
-        </section>
-        <section id="tiposPrimitivos">
-            <h2>Tipos Primitivos JavaScript</h2>
+    <main>
+        <section id="pageIndex">
+            <h2>Page Index</h2>
+            <h5><a href="#libraries">Bibliotecas JavaScript</a></h5>
+            <h5><a href="#primitiveTypes">Tipos Primitivos</a></h5>
+            <h5><a href="#jsCommandTable">Tabela de Comandos JavaScript</a></h5>
+            <h5><a href="#ternaryOperator">Operadores Ternários</a></h5>
+            <h5><a href="#DOM">DOM - Document Object Model</a></h5>
+            <h5><a href="#conditions">Condições JavaScript</a></h5>
+            <h5><a href="#dates">Datas</a></h5>
+            <h5><a href="#loops">Repetições</a></h5>
+            <h5><a href="#arrays">Array / Variáveis Compostas / Vetores</a></h5>
+            <h5><a href="#functions">Operadores Ternarios</a></h5>
+            <h5><a href="#objects">Objetos JavaScript e JSON</a></h5>
+            <h5><a href="#usefulCommands">Comandos Úteis</a></h5>
+            <h5><a href="#nextSteps">Próximos Passos</a></h5>
 
-            <ul>
-                <li>Number</li>
-                <li>String</li>
-                <li>Boolean</li>
-                <li>Undefined</li>
-                <li>Null</li>
-                <li>Symbol</li>
-                <li>BigInt</li>
-            </ul>
         </section>
-        <section id="tabelaComandosJS">
-            <h2>COMANDOS JavaScript:</h2>
-            <table>
-                <tr>
-                    <th>COMANDO</th>
-                    <th>Função</th>
-                    <th>Característica</th>
-                </tr>
-                <tr>
-                    <td><code>window.alert('<sub>mensagem</sub>');</code></td>
-                    <td>Cria caixa de alerta</td>
-                    <td>Mensagem vai entre as aspas</td>
-                </tr>
-                <tr>
-                    <td><code>window.confirm('<sub>mensagem</sub>')</code></td>
-                    <td>Cria caixa de confirmação</td>
-                    <td>Para armazenar a reposta, usa-se uma variável - let res = confirm('');</td>
-                </tr>
-                <tr>
-                    <td>window.prompt('<sub>mensagem</sub>')</td>
-                    <td>Cria caixa prompt de inserção de texto</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>typeof <sub>primitivo</sub></td>
-                    <td>Exibe o tipo primitivo do dado</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>parseInt(<sub>converter</sub>)</td>
-                    <td>Converte o número do parâmetro em Inteiro</td>
-                    <td>let num = '5'<br> let numInteiro = parseInt(num)</td>
-                </tr>
-                <tr>
-                    <td>parseFloat(<sub>converter</sub>)</td>
-                    <td>Converte para Float (decimal)</td>
-                    <td>let num = 5; <br> let numFloat = parseFloat(num)</td>
-                </tr>
-                <tr>
-                    <td>Number(<sub>converter</sub>)</td>
-                    <td>Converte para número</td>
-                    <td>let num = '42' <br> let numero = Number(num)</td>
-                </tr>
-                <tr>
-                    <td>String(<sub>converter</sub>)</td>
-                    <td>Converte em String</td>
-                    <td>let num = 51 <br> let numString = String(num)</td>
-                </tr>
-                <tr>
-                    <td>toString()</td>
-                    <td>Converte em String</td>
-                    <td>let num = 14 <br> let str = num.toString()</td>
-                </tr>
-                <tr>
-                    <td>Boolean(<sub>converter</sub>)</td>
-                    <td>Converte em Booleano</td>
-                    <td>Todo valor que não seja 0, NaN, Null, Undefined, false ou string vazia retorna true. let boolValue = Boolean(41)</td>
-                </tr>
-                <tr>
-                    <td>JSON.parse(<sub>converter</sub>)</td>
-                    <td>Converte String JSON em um objeto JavaScript</td>
-                    <td>let jsonString = '{"nome": "João", "idade": "30"}'<br> let obj = JSON.parse(jsonString)</td>
-                </tr>
-                <tr>
-                    <td>JSON.stringify(<sub>converter</sub>)</td>
-                    <td>Converte objeto JavaScript em JSON</td>
-                    <td>let obj = {nome: 'Maria', idade: 25} <br> let jsonString = JSON.strigify(obj)</td>
-                </tr>
-                <tr>
-                    <td><sub>var</sub>.toUpperCase()</td>
-                    <td>Transforma todas as letras em maiúsculas</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>var</sub>.toLowerCase()</td>
-                    <td>Transforma todas as letras em minúsculas</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>var</sub>.length</td>
-                    <td>Mostra número de caracteres</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>.toFixed(<sub>x</sub>)</td>
-                    <td><sub>var</sub>X define o número de casas decimais</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>var</sub>.replace('<sub>x</sub>','<sub>y</sub>')</td>
-                    <td>Troca todos os X da variável por Y</td>
-                    <td>Somente usado em Strings. <br> let n = '53.40' <br> let nform = n.replace('.',',')</td>
-                </tr>
-                <tr>
-                    <td>getELemetsByTagName('<sub>nome_tag</sub>')[<sub>i</sub>]</td>
-                    <td>Seleciona o elemento com determinada tag que tenha índice i</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>getElementsByName('<sub>nome</sub>')[<sub>i</sub>]</td>
-                    <td>Seleciona elemento pelo nome</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>getElementsByClass('<sub>class_name</sub>')[<sub>i</sub>]</td>
-                    <td>Seleciona elemento por classe</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>getElementById('<sub>id</sub>')</td>
-                    <td>Seleciona um elemento pelo id</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>querySelector('<sub>id ou class</sub>')</td>
-                    <td>Seleciona elemento por id ou classe</td>
-                    <td>Se for id, usa-se # antes do nome, se for class . antes de nome</td>
-                </tr>
-                <tr>
-                    <td>querySelector('[name = "<sub>nome</sub>"]')</td>
-                    <td>Seleciona elemento por nome</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>querySelectorAll('')</td>
-                    <td>Seleciona todos os elementos correspondentes</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>addEventListener('<sub>evento</sub>', <sub>função</sub>)</td>
-                    <td>Adiciona um event listener</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>checkbox</sub>.checked</td>
-                    <td>.checked conferete se um input radio ou input checkbox está marcado, retornando true caso esteja.</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td>document.createElement('<sub>nome_da_tag')</sub></td>
-                    <td>Cria um elemento HTML através do JavaScript</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>elemento</sub>.setAttribute('<sub>atributo</sub>', '<sub>valor</sub>')</td>
-                    <td>Adiciona um atributo a um elemento HTML através do JavaScript</td>
-                    <td>Atributos: id, class, src, href, data,</td>
-                </tr>
-                <tr>
-                    <td><sub>elementoPai</sub>.appendChild(<sub>elementoCriado</sub>)</td>
-                    <td>Inserir elemento html criado por JavaScript no DOM</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>elementoPai</sub>.insertBefore(<sub>elementoCriado</sub>, <sub>antesDeQual</sub>)</td>
-                    <td>Insere um elemento antes de outro</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>elemento</sub>.innerText = '<sub>texto</sub>'</td>
-                    <td>Insere texto dentro de um elemento</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>elemento</sub>.textContent = '<sub>texto</sub>'</td>
-                    <td>Insere texto dentro de um elemento</td>
-                    <td><hr></td>
-                </tr>
-                <tr>
-                    <td><sub>elemento</sub>.HTML = '<sub>HTML text</sub>'</td>
-                    <td>Insere HTML dentro de elemento</td>
-                    <td><hr></td>
-                </tr>
-
-
-            </table>
+        <section id="libraries">
+        <h2>Biliotecas JavaScript:</h2>
+        <ul>
+          <li>JQuery</li>
+          <li>Angular (Criado pelo Google)</li>
+          <li>React (Criado pelo Facebook)</li>
+          <li>vue (Angular melhorado)</li>
+          <li>Electron</li>
+          <li>Ionic</li>
+          <li>Cordova</li>
+        </ul>
+        <h3>Bibliotecas para Jogos JavaScript:</h3>
+        <ul>
+          <li>Phaser</li>
+          <li>PixiJS</li>
+          <li>ImpactJS</li>
+          <li>melon.js</li>
+          <li>CraftyJs</li>
+        </ul>
         </section>
-        <section id="operadorTernario">
-            <h2>Operador Ternário</h2>
-            <h3>Forma:</h3>
-            <span>teste?true:false</span>
-            <span>Exemplo:</span>
-            <pre>
+        <section id="primitiveTypes">
+        <h2>Tipos Primitivos JavaScript</h2>
+
+        <ul>
+          <li>Number</li>
+          <li>String</li>
+          <li>Boolean</li>
+          <li>Undefined</li>
+          <li>Null</li>
+          <li>Symbol</li>
+          <li>BigInt</li>
+        </ul>
+        </section>
+        <section id="jsCommandTable">
+        <h2>COMANDOS JavaScript:</h2>
+        <table>
+          <tr>
+            <th>COMANDO</th>
+            <th>Função</th>
+            <th>Característica</th>
+          </tr>
+          <tr>
+            <td><code>window.alert('<sub>mensagem</sub>');</code></td>
+            <td>Cria caixa de alerta</td>
+            <td>Mensagem vai entre as aspas</td>
+          </tr>
+          <tr>
+            <td><code>window.confirm('<sub>mensagem</sub>')</code></td>
+            <td>Cria caixa de confirmação</td>
+            <td>
+              Para armazenar a reposta, usa-se uma variável - let res =
+              confirm('');
+            </td>
+          </tr>
+          <tr>
+            <td>window.prompt('<sub>mensagem</sub>')</td>
+            <td>Cria caixa prompt de inserção de texto</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>typeof <sub>primitivo</sub></td>
+            <td>Exibe o tipo primitivo do dado</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>parseInt(<sub>converter</sub>)</td>
+            <td>Converte o número do parâmetro em Inteiro</td>
+            <td>
+              let num = '5'<br />
+              let numInteiro = parseInt(num)
+            </td>
+          </tr>
+          <tr>
+            <td>parseFloat(<sub>converter</sub>)</td>
+            <td>Converte para Float (decimal)</td>
+            <td>
+              let num = 5; <br />
+              let numFloat = parseFloat(num)
+            </td>
+          </tr>
+          <tr>
+            <td>Number(<sub>converter</sub>)</td>
+            <td>Converte para número</td>
+            <td>
+              let num = '42' <br />
+              let numero = Number(num)
+            </td>
+          </tr>
+          <tr>
+            <td>String(<sub>converter</sub>)</td>
+            <td>Converte em String</td>
+            <td>
+              let num = 51 <br />
+              let numString = String(num)
+            </td>
+          </tr>
+          <tr>
+            <td>toString()</td>
+            <td>Converte em String</td>
+            <td>
+              let num = 14 <br />
+              let str = num.toString()
+            </td>
+          </tr>
+          <tr>
+            <td>Boolean(<sub>converter</sub>)</td>
+            <td>Converte em Booleano</td>
+            <td>
+              Todo valor que não seja 0, NaN, Null, Undefined, false ou string
+              vazia retorna true. let boolValue = Boolean(41)
+            </td>
+          </tr>
+          <tr>
+            <td>JSON.parse(<sub>converter</sub>)</td>
+            <td>Converte String JSON em um objeto JavaScript</td>
+            <td>
+              let jsonString = '{"nome": "João", "idade": "30"}'<br />
+              let obj = JSON.parse(jsonString)
+            </td>
+          </tr>
+          <tr>
+            <td>JSON.stringify(<sub>converter</sub>)</td>
+            <td>Converte objeto JavaScript em JSON</td>
+            <td>
+              let obj = {nome: 'Maria', idade: 25} <br />
+              let jsonString = JSON.strigify(obj)
+            </td>
+          </tr>
+          <tr>
+            <td><sub>var</sub>.toUpperCase()</td>
+            <td>Transforma todas as letras em maiúsculas</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td><sub>var</sub>.toLowerCase()</td>
+            <td>Transforma todas as letras em minúsculas</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td><sub>var</sub>.length</td>
+            <td>Mostra número de caracteres</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>.toFixed(<sub>x</sub>)</td>
+            <td><sub>var</sub>X define o número de casas decimais</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td><sub>var</sub>.replace('<sub>x</sub>','<sub>y</sub>')</td>
+            <td>Troca todos os X da variável por Y</td>
+            <td>
+              Somente usado em Strings. <br />
+              let n = '53.40' <br />
+              let nform = n.replace('.',',')
+            </td>
+          </tr>
+          <tr>
+            <td>Math.random()</td>
+            <td>Gera um valor aleatório entre 0 ~ 1</td>
+            <td>hr</td>
+          </tr>
+          <tr>
+            <td>getELemetsByTagName('<sub>nome_tag</sub>')[<sub>i</sub>]</td>
+            <td>Seleciona o elemento com determinada tag que tenha índice i</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>getElementsByName('<sub>nome</sub>')[<sub>i</sub>]</td>
+            <td>Seleciona elemento pelo nome</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>getElementsByClass('<sub>class_name</sub>')[<sub>i</sub>]</td>
+            <td>Seleciona elemento por classe</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>getElementById('<sub>id</sub>')</td>
+            <td>Seleciona um elemento pelo id</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>querySelector('<sub>id ou class</sub>')</td>
+            <td>Seleciona elemento por id ou classe</td>
+            <td>
+              Se for id, usa-se # antes do nome, se for class . antes de nome
+            </td>
+          </tr>
+          <tr>
+            <td>querySelector('[name = "<sub>nome</sub>"]')</td>
+            <td>Seleciona elemento por nome</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>querySelectorAll('')</td>
+            <td>Seleciona todos os elementos correspondentes</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>addEventListener('<sub>evento</sub>', <sub>função</sub>)</td>
+            <td>Adiciona um event listener</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td><sub>checkbox</sub>.checked</td>
+            <td>
+              .checked conferete se um input radio ou input checkbox está
+              marcado, retornando true caso esteja.
+            </td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>document.createElement('<sub>nome_da_tag')</sub></td>
+            <td>Cria um elemento HTML através do JavaScript</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>
+              <sub>elemento</sub>.setAttribute('<sub>atributo</sub>',
+              '<sub>valor</sub>')
+            </td>
+            <td>
+              Adiciona um atributo a um elemento HTML através do JavaScript
+            </td>
+            <td>Atributos: id, class, src, href, data,</td>
+          </tr>
+          <tr>
+            <td>
+              <sub>elementoPai</sub>.appendChild(<sub>elementoCriado</sub>)
+            </td>
+            <td>Inserir elemento html criado por JavaScript no DOM</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td>
+              <sub>elementoPai</sub>.insertBefore(<sub>elementoCriado</sub>,
+              <sub>antesDeQual</sub>)
+            </td>
+            <td>Insere um elemento antes de outro</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td><sub>elemento</sub>.innerText = '<sub>texto</sub>'</td>
+            <td>Insere texto dentro de um elemento</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td><sub>elemento</sub>.textContent = '<sub>texto</sub>'</td>
+            <td>Insere texto dentro de um elemento</td>
+            <td><hr /></td>
+          </tr>
+          <tr>
+            <td><sub>elemento</sub>.HTML = '<sub>HTML text</sub>'</td>
+            <td>Insere HTML dentro de elemento</td>
+            <td><hr /></td>
+          </tr>
+        </table>
+        </section>
+        <section id="ternaryOperator">
+        <h2>Operador Ternário</h2>
+        <h3>Forma:</h3>
+        <span>teste?true:false</span>
+        <span>Exemplo:</span>
+        <pre>
     let media = 5.9
     media >= 6? console.log('aprovado'):console.log('reprovado')
-            </pre>
-
+            </pre
+        >
         </section>
         <section id="DOM">
-            <h2>Árvore <abbr title="Document Object Model">DOM</abbr></h2>
-            <img src="../img/dom.jpg" alt="Foto Imagem DOM"><br>
-            <span>Fonte: Curso em Video JavaScript - Gustavo Guanabara</span>
+        <h2>DOM - Document Object Model</h2>
+        <img src="../img/dom.jpg" alt="Foto Imagem DOM" /><br />
+        <span>Fonte: Curso em Video JavaScript - Gustavo Guanabara</span>
 
-            <p>Dentro de window.document existem inúmeras funções, ex:</p>
-            <span>window.document.URL -> retorna URL do site</span>
+        <p>Dentro de window.document existem inúmeras funções, ex:</p>
+        <span>window.document.URL -> retorna URL do site</span>
         </section>
-        <section id="condicoes">
-            <h2>Condições</h2>
-            <h3>Condição Simples:</h3>
-            <p>A condição simples possui apenas um if, sem else. Ex:</p>
-            <pre>
+        <section id="conditions">
+        <h2>Condições</h2>
+        <h3>Condição Simples:</h3>
+        <p>A condição simples possui apenas um if, sem else. Ex:</p>
+        <pre>
 
     if(vel>60){
 
         document.write('Você foi multado')
     }
     document.write('Dirija sempre com cinto de segurança')
-            </pre>
-            <h3>Condição Normal:</h3>
-            <p>Para uma condição if else ou com else if Ex:</p>
-            <pre>
+            </pre
+        >
+        <h3>Condição Normal:</h3>
+        <p>Para uma condição if else ou com else if Ex:</p>
+        <pre>
 
     if(nota>=6){
 
@@ -275,10 +342,11 @@
     }else{
         document.write('Reprovado')
     }
-            </pre>
-            <h3>Condição Múltipla, Switch Case:</h3>
-            <p>Para muitas opções</p>
-            <pre>
+            </pre
+        >
+        <h3>Condição Múltipla, Switch Case:</h3>
+        <p>Para muitas opções</p>
+        <pre>
 
     switch(<sub>expressão</sub>){
         case valor1:
@@ -294,66 +362,73 @@
             console.log('valor4')
             break
     }
-            </pre>
+            </pre
+        >
         </section>
-        <section id="datas">
-            <h2>Datas</h2>
-            <p>Existe uma função da biblioteca padrão JS que pega data e hora atuais, Date()</p>
-            <pre>
+        <section id="dates">
+        <h2>Datas</h2>
+        <p>
+          Existe uma função da biblioteca padrão JS que pega data e hora atuais,
+          Date()
+        </p>
+        <pre>
 
     let dataAtual = new Date()
     console.log(dataAtual)
             </pre>
-            <h3>Ano</h3>
-            <pre>
+        <h3>Ano</h3>
+        <pre>
     let dataAtual = new Date()
     let ano = dataAtual.getFullYear()
     console.log(ano)
             </pre>
-            <h3>Mês</h3>
-            <pre>
+        <h3>Mês</h3>
+        <pre>
     let dataAtual = new Date()
     let mes = dataAtual.getMonth() +1 //Retorna de 0-11
     console.log(mes)
             </pre>
-            <h3>Dia do Mês</h3>
-            <pre>
+        <h3>Dia do Mês</h3>
+        <pre>
     let dataAtual = new Date()
     let diaMes = dataAtual.getDate()
     console.log(dia)
             </pre>
-            <h3>Dia da Semana</h3>
-            <pre>
+        <h3>Dia da Semana</h3>
+        <pre>
     let dataAtual = new Date()
     let diaSemana = dataAtual.getDay()
     console.log(diaSemana)
             </pre>
-            <h3>Hora</h3>
-            <pre>
+        <h3>Hora</h3>
+        <pre>
     let dataAtual = new Date()
     let hora = dataAtual.getHours()
     console.log(hora)
             </pre>
-            <h3>Minutos</h3>
-            <pre>
+        <h3>Minutos</h3>
+        <pre>
     let dataAtual = new Date()
     let minutos = dataAtual.getMinutes()
     console.log(minutos)
             </pre>
-            <h3>Segundos</h3>
-            <pre>
+        <h3>Segundos</h3>
+        <pre>
     let dataAtual = new Date()
     let segundos = dataAtual.getSeconds() + 1 //Retorna de 0-59
     console.log(segundos)
             </pre>
         </section>
-        <section id="repeticoes">
-            <h2>Repetições JavaScript</h2>
-            <h3>WHILE</h3>
-            <p>While é uma estrutura de repetição em que o teste lógico se faz no Início, antes de executar o bloco</p>
-            <img src="../img/while.jpg" alt="Foto While"><br>
-            <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara  </span>
-            <pre>
+        <section id="loops">
+        <h2>Repetições JavaScript</h2>
+        <h3>WHILE</h3>
+        <p>
+          While é uma estrutura de repetição em que o teste lógico se faz no
+          Início, antes de executar o bloco
+        </p>
+        <img src="../img/while.jpg" alt="Foto While" /><br />
+        <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara </span>
+        <pre>
 
     while(<sub>condição</sub>){
         alert('Repetir este bloco')
@@ -366,11 +441,14 @@
     }
             </pre>
 
-            <h3>DO-WHILE</h3>
-            <p>DO-WHILE é uma estrutura de repetição que faz o teste lógico no final, após executar o bloco</p>
-            <img src="../img/do-while.jpg" alt="Foto Do-While"><br>
-            <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara  </span>
-            <pre>
+        <h3>DO-WHILE</h3>
+        <p>
+          DO-WHILE é uma estrutura de repetição que faz o teste lógico no final,
+          após executar o bloco
+        </p>
+        <img src="../img/do-while.jpg" alt="Foto Do-While" /><br />
+        <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara </span>
+        <pre>
 
     do{
         alert('Repetir este bloco')
@@ -381,11 +459,14 @@
     }
             </pre>
 
-            <h3>FOR</h3>
-            <p>FOR é uma estrutura de repetição que possue dentro da sua estrutura uma variável que define quantas vezes será executado o bloco</p>
-            <img src="../img/for.jpg" alt="Foto FOR"><br>
-            <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara  </span>
-            <pre>
+        <h3>FOR</h3>
+        <p>
+          FOR é uma estrutura de repetição que possue dentro da sua estrutura
+          uma variável que define quantas vezes será executado o bloco
+        </p>
+        <img src="../img/for.jpg" alt="Foto FOR" /><br />
+        <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara </span>
+        <pre>
 
     for(<sub>declarar variável</sub>; <sub>Condição para a variável</sub>; <sub>O que fazer com a variável</sub>){
 
@@ -397,212 +478,565 @@
             </pre>
         </section>
         <section id="arrays">
-            <h2>ARRAYS / VARIÁVEIS COMPOSTAS / VETORES</h2>
-            <h3>Formas de declarar:</h3>
-            <h4>Abrindo e Fechando colchetes:</h4>
-            <pre>
+        <h2>ARRAYS / VARIÁVEIS COMPOSTAS / VETORES</h2>
+        <h3>Formas de declarar:</h3>
+        <h4>Abrindo e Fechando colchetes:</h4>
+        <pre>
     let array = []
             </pre>
-            <h4>Com Array + parenteses</h4>
-            <pre>
+        <h4>Com Array + parenteses</h4>
+        <pre>
     let array = Array()
             </pre>
-            <p>Caso dentro dos parenteses seja passado um único valor numérico e inteiro, esse número indica a quantidade de elementos dentro do array.</p>
+        <p>
+          Caso dentro dos parenteses seja passado um único valor numérico e
+          inteiro, esse número indica a quantidade de elementos dentro do array.
+        </p>
 
-            <h2>Comandos para Arrays:</h2>
+        <h3>Comandos para Arrays:</h3>
 
-            <h3>Comandos de Acesso e Verificação de Dados:</h3>
-            <table>
-                <tr>
-                  <th>COMANDO</th>
-                  <th>Função</th>
-                  <th>Característica</th>
-                </tr>
-                <tr>
-                  <td>array[i]</td>
-                  <td>Retorna o valor do array com índice i</td>
-                  <td>let array = [1, 2, 3, 4, 5]<br>console.log(array[2])</td>
-                </tr>
-                <tr>
-                  <td>array.indexOf(par)</td>
-                  <td>VERIFICAR índice do primeiro elemento com este valor</td>
-                  <td>
-                    par recebe o valor do elemento. Caso não encontre o elemento, retorna -1<br>
-                    let array = [4, 3, 2, 1]<br>
-                    array.indexOf(2)
-                    </td>
-                </tr>
-                <tr>
-                    <td>array.lastIndexOf(par)</td>
-                    <td>VERIFICAR índice do último elemento com este valor</td>
-                    <td>
-                        caso não encontre o elemento, retorna -1
-                        par recebe o valor do elemento<br>
-                        let array = [4, 3, 2, 1]<br>
-                        array.indexOf(2)
-                    </td>
-                </tr>
-                <tr>
-                    <td>array.length</td>
-                    <td>VERIFICAR comprimento do Array</td>
-                    <td>let array = [1, 2, 3, 4]<br>console.log(array.length)</td>
-                </tr>
-                <tr>
-                    <td>array.includes(par)</td>
-                    <td>Verificar se o parâmetro está incluido dentro do array, retorna Boolean</td>
-                    <td>
-                        let array = ['Lucas', 'Ivan', 'Maria']<br>
-                        array.includes('Ivan')
-                    </td>
-                </tr>
-              </table>
-              
-            <h3>Comandos de Inserção e Remoção de dados:</h3>
-            <table>
-                <tr>
-                  <th>COMANDO</th>
-                  <th>Função</th>
-                  <th>Característica</th>
-                </tr>
-                <tr>
-                  <td>array.push(par)</td>
-                  <td>ADICIONAR ao fim da lista</td>
-                  <td>let array = [1, 2, 3, 4, 5]<br>array.push(6)</td>
-                </tr>
-                <tr>
-                  <td>array.pop()</td>
-                  <td>REMOVER último item da Lista</td>
-                  <td>let array = [1, 2, 3, 4, 5]<br>array.pop()</td>
-                </tr>
-                <tr>
-                  <td>array.unshift(par)</td>
-                  <td>ADICIONAR ao início da Lista</td>
-                  <td>let array = [1, 2, 3, 4, 5]<br>array.unshift(0)</td>
-                </tr>
-                <tr>
-                  <td>array.shift()</td>
-                  <td>REMOVER primeiro item da Lista</td>
-                  <td>let array = [1, 2, 3, 4, 5]<br>array.shift()</td>
-                </tr>
-                <tr>
-                    <td>array.splice(par1, par2)</td>
-                    <td>REMOVER de uma posição específica em diante</td>
-                    <td>par1 recebe o índice inicial, par2 recebe quantos elementos remover apartir daquele índice<br>let array = [3, 6, 1, 9]<br>array.splice(1, 2)</td>
-                  </tr>
-              </table>
-              
-              <h3>Comandos de Manipulação de Arrays:</h3>
-              <table>
-                <tr>
-                  <th>COMANDO</th>
-                  <th>Função</th>
-                  <th>Característica</th>
-                </tr>
-                <tr>
-                    <td>array.slice(par1, par2)</td>
-                    <td>COPIAR de uma posição específica em diante</td>
-                    <td>par1 recebe o índice inicial, par2 recebe quantos elementos copiar apartir daquele índice<br>let array = [1, 2, 3, 4]<br>array.slice(0,2)</td>
-                </tr>
-                <tr>
-                  <td>...array</td>
-                  <td>ADICIONAR um array a outro array</td>
-                  <td>let array1 = [1, 2, 3, 4]<br>let array2 = [...array1, 5, 6]</td>
-                </tr>
-                <tr>
-                    <td>array1.concat(array2)</td>
-                    <td>Soma 2 arrays ou mais</td>
-                    <td>
-                        let array1 = [1, 2, 3]<br>
-                        let array2 = [4, 5, 6]<br>
-                        let array3 = arra1.concat(array2)
-                    </td>
-                </tr>
-                <tr>
-                    <td>Array.isArray(array)</td>
-                    <td>Verifica se o elemento dentro dos parenteses é um array e retorna Boolean</td>
-                    <td>
-                        let array = [1, 2, 3]<br>
-                        console.log(Array.isArray(array))
-                    </td>
-                </tr>
-                <tr>
-                    <td>array.join()</td>
-                    <td>Imprime os elementos de um array de forma concatenada</td>
-                    <td>
-                        Por padrão é concatenado com uma vírgula, se quiser mudar a concatenação coloca-se entre aspas dentro do parenteses.<br>
-                        let countries = ['Brazil', 'Russia', 'Japan']<br>
-                        let res = countries.join()
-                        console.log(res)
-                    </td>
-                </tr>
-                <tr>
-                    <td>array.reverse()</td>
-                    <td>Inverte a ordem dos elementos do array</td>
-                    <td>
-                        let array = [1, 2, 3, 4, 5]<br>
-                        array.reverse()<br>
-                        console.log(array)
-                    </td>
-                </tr>
-                <tr>
-                    <td>array.sort()</td>
-                    <td>Deixa o array em ordem alfabetica</td>
-                    <td>
-                        let names = ['Lucas', 'Shayera', 'Amanda', 'Felipe']<br>
-                        names.sort()<br>
-                        console.log(names)
-                    </td>
-                </tr>
-                <tr>
-                    <td>array.flat(_)</td>
-                    <td>Faz com que todos os arrays dentro deste array, sejam unidos em um único array</td>
-                    <td>
-                        Por padrão ele fará isso com 1 array, passar nos parâmetros quantas vezes quer que ele faça isso. podemos passar o parâmetro Infinity<br>
-                        let array = [1, [2, [3, [4, [5]]]]]<br>
-                        array.flat(Infinity)<br>
-                        console.log(array)
-                    </td>
-                </tr>
-                <tr>
-                    <td>Array.from(string)</td>
-                    <td>Transforma todos os caracteres de uma string em um elemento de um array</td>
-                    <td>
-                        let str = '1234567'<br>
-                        let array = Array.from(str)<br>
-                        console.log(array)
-                    </td>
-                </tr>
-              </table>
+        <h4>Comandos de Acesso e Verificação de Dados:</h4>
+        <table>
+          <tr>
+            <th>COMANDO</th>
+            <th>Função</th>
+            <th>Característica</th>
+          </tr>
+          <tr>
+            <td>array[i]</td>
+            <td>Retorna o valor do array com índice i</td>
+            <td>let array = [1, 2, 3, 4, 5]<br />console.log(array[2])</td>
+          </tr>
+          <tr>
+            <td>array.indexOf(par)</td>
+            <td>VERIFICAR índice do primeiro elemento com este valor</td>
+            <td>
+              par recebe o valor do elemento. Caso não encontre o elemento,
+              retorna -1<br />
+              let array = [4, 3, 2, 1]<br />
+              array.indexOf(2)
+            </td>
+          </tr>
+          <tr>
+            <td>array.lastIndexOf(par)</td>
+            <td>VERIFICAR índice do último elemento com este valor</td>
+            <td>
+              caso não encontre o elemento, retorna -1 par recebe o valor do
+              elemento<br />
+              let array = [4, 3, 2, 1]<br />
+              array.indexOf(2)
+            </td>
+          </tr>
+          <tr>
+            <td>array.length</td>
+            <td>VERIFICAR comprimento do Array</td>
+            <td>let array = [1, 2, 3, 4]<br />console.log(array.length)</td>
+          </tr>
+          <tr>
+            <td>array.includes(par)</td>
+            <td>
+              Verificar se o parâmetro está incluido dentro do array, retorna
+              Boolean
+            </td>
+            <td>
+              let array = ['Lucas', 'Ivan', 'Maria']<br />
+              array.includes('Ivan')
+            </td>
+          </tr>
+        </table>
+
+        <h4>Comandos de Inserção e Remoção de dados:</h4>
+        <table>
+          <tr>
+            <th>COMANDO</th>
+            <th>Função</th>
+            <th>Característica</th>
+          </tr>
+          <tr>
+            <td>array.push(par)</td>
+            <td>ADICIONAR ao fim da lista</td>
+            <td>let array = [1, 2, 3, 4, 5]<br />array.push(6)</td>
+          </tr>
+          <tr>
+            <td>array.pop()</td>
+            <td>REMOVER último item da Lista</td>
+            <td>let array = [1, 2, 3, 4, 5]<br />array.pop()</td>
+          </tr>
+          <tr>
+            <td>array.unshift(par)</td>
+            <td>ADICIONAR ao início da Lista</td>
+            <td>let array = [1, 2, 3, 4, 5]<br />array.unshift(0)</td>
+          </tr>
+          <tr>
+            <td>array.shift()</td>
+            <td>REMOVER primeiro item da Lista</td>
+            <td>let array = [1, 2, 3, 4, 5]<br />array.shift()</td>
+          </tr>
+          <tr>
+            <td>array.splice(par1, par2)</td>
+            <td>REMOVER de uma posição específica em diante</td>
+            <td>
+              par1 recebe o índice inicial, par2 recebe quantos elementos
+              remover apartir daquele índice<br />let array = [3, 6, 1, 9]<br />array.splice(1,
+              2)
+            </td>
+          </tr>
+        </table>
+
+        <h4>Comandos de Manipulação de Arrays:</h4>
+        <table>
+          <tr>
+            <th>COMANDO</th>
+            <th>Função</th>
+            <th>Característica</th>
+          </tr>
+          <tr>
+            <td>array.slice(par1, par2)</td>
+            <td>COPIAR de uma posição específica em diante</td>
+            <td>
+              par1 recebe o índice inicial, par2 recebe quantos elementos copiar
+              apartir daquele índice<br />let array = [1, 2, 3, 4]<br />array.slice(0,2)
+            </td>
+          </tr>
+          <tr>
+            <td>...array</td>
+            <td>ADICIONAR um array a outro array</td>
+            <td>
+              let array1 = [1, 2, 3, 4]<br />let array2 = [...array1, 5, 6]
+            </td>
+          </tr>
+          <tr>
+            <td>array1.concat(array2)</td>
+            <td>Soma 2 arrays ou mais</td>
+            <td>
+              let array1 = [1, 2, 3]<br />
+              let array2 = [4, 5, 6]<br />
+              let array3 = arra1.concat(array2)
+            </td>
+          </tr>
+          <tr>
+            <td>Array.isArray(array)</td>
+            <td>
+              Verifica se o elemento dentro dos parenteses é um array e retorna
+              Boolean
+            </td>
+            <td>
+              let array = [1, 2, 3]<br />
+              console.log(Array.isArray(array))
+            </td>
+          </tr>
+          <tr>
+            <td>array.join()</td>
+            <td>Imprime os elementos de um array de forma concatenada</td>
+            <td>
+              Por padrão é concatenado com uma vírgula, se quiser mudar a
+              concatenação coloca-se entre aspas dentro do parenteses.<br />
+              let countries = ['Brazil', 'Russia', 'Japan']<br />
+              let res = countries.join() console.log(res)
+            </td>
+          </tr>
+          <tr>
+            <td>array.reverse()</td>
+            <td>Inverte a ordem dos elementos do array</td>
+            <td>
+              let array = [1, 2, 3, 4, 5]<br />
+              array.reverse()<br />
+              console.log(array)
+            </td>
+          </tr>
+          <tr>
+            <td>array.sort()</td>
+            <td>Deixa o array em ordem alfabetica</td>
+            <td>
+              let names = ['Lucas', 'Shayera', 'Amanda', 'Felipe']<br />
+              names.sort()<br />
+              console.log(names)
+            </td>
+          </tr>
+          <tr>
+            <td>array.flat(_)</td>
+            <td>
+              Faz com que todos os arrays dentro deste array, sejam unidos em um
+              único array
+            </td>
+            <td>
+              Por padrão ele fará isso com 1 array, passar nos parâmetros
+              quantas vezes quer que ele faça isso. podemos passar o parâmetro
+              Infinity<br />
+              let array = [1, [2, [3, [4, [5]]]]]<br />
+              array.flat(Infinity)<br />
+              console.log(array)
+            </td>
+          </tr>
+          <tr>
+            <td>Array.from(string)</td>
+            <td>
+              Transforma todos os caracteres de uma string em um elemento de um
+              array
+            </td>
+            <td>
+              let str = '1234567'<br />
+              let array = Array.from(str)<br />
+              console.log(array)
+            </td>
+          </tr>
+        </table>
         </section>
-        <section id="especiais">
-            <h2>Formatar Dinheiro:</h2>
-            <span>
-                <sub>valor</sub>.toLocaleString('pt-BR',{style:'currency', currency:'BRL'})
-            </span>
-            <pre>
+        <section id="functions">
+        <h2>Funções</h2>
+        <h3>Como Funcionam:</h3>
+
+        <p>É um bloco de código que é executado somente quando nós chamarmos a função.</p>
+        <p>Para definir uma função usa-se a palavra function, seguida do nome da função, abre-fecha parenteses, abre-fecha chaves function andar(){}.</p>
+        <p>O que está dentro dos parênteses se chama parâmetro, o que está dentro das chaves, bloco, é o que será executado quando a função for chamada.</p>
+        <p>Para chamar uma função, basta escrever o nome dela seguido de abre-fecha parenteses.</p>
+
+        <span>ex:</span>
+        <pre>
+    function andar(){
+        window.alert('andou')
+    }
+    andar()
+            </pre>
+        <p>
+          Qualquer variável criada dentro do escopo de uma função só existe
+          dentro dele. 
+        </p>
+        <h3>return:</h3>
+        <p>
+            Para tirar um valor de dentro de uma função usa-se return. Quando uma função é chamada, ela ecexuta o que tem dentro do bloco, e o valor de retorno o valor colocado no return. O comando return finaliza a função. Nada escrito após o return será lido.
+        </p>
+        <pre>
+
+    function calcular(){
+        let n = 2+2
+        return n
+    }
+
+    <span>Função calcular() vale n</span>
+        </pre>
+        <h3>Parâmetro:</h3>
+        <p>
+            O parâmetro é uma variável que é criada dentro da função e é passado no momento que se chama a função
+        </p>
+        <span>ex:</span>
+        <pre>
+
+    function elevar_ao_quadrado(n){
+        n *= n
+    
+        return n
+    }
+    console.log(elevar_ao_quadrado(5)) | Resutado = 25
+        </pre>
+        <p>É possível colocar quantos valores quiser dentro dos parâmetros</p>
+        <pre>
+
+    function multiplicar(a, b){
+        let res = a * b
+        return res
+    }
+    console.log(multiplicar(3, 6)) | Resultado: 18
+        </pre>
+
+        <p>Quando se coloca dentro dos parenteses que um parâmetro recebe algo, isso significa que caso o valor não seja definido, será considerado este passado dentro dos parâmetros</p>
+
+        <pre>
+
+    function somar(a=0, b=0){
+        let soma = a + b
+        return soma
+    }
+    console.log(somar(4)) | Resultado: 4
+        </pre>
+        </section>
+        <section id="objects">
+        <h2>Objetos JavaScript e JSON</h2>
+
+        <h3>Como Declarar:</h3>
+
+        <p>Um objeto é declarado com uma variável com abre-fecha chaves</p>
+        <span>ex:</span>
+
+        <pre>
+
+    let product = {
+
+    }
+        </pre>
+
+        <p>Objetos possuem dentro de si propriedades e um Valor. Podemos chamar um objeto e os valores dos objetos com o comado 'nome_do_objet.nome_da_propriedade' ou 'nome_do_objeto['nome_da_propriedade']'. Uma propriedade com um valor é chamada de 'Propery-Value Pair'</p>
+
+        <span>ex:</span>
+        <pre>
+
+    let product = {
+        name: 'skateboard',
+        price: 100
+    }
+
+    console.log(product) | Resultado: { name: 'skateboard', price: 100 }
+
+    console.log(product.name) ou console.log(product['name']) | Resultado: skateboard
+
+    console.log(product.price) ou console.log(product['price']) | Resultado: 100
+        </pre>
+
+        <p>Isso serve para não ocorrer conflitos em algumas propriedades que tenha o caractere menos no nome, para que o javascript entenda que não é uma subtração</p>
+        <h3>Manipulação de Propriedades e Valores</h3>
+
+        <h4>Adicionar e Remover uma Propriedade:</h4>
+
+        <p>Basta nomeá-la que será inserida</p>
+        <p>Para deletar usa-se o comando delete antes e seleciona a propriedade</p>
+        <span>ex:</span>
+
+        <pre>
+
+    let person = {
+        name: 'Ivan',
+        age: 40
+    }
+
+    person.lastName = 'de Souza'
+    delete person.age
+    console.log(person.lastName) | Resultado : de Souza
+        </pre>
+
+        <h4>Alterar um Valor:</h4>
+        
+        <p>Podemos alterar um valor de uma propriedade assim:</p>
+        <span>ex:</span>
+        
+        <pre>
+
+    let person = {
+        name: 'Ivan',
+        age: 40
+    }
+
+    person.name = 'Lucas'
+    person.age = 21
+
+    console.log(person) | Resultado: { name: 'Lucas', age: 21 }
+
+
+        </pre>
+
+        <h3>Objetos e Funções dentro de Objetos:</h3>
+
+        <p>Objetos podem receber funções e outros objetos</p>
+        <span>ex:</span>
+
+        <pre>
+    
+    let person = {
+        name: 'Lucas',
+        age: 21,
+        profession: 'Web-Developer',
+        pets: {
+            dog: 'bidu',
+            cat: 'frajolinha'
+        },
+        fun: function walk(){
+            console.log(this.name + ' walks')
+            
+        }
+    }       
+    console.log(person.fun()) 
+        </pre>
+        
+        <p>Toda função dentro de um objeto é chamada Method, método</p>
+
+        <h3>Built-in Objects</h3>
+
+        <p>O comando Console do JavaScript é um objeto. console.log é uma função salva dentro do objeto console.</p>
+        <p>Quando existem objetos que fazem parte da própria linguagem nativa, é chamado de Buil-in objects</p>
+
+        <h3>JSON - JavaScript Object Notation</h3>
+        <p>JSON é uma syntax muito similar com objetos de javascript, porém com menos recursos</p>
+        <span>ex:</span>
+
+        <div id="JSON-JS-imgs">
+            <div>
+                <h4>Objeto JavaScript</h4>
+                <img src="../img/javascript_object.jpg" alt="Foto de um Objeto Javascript">
+                <span>Fonte: <a href="https://www.youtube.com/@SuperSimpleDev">SuperSimplesDev</a> - JavaScript Full Course</span>
+            </div>
+            <div>
+                <h4>JSON</h4>
+                <img src="../img/json.jpg" alt="Foto de um Objeto JSON">
+                <span>Fonte: <a href="https://www.youtube.com/@SuperSimpleDev">SuperSimplesDev</a> - JavaScript Full Course</span>
+            </div>
+        </div>
+
+        <h4>Características JSON</h4>
+        <ul>
+            <li>Todas as propriedades e valores devem receber aspas duplas;</li>
+            <li>Não suporta funções;</li>
+            <li>Quase todas linguagens de programação conseguem entender JSON</li>
+            <li>Usa-se JSON para trocar dados entre computadores</li>
+            <li>JSON também é usado  para guardar dados</li>
+            <li>JSON é uma String</li>
+        </ul>
+        <h4>JavaScript Object &lt;---&gt; JSON</h4>
+        <p>Para converter um objeto JavaScript em JSON usa-se o comando: JSON.stringify(objeto_jacscript)</p>
+        <span>ex:</span>
+        <pre>
+
+    let object = {
+        name: 'Lucas',
+        age: 21,
+        height: '178cm'
+    }
+
+    let jsonString = JSON.stringify(object)
+
+    console.log(jsonString) | Resultado: {"name":"Lucas","age":21,"height":"178cm"}
+        </pre>
+
+        <p>Para transformar um JSON em objeto JavaScript utiliza-se o comando: JSON.parse(<sub>JSON</sub>)</p>
+        <span>ex:</span>
+        <pre>
+
+        {"name":"Lucas","age":21,"height":"178cm"} // name = jsonString
+
+        let jsObject = JSON.parse(jsonString)
+
+        console.log(jsObject) | Resultado: { name: 'Lucas', age: 21, height: '178cm' }
+        </pre>
+
+        <h3>localStorage</h3>
+
+        <h4>Como Fuciona:</h4>
+
+        <p>O Built-in object localStorage é usado para salvar dados permanentemente. Quando fechamos uma aba de um site, ele automaticamente zera todos os dados gerados no site. Quando salvamos estes dados no localStorage, mesmo após fechar e abrir a página os dados continuam.</p>
+        
+        <h4>Comandos</h4>
+
+        <table>
+            <tr>
+                <th>COMANDO</th>
+                <th>Função</th>
+                <th>Característica</th>
+            </tr>
+            <tr>
+                <td>localStorage.setItem('par1', 'par2')</td>
+                <td>Salva um dado no localStorage</td>
+                <td>Os parâmetros suportam apenas Strings, então tem que se converter variáveis e objetos em String ao salvar. O primeiro é o nome do parâmetro, o segundo é o que ele vai armazenar</td>
+            </tr>
+            <tr>
+                <td>localStorage.getItem('par')</td>
+                <td>Retorna o valor salvo no localStorage. O nome do valor salvo tem que ser passado no parâmetro</td>
+                <td><hr></td>
+            </tr>
+            <tr>
+                <td>localStorage.removeItem('par')</td>
+                <td>Remove o item do local storage com nome passado no argumento</td>
+                <td><hr></td>
+            </tr>
+        </table>
+        
+        <h3>Características de Objetos</h3>
+        <p>Objetos são referências. Isso significa que o nome da variável não recebe os valores do objeto, ela é uma referência que guia até onde está o valor da variável. Isso significa que um objeto declarado com CONST pode ter seu valor alterado.</p>
+        <p>Podemos remover propriedades de um objeto e salvá-las em variáveis, por exemplo, isso se chama 'Destructuring':</p>
+
+        <pre>
+    
+    let object = {
+        product: 'Phone',
+        price: '1000'
+    }
+    let product = object.product
+    let price = object.price
+
+    console.log(product)
+    console.log(price)
+        </pre>
+        <span>Atalho para tirar propriedades de objetos:</span>
+        <pre>
+    let object = {
+        product: 'Phone',
+        price: '1000'
+    }
+    let { product, price } = object
+
+    console.log(product)
+    console.log(price)
+        </pre>
+    
+        <p>Caso queiramos colocar uma variável externa em um objeto podemos fazer isso simplesmente passando o nome da variável como valor</p>
+        
+        <pre>
+
+    let message = 'Good Job!'
+    let object = {
+        message: message
+    }
+        </pre>
+        <span>Quando uma propriedade recebe um valor de mesmo nome podemos abreviar isso:</span>
+        <pre>
+
+    let message = 'Good Job!'
+    let object = {
+        message
+    }
+        </pre>
+
+        <p>Funções dentro de Objetos se chamam Métodos</p>
+        <pre>
+
+    let object = {
+        myFunction: function clicar(){
+            console.log('click')
+        }
+    }
+    object.myFunction()
+        </pre>
+        <span>Para isso há um atalho. Não é necessário passar a propriedade, basta escrever o nome da função abre-fecha parenteses abre-fecha chaves</span>
+        <pre>
+
+    let object = {
+        
+        myFunction(){
+            console.log('clicou')
+        }
+    }
+    object.myFunction()
+        </pre>
+        </section>
+        <section id="usefulCommands">
+        <h2>Comandos Úteis</h2>
+        <h3>Formatar Dinheiro:</h3>
+        <span>
+          <sub>valor</sub>.toLocaleString('pt-BR',{style:'currency',
+          currency:'BRL'})
+        </span>
+        <pre>
 
     let dinheiro = 80.50
     dinheiro = dinheiro.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
     console.log(dinheiro)
-            </pre>
+        </pre>
+        <p>Sempre que for fazer operações com cálculos com dinheiro, para que haja precisão deve-se calcular com o dinheiro convertido em centavos, e então depois passar novamente para o formato normal. Para passar de reias para centavos é só multiplicar por 100.</p>
         </section>
-        <section id="proximosPassos">
-            <h2>Próximos passos JavaScript:</h2>
-            <ul>
-                <li>Functions</li>
-                <li>Objects</li>
-                <li>Modularização</li>
-                <li>RegEx</li>
-                <li>JSON</li>
-                <li>AJAX</li>
-                <li>Node.js</li>
-            </ul>
+        <section id="nextSteps">
+        <h2>Próximos passos JavaScript</h2>
+        <ul>
+            <li>Functions</li>
+            <li>Objects</li>
+            <li>Modularização</li>
+            <li>RegEx</li>
+            <li>JSON</li>
+            <li>AJAX</li>
+            <li>Typescript</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+        </ul>
         </section>
-
     </main>
     <footer>
-        <p>&copy;LucasTombely</p>
+      <p>&copy;LucasTombely</p>
     </footer>
-</body>
+  </body>
 </html>
-

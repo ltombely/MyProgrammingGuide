@@ -23,3 +23,27 @@ section{
 section > img{
     border-radius: 2rem;
 }
+
+/*GENERAL*/
+
+h2{
+    font-size: 1.9rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+h5{
+    margin-top: 0.4rem;
+}
+pre{
+    color:yellow;
+}
+div#JSON-JS-imgs{
+    display:flex;
+}
+div#JSON-JS-imgs > div{
+    padding: 1rem;
+}

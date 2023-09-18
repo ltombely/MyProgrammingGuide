@@ -1,4 +1,5 @@
-const str = 'Lucas'
+let str = 'testes'
 
-const res = Array.from(str)
-console.log(res)
+str = str.repeat(5)
+
+console.log(str)

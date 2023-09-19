@@ -4,43 +4,11 @@ body > main > section{
     overflow-x: auto;
 }
 
-body > main > div > table > th, td{
-    border: 0.1rem solid black;
-    padding:0.5rem;
-}
 
-td{
-    text-align: center;
-}
-/*SECTIONS*/
 
-section{
-    background-color: #333333;
-    margin:0.5rem;
-    padding: 1.5rem;
-    border-radius: 1rem;
-}
-section > img{
-    border-radius: 2rem;
-}
 
 /*GENERAL*/
 
-h2{
-    font-size: 1.9rem;
-}
-h3{
-    font-size: 1.6rem;
-}
-h4{
-    font-size: 1.3rem;
-}
-h5{
-    margin-top: 0.4rem;
-}
-pre, code, td:nth-child(1){
-    color:yellow;
-}
 div#JSON-JS-imgs{
     display:flex;
 }

@@ -44,6 +44,33 @@ body > main{
     margin:1rem;
 }    
 
+/*SECTION*/
+
+section{
+    overflow-x: auto;
+}
+section{
+    background-color: #333333;
+    margin:0.5rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+section > img{
+    border-radius: 2rem;
+}
+
+/*TABLE*/
+
+body > main > section{
+    overflow-x: auto;
+}
+
+th, td{
+    border: 0.1rem solid black;
+    padding:0.5rem;
+    text-align: center;
+}
+
 /*FOOTER*/
 
 footer{
@@ -59,14 +86,20 @@ footer{
 h2{
     padding: 1.2rem;
     color: rgb(63, 255, 63);
+    font-size: 1.9rem;
 }
 h3{
     padding: 1rem;
     color: rgb(98, 86, 255);
+    font-size: 1.6rem;
 }
 h4{ 
     padding: 1rem;
     color:rgb(255, 61, 61);
+    font-size: 1.3rem;
+}
+h5{
+    margin: 0.4rem;
 }
 p{
     color: violet;
@@ -74,4 +107,6 @@ p{
     margin-top: 1rem;
     text-align: justify;
 }
-
+pre, code, td:nth-child(1){
+    color:yellow;
+}

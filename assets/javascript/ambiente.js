@@ -1,2 +1,5 @@
-const numbers = [1, 6, 34, 98 ,45 ,57]
+const function1 = function greeting(){
+    console.log('Hello')
+};
 
+console.log(typeof function1)

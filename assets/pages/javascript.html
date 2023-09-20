@@ -1017,6 +1017,32 @@
     }
     console.log(somar(4)) | Resultado: 4
         </pre>
+
+
+        <h3>Funções Avançadas</h3>
+        <p>Funções são valores como quaisquer outros, isso significa que podemos armazenálas em variáveis</p>
+        <span>ex:</span>
+        <pre>
+
+    const function1 = function greeting(){
+        console.log('Helo')
+    }
+    console.log(typeof function1) | Restulado: function
+    function1() | Chamando a função
+        </pre>
+
+        <p>Como a função está dentro de uma variável, não é necessário que ela tenha um nome, pois ja está associada à variável. Isso é chamado de uma função anônima.</p>
+        <p>O jeito de declarar função function name(){} é um atalho do var name = function (){}</p>
+
+        <pre>
+
+    const function1 = function (){
+        console.log('Helo')
+    }
+    function1() | Chamando a função
+        </pre>
+
+
       </section>
       <section id="objects">
         <h2>Objetos JavaScript e JSON</h2>
@@ -1359,6 +1385,103 @@
     object.myFunction()
         </pre>
       </section>
+      <section id="RegEx">
+        <h2>RegEx - Regular Expressions</h2>
+
+        <h3>O que é RegEx</h3>
+        <p>RegEx é uma notação para estabelecer padrões te textos ou números. Tem 3 principais aplicações.</p>
+        <ul>
+            <li>Efetuar Buscas de informações com um formato específico</li>
+            <li>Efetuar Validações de texto. (Verifica se um texto atende a um padrão estabelecido)</li>
+            <li>Fazer Substituições</li>
+        </ul>
+        
+        <h3>Características</h3>
+        <p>Toda Expressão Regular tem que ficar entre barras / / Isso faz a linguagem entender que isso é uma RegEx</p>
+        <p>Existem funções em JavaScript para se interagir com RegEx. <code>texto.match(RegEx</code>) e <code>RegEx.exec(texto)</code></p>
+        <p>RegEx pode ser utilizado em qualquer sequência de caracteres, seja o parágrafo de um livro (DOC), um texto estruturado como XML, JSON ou até em um código como por exemplo CSS</p>
+
+
+        <h3>Comandos JavaScript de interação com RegEx</h3>
+
+        <table>
+            <tr>
+                <th>COMANDO</th>
+                <th>Função</th>
+                <th>Exemplo</th>
+            </tr>
+            <tr>
+                <td>__.match(__)</td>
+                <td>Usa o texto e testa na expressão regular<br>O primeiro valor recebe o texto. O segundo a RegEx.<br>Caso contenha essa expressão, retorna um array com as palavras, caso contrário retorna null</td>
+                <td><code>let text = 'Este é um texto'<br>let regex = /texto/g<br>let results = text.match(regex)</code></td>
+            </tr>
+            <tr>
+                <td>__.exec(__)</td>
+                <td>Usa a expressão regular para testar o texto.<br>O primeiro valor recebe a RegEx, o segundo o texto,</td>
+                <td><code>let text = 'Este é um texto'<br>let regex = /texto/g<br>let results = regex.exec(text)</code></td>
+            </tr>
+        </table>
+        <h3>Notação RegEx</h3>
+
+        <h4>Flags</h4>
+        <p>Flag é a letra que vai após o final da expressão regular, ela faz com que tenha algumas características.</p>
+        <span>ex:</span>
+        <code>/texto/g</code>
+
+        <h4>Flags Importantes:</h4>
+        <table id="flags-table">
+            <tr>
+                <th>FLAG</th>
+                <th>Função</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Por padrão busca apenas a primeira palavra com o padrão</td>
+            </tr>
+            <tr>
+                <td>g</td>
+                <td>General -> Busca todas as palavras com este padrão</td>
+            </tr>
+            <tr>
+                <td>i</td>
+                <td>Insensitive -> Ignora se a letra for maiúscula ou minúscula</td>
+            </tr>
+            <tr>
+                <td>m</td>
+                <td>Multiline -> Em textos de várias linhas, faz com que ^ deixe de valer só no início do texto e comece a valer para todas as linhas</td>
+            </tr>
+        </table>
+
+        <h4>Formas de notação</h4>
+        
+        <p>[] -> Busca pelo caractere de dentro indidualmente.</p>
+        <p>{} -> Recebe Número de ocorrêcias do padrão.</p>
+        <p>() -> Caracteriza um grupo. Para chamá-lo usase $ com o número do grupo.</p>
+        <p>^ ->caracteriza o início da linha.</p>
+        <p>$ -> caracteriza o fim da linha.</p>
+        <p>. -> faz com que aceite qualquer tipo de caractere.</p>
+        <p>| -> serve como OU.</p>
+        <p>? -> O padrão pode ocorrer zero ou uma vez.</p>
+        <p>* -> O padrão pode ocorrer 0 ou várias vezes.</p>
+        <p>+ -> O padrão pode ocorror 1 ou mais vezes.</p>
+
+        <span>Exemplos:</span>
+        <br>
+        <br>
+        <span>Email: abcde12.34@gmail.com.br</span>
+        <br>
+        <span>RegEx Email:</span><code>/^[A-Za-z._%+-]+@[a-zA-z0-9.-]+\.[a-zA-z]{2,}$/g</code>
+        <br>
+        <br>
+        <span>Número: (12) 12345-6789</span><br>
+        <span>RegEx Número:</span><code>/[(][0-9]{2}[)][ ][0-9]{4,5}[-][0-9]{4}/g</code>
+        <br>
+        <br>
+        <span>CPF: 123.456.789-12</span>
+        <br>
+        <span>RegEx CPF:</span><code> /[0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}/g</code>
+
+      </section>
       <section id="usefulCommands">
         <h2>Comandos Úteis</h2>
         <h3>Formatar Dinheiro:</h3>
@@ -1382,14 +1505,12 @@
       <section id="nextSteps">
         <h2>Próximos passos JavaScript</h2>
         <ul>
+          <li>Arrays</li>
           <li>Functions</li>
-          <li>Objects</li>
           <li>Modularização</li>
-          <li>RegEx</li>
-          <li>JSON</li>
           <li>AJAX</li>
-          <li>Typescript</li>
           <li>Node.js</li>
+          <li>Express</li>
           <li>MongoDB</li>
         </ul>
       </section>

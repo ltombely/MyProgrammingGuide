@@ -24,7 +24,7 @@
       <a href="#"><span>JavaScript</span></a>
     </nav>
     <main>
-      <section id="pageIndex">
+        <section id="pageIndex">
         <h2>Page Index</h2>
         <h5><a href="#libraries">Bibliotecas JavaScript</a></h5>
         <h5><a href="#primitiveTypes">Tipos Primitivos</a></h5>
@@ -39,8 +39,8 @@
         <h5><a href="#objects">Objetos JavaScript e JSON</a></h5>
         <h5><a href="#usefulCommands">Comandos Úteis</a></h5>
         <h5><a href="#nextSteps">Próximos Passos</a></h5>
-      </section>
-      <section id="libraries">
+        </section>
+        <section id="libraries">
         <h2>Biliotecas JavaScript:</h2>
         <ul>
           <li>JQuery</li>
@@ -59,8 +59,8 @@
           <li>melon.js</li>
           <li>CraftyJs</li>
         </ul>
-      </section>
-      <section id="primitiveTypes">
+        </section>
+        <section id="primitiveTypes">
         <h2>Tipos Primitivos JavaScript</h2>
 
         <ul>
@@ -72,8 +72,8 @@
           <li>Symbol</li>
           <li>BigInt</li>
         </ul>
-      </section>
-      <section id="jsCommandTable">
+        </section>
+        <section id="jsCommandTable">
         <h2>COMANDOS JavaScript:</h2>
         <table>
           <tr>
@@ -232,8 +232,8 @@
           </tr>
           
         </table>
-      </section>
-      <section id="DOM">
+        </section>
+        <section id="DOM">
         <h2>DOM - Document Object Model</h2>
         <h3>O que é</h3>
 
@@ -508,8 +508,8 @@
         <p>Dentro de um evento existe um objeto chamado event, e ele possue várias informações sobre o evento.</p>
       
     
-    </section>
-      <section id="conditions">
+        </section>
+        <section id="conditions">
         <h2>Condições</h2>
         <h3>Condição Simples:</h3>
         <p>A condição simples possui apenas um if, sem else. Ex:</p>
@@ -564,8 +564,8 @@
     media >= 6? console.log('aprovado'):console.log('reprovado')
             </pre
         >
-      </section>
-      <section id="dates">
+        </section>
+        <section id="dates">
         <h2>Datas</h2>
         <p>
           Existe uma função da biblioteca padrão JS que pega data e hora atuais,
@@ -626,8 +626,8 @@
     console.log(segundos)
             </pre
         >
-      </section>
-      <section id="loops">
+        </section>
+         <section id="loops">
         <h2>Repetições JavaScript</h2>
         <h3>WHILE</h3>
         <p>
@@ -705,8 +705,8 @@
         console.log(array[i])
     }
         </pre>
-      </section>
-      <section id="arrays">
+        </section>
+        <section id="arrays">
         <h2>ARRAYS / VARIÁVEIS COMPOSTAS / VETORES</h2>
         <h3>Formas de declarar:</h3>
         <h4>Abrindo e Fechando colchetes:</h4>
@@ -928,8 +928,8 @@
 
     console.log(result) | Resultado: 10
         </pre>
-      </section>
-      <section id="functions">
+        </section>
+        <section id="functions">
         <h2>Funções</h2>
         <h3>Como Funcionam:</h3>
 
@@ -1041,10 +1041,80 @@
     }
     function1() | Chamando a função
         </pre>
+      
+        <p>Essa forma de abreviar funções tem 2 vantagens.</p>
+        <ol>
+            <li>Mais facil de ler</li>
+            <li>Hoisting</li>
+        </ol>
+        <p>Hoisting significa que uma função pode ser chamada antes mesmo de ser criada.</p>
+        <p>Funções são valores, então podemos colocá-las em objetos</p>
+        <p>Funções podem ser chamadas dentro de outras fuções</p>
+        <span>ex:</span>
+        <pre>
+
+    function run(param){
+
+        param()
+    }  
+    
+    run(
+        function(){
+            console.log('Running')
+        }
+        )
+        </pre>
+        <p>Aqui está sendo passado como parâemtro da função run uma função anônima que escreve Running no console</p>
+        <p>A função que é passada como parâmetro de outra função é chamada Callback</p>
+        
+        <h4>Código Assíncrono</h4>
+        
+        <p>Código Síncrono -> O computador espera terminar de ler o primeiro código para ler o próximo</p>
+        <p>Código Assíncrono -> O computador não vai esperar terminar de ler um código para começar a ler o próximo código</p>
+        <p>A partir do momento que esse comando é lido ele inicia o contador e segue lendo o resto do código. Quando o contador chegar no tempo escolhido ele ativa essa função. Isso se chama Asynchronous Code (código assíncrono).</p>
+
+        <table>
+            <tr>
+                <th>COMANDO</th>
+                <th>Função</th>
+                <th>Exemplo</th>
+            </tr>
+            <tr>
+                <td>setTimeout(__ , __)</td>
+                <td>Inicia uma função após um intervalo de tempo. O parâmetro 1 recebe uma função, o 2 recebe o tempo para esperar antes de iniciar em milisegundos</td>
+                <td style="text-align: left;">
+                    <pre>
+setTimout(function(){
+        console.log('Olá')
+    }, 5000)
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>setInterval(__, __)</td>
+                <td>Repete a função a cada determinado tempo. Par1 recebe a função, par2 recebe o tempo</td>
+                <td style="text-align: left;">
+                    <pre>
+setInterval(function(){
+        console.log('Olá')
+    }, 2000)
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>clearInterval(__)</td>
+                <td>Para de repetir um intervalo</td>
+                <td>
+                    <pre>
+clearInerval(intervalId)
+                    </pre>
+                </td>
+            </tr>
+        </table>
 
 
-      </section>
-      <section id="objects">
+        </section>
+        <section id="objects">
         <h2>Objetos JavaScript e JSON</h2>
 
         <h3>Como Declarar:</h3>
@@ -1262,7 +1332,7 @@
           permanentemente. Quando fechamos uma aba de um site, ele
           automaticamente zera todos os dados gerados no site. Quando salvamos
           estes dados no localStorage, mesmo após fechar e abrir a página os
-          dados continuam.
+          dados continuam.a
         </p>
 
         <h4>Comandos</h4>
@@ -1384,8 +1454,8 @@
     }
     object.myFunction()
         </pre>
-      </section>
-      <section id="RegEx">
+        </section>
+        <section id="RegEx">
         <h2>RegEx - Regular Expressions</h2>
 
         <h3>O que é RegEx</h3>
@@ -1481,8 +1551,8 @@
         <br>
         <span>RegEx CPF:</span><code> /[0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}/g</code>
 
-      </section>
-      <section id="usefulCommands">
+        </section>
+        <section id="usefulCommands">
         <h2>Comandos Úteis</h2>
         <h3>Formatar Dinheiro:</h3>
         <span>
@@ -1501,8 +1571,8 @@
           e então depois passar novamente para o formato normal. Para passar de
           reias para centavos é só multiplicar por 100.
         </p>
-      </section>
-      <section id="nextSteps">
+        </section>
+        <section id="nextSteps">
         <h2>Próximos passos JavaScript</h2>
         <ul>
           <li>Arrays</li>
@@ -1513,7 +1583,7 @@
           <li>Express</li>
           <li>MongoDB</li>
         </ul>
-      </section>
+        </section>
     </main>
     <footer>
       <p>&copy;LucasTombely</p>

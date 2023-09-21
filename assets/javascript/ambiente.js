@@ -1,5 +1,21 @@
-const function1 = function greeting(){
-    console.log('Hello')
-};
+let array = []
+let todoList = document.querySelector('#todo-list')
 
-console.log(typeof function1)
+function add(){
+    let text = document.querySelector('#text').value
+    let date = document.querySelector('#date').value
+
+    let object = {
+        task: text,
+        time: date
+    }
+
+    object.time = object.time.replace(/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/, '$3/$2/$1' )
+    array.push(object)
+
+    todoList.innerHTML = `
+    <p>Task: ${object.task}</p>
+    <p>Date : ${object.time}</p>
+    `
+
+}

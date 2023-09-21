@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+*{  
+    margin: 5px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', monospace;
+    font-size: 14pt;
+}
+input{
+    padding: 5px;
+}
+body{
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <h1>Todo List</h1>
+    
+    <input type="text" id="text">
+    <input type="date" id="date">
+    <input type="submit" onclick="add()" value="Add to List">
+    <div id="todo-list" style="width: 100%; background-color: gray;"></div>
+
+    <script src="assets/javascript/ambiente.js"></script>
+</body>
+</html>

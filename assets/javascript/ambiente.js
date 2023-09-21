@@ -13,9 +13,20 @@ function add(){
     object.time = object.time.replace(/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/, '$3/$2/$1' )
     array.push(object)
 
-    todoList.innerHTML = `
-    <p>Task: ${object.task}</p>
-    <p>Date : ${object.time}</p>
-    `
+    showList()
+
+        
+}
+
+function showList(){
+
+
+    
+}
+
+
+function toDelete(param){
+
+
 
 }

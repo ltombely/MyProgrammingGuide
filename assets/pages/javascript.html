@@ -297,6 +297,11 @@
                 <td><hr /></td>
               </tr>
               <tr>
+                <td>document.removeEventListener('<sub>evento</sub>', <sub>função</sub>)</td>
+                <td>Remove um event Listener, Devemos passar qual o evento que devemos remover e qual a função do evento que queremos remover</td>
+                <td><hr></td>
+              </tr>
+              <tr>
                 
               </tr>
               <tr>
@@ -628,7 +633,10 @@
         >
         </section>
          <section id="loops">
-        <h2>Repetições JavaScript</h2>
+        <h2>Loops JavaScript</h2>
+        <h3>O que é</h3>
+        <p>Um Loop em javascript é um comando que se repete diversas automaticamente durante o código</p>
+        
         <h3>WHILE</h3>
         <p>
           While é uma estrutura de repetição em que o teste lógico se faz no
@@ -1103,7 +1111,7 @@ setInterval(function(){
             </tr>
             <tr>
                 <td>clearInterval(__)</td>
-                <td>Para de repetir um intervalo</td>
+                <td>ParaR de repetir um intervalo</td>
                 <td>
                     <pre>
 clearInerval(intervalId)
@@ -1111,6 +1119,91 @@ clearInerval(intervalId)
                 </td>
             </tr>
         </table>
+
+        <h4>Arrow Functions</h4>
+        <p>Arrow Function é um shorcut para funções anônimas. Arrow Functions tem algumas vantagens sobre funções anônimas normais</p>
+        <span>Função Comum:</span>
+        <pre>
+
+    const regularFunction = function(param1, param2){
+        console.log('Regular Function')
+        return 5
+    }
+        </pre>
+
+        <span>Arrow Function:</span>
+
+        <pre>
+
+    const arrowFunction = (param1, param2) => {
+        console.log('Arrow Function')
+        return 5
+    }
+        </pre>
+        <p>Arrow Functions tem alguns shortcuts que funções normais não tem.</p>
+        <p>Quando uma Arrow Function tem apenas um parâmetro, os parenteses são opcionais</p>
+        <span>ex:</span>
+        <pre>
+
+    const oneParamFunction = (param) => {
+        console.log('Arrow Function')
+        return 5
+    }
+    oneParamFunction(10)
+
+
+
+    const oneParamFunction = param => {
+        console.log('Arrow Function')
+        return 5
+    }
+    oneParamFunction(10)
+        </pre>
+        <p>Quando uma Arrow Function tem apenas uma linha, podemos colocar tudo na mesma linha da seta, apagar o return e as chaves</p>
+        <span>ex:</span>
+
+        <pre>
+
+    const oneLineFunction = () => {
+        return 2 + 3
+    }
+    oneLineFunction()
+
+
+
+    const oneLineFunction = () => 2 + 3
+    oneLineFunction()
+        </pre>
+        
+        <p>Quando um método é criado dentro de um objeto, existe uma maneira mais simples de declarar</p>
+        <span>ex:</span>
+
+        <pre>
+
+    const person = {
+        name: 'Robson',
+        speak: function(){
+            console.log(this.name + ' spoke')
+        }
+    }
+    person.speak()
+    
+
+    const person ={
+        name: 'Robson',
+        speak () {
+            console.log(this.name + ' spoke')
+        }
+    }
+    person.speak()
+        </pre>
+
+        <p>Quando uma função é passada dentro de outra função, devemos criar Arrow Functions, pois facilita a leitura</p>
+        <p>Funções normais tem uma vantagem, pois podem serem chamadas antes de serem criadas. Arrow functions não</p>
+
+
+
+
 
 
         </section>

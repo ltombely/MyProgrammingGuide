@@ -634,10 +634,26 @@
         </section>
          <section id="loops">
         <h2>Loops JavaScript</h2>
+
         <h3>O que é</h3>
-        <p>Um Loop em javascript é um comando que se repete diversas automaticamente durante o código</p>
+        <p>Um Loop em javascript é um comando que se repete diversas automaticamente durante o código.</p>
+        <p>
+            Loops tem 3 principais partes. 
+            <ul>
+                <li>Loop Variable</li>
+                <li>Loop Condition</li>
+                <li>Increment Step</li>
+            </ul>
+        </p>
+        <p>Para fazer um loop parar, temos que criar uma variável que controla e fazer ele parar na condição dentro dos parenteses.</p>
         
-        <h3>WHILE</h3>
+        <p>Cada vez que um loop roda, é chamado de iteração</p>
+
+        <p>Loops criam um escopo, qualquer variável criada entre as chaves fica entre as chaves.</p>
+
+        <h3>Tipos de Loops</h3>
+
+        <h4>WHILE</h4>
         <p>
           While é uma estrutura de repetição em que o teste lógico se faz no
           Início, antes de executar o bloco
@@ -658,7 +674,7 @@
             </pre
         >
 
-        <h3>DO-WHILE</h3>
+        <h4>DO-WHILE</h4>
         <p>
           DO-WHILE é uma estrutura de repetição que faz o teste lógico no final,
           após executar o bloco
@@ -677,11 +693,19 @@
             </pre
         >
 
-        <h3>FOR</h3>
+        <h4>FOR</h4>
         <p>
           FOR é uma estrutura de repetição que possue dentro da sua estrutura
           uma variável que define quantas vezes será executado o bloco
         </p>
+        <p>Possui como argumentos 3 partes. A primeira recebe a Loop Variable, a segunda a Loop Condition, e a terceira a Increment Step</p>
+
+        <pre>
+
+    for(loop variable; loop condition; increment step){
+
+    }
+        </pre>
         <img src="../img/for.jpg" alt="Foto FOR" /><br />
         <span>Fonte: Curso em Vídeo Javascript - Gustavo Guanabara </span>
         <pre>
@@ -694,8 +718,21 @@
         console.log(n)
     }
         </pre>
+        <h3>Quando usa cada tipo de Loop</h3>
+        <p>Recomenda-se que quando vamos fazer algum loop padrão (Que possua as 3 principais partes), usemos For, pois fica mais organizado já que a Loop Variable, Loop Condition, e Step Increment estão juntas no mesmo lugar. Quando não há as 3 principais partes, usamos While</p>
+        <span>ex:</span>
 
-        <h3>FOR IN</h3>
+        <pre>
+
+    let randomNumber = 0
+
+    while (randoNumber &lt; 0.5){
+        randomNumber = Math.random()
+    }
+        </pre>
+        <p>Esse Loop não possui Step Increment.</p>
+
+        <h4>FOR IN</h4>
         <p>For in é um loop especial para arrays, que faz com que repita o loop de ac acordo à quantidade de elementos de um array.</p>
         <span>Estrutura:</span>
         <pre>
@@ -782,23 +819,24 @@
               array.includes('Ivan')
             </td>
           </tr>
-        </table>
+        </tr>
+    </table>
 
         <h4>Comandos de Inserção e Remoção de dados:</h4>
         <table>
           <tr>
-            <th>COMANDO</th>
+              <th>COMANDO</th>
             <th>Função</th>
             <th>Característica</th>
           </tr>
           <tr>
-            <td>array.push(par)</td>
-            <td>ADICIONAR ao fim da lista</td>
-            <td>let array = [1, 2, 3, 4, 5]<br />array.push(6)</td>
+              <td>array.push(par)</td>
+              <td>ADICIONAR ao fim da lista</td>
+              <td>let array = [1, 2, 3, 4, 5]<br />array.push(6)</td>
           </tr>
           <tr>
-            <td>array.pop()</td>
-            <td>REMOVER último item da Lista</td>
+              <td>array.pop()</td>
+              <td>REMOVER último item da Lista</td>
             <td>let array = [1, 2, 3, 4, 5]<br />array.pop()</td>
           </tr>
           <tr>
@@ -810,26 +848,26 @@
             <td>array.shift()</td>
             <td>REMOVER primeiro item da Lista</td>
             <td>let array = [1, 2, 3, 4, 5]<br />array.shift()</td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
             <td>array.splice(par1, par2)</td>
             <td>REMOVER de uma posição específica em diante</td>
             <td>
-              par1 recebe o índice inicial, par2 recebe quantos elementos
-              remover apartir daquele índice<br />let array = [3, 6, 1, 9]<br />array.splice(1,
-              2)
+                par1 recebe o índice inicial, par2 recebe quantos elementos
+                remover apartir daquele índice<br />let array = [3, 6, 1, 9]<br />array.splice(1,
+                2)
             </td>
           </tr>
         </table>
-
+        
         <h4>Comandos de Manipulação de Arrays:</h4>
         <table>
-          <tr>
-            <th>COMANDO</th>
-            <th>Função</th>
+            <tr>
+                <th>COMANDO</th>
+                <th>Função</th>
             <th>Característica</th>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
             <td>array.slice(par1, par2)</td>
             <td>COPIAR de uma posição específica em diante</td>
             <td>
@@ -843,7 +881,7 @@
             <td>
               let array1 = [1, 2, 3, 4]<br />let array2 = [...array1, 5, 6]
             </td>
-          </tr>
+        </tr>
           <tr>
             <td>array1.concat(array2)</td>
             <td>Soma 2 arrays ou mais</td>
@@ -866,7 +904,7 @@
             </td>
           </tr>
           <tr>
-            <td>array.join()</td>
+              <td>array.join()</td>
             <td>Imprime os elementos de um array de forma concatenada</td>
             <td>
               Por padrão é concatenado com uma vírgula, se quiser mudar a
@@ -874,8 +912,8 @@
               let countries = ['Brazil', 'Russia', 'Japan']<br />
               let res = countries.join() console.log(res)
             </td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
             <td>array.reverse()</td>
             <td>Inverte a ordem dos elementos do array</td>
             <td>
@@ -892,11 +930,11 @@
               names.sort()<br />
               console.log(names)
             </td>
-          </tr>
+        </tr>
           <tr>
             <td>array.flat(_)</td>
             <td>
-              Faz com que todos os arrays dentro deste array, sejam unidos em um
+                Faz com que todos os arrays dentro deste array, sejam unidos em um
               único array
             </td>
             <td>
@@ -907,19 +945,25 @@
               array.flat(Infinity)<br />
               console.log(array)
             </td>
-          </tr>
-          <tr>
-            <td>Array.from(string)</td>
+        </tr>
+        <tr>
+            <td>Array.from(__)</td>
             <td>
-              Transforma todos os caracteres de uma string em um elemento de um
-              array
+              Transforma em array uma String, um Map ou um Set
             </td>
             <td>
               let str = '1234567'<br />
               let array = Array.from(str)<br />
               console.log(array)
             </td>
-          </tr>
+        </tr>
+        <tr>
+          <td>array.map(callback)</td>
+          <td>Aplica a função a todos os elementos de um array. O parâmetro da função tem que ser o nome que queremos chamar cada elemento do array</td>
+          <td>
+              const numbers = [1, 2, 3]<br>
+              const doubledNumbers = numbers.map(number => number*2)
+          </td>
         </table>
 
         <h4>Padrão acumulador</h4>
@@ -936,6 +980,186 @@
 
     console.log(result) | Resultado: 10
         </pre>
+        </section>
+        <section id="arrayMapSet">
+            <h2>MAP / SET</h2>
+
+            <p>Array, Map e Set são tipos especiais de objetos JavaScript. Cada um tem características diferentes, que permite com que sejam usados para coisas diferentes.</p>
+
+            <h3>MAP</h3>
+
+            <p>MAP é uma estrutura de dados que existe em outras linguagens de programação, e no ES6 foi implementado no JavaScript</p>
+            <p>Map é uma coleção de pares. Cada par de um Map é um Array</p>
+
+            
+            <h4>Declarar MAP</h4>
+            
+            <p>Para declarar um Map, usa-se 'new Map()'</p>
+            
+            <code>const myMap = new Map()</code>
+            
+            <p>Podemos declarar um Map com valores usnaod forma de arrays.</p>
+            <pre>
+
+    const myMap = new Map([
+    [1, 'Lucas'],
+    [2, 'João'],
+    [3, 'Roberto']
+    ])
+            </pre>
+
+            <h4>MAP Loop</h4>
+
+            <p>A estrutura de repetição for(__ of map_name){ } é como o for in para Maps.</p>
+
+            <pre>
+
+    const myMap = new Map([
+    [1, 'Lucas'],
+    [2, 'João'],
+    [3, 'Roberto']
+    ])
+
+    for(i of myMap){
+        console.log(i)
+    }
+            </pre>
+
+            <p>Como cada par do map é um array, podemos chamar as chaves e os valores através da notação de array</p>
+
+            <pre>
+
+    const myMap = new Map([
+    [1, 'Lucas'],
+    [2, 'João'],
+    [3, 'Roberto']
+    ])
+
+    for(i of myMap){
+        console.log(i[0]) | Retorna só as chaves
+        console.log(i[1]) | Retorna só os valores
+    }
+            </pre>
+
+            
+            <h4>MAP Methods</h4>
+
+
+            <table>
+                <tr>
+                    <th>METHOD</th>
+                    <th>Função</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td>myMap.set(__, __)</td>
+                    <td>Adiciona um elemento ao Map. O primeiro recebe a chave o segundo o valor</td>
+                    <td><code>const myMap = new Map() <br> myMap.set(1, 'mouse)</code></td>
+                </tr>
+                <tr>
+                    <td>myMap.get(__)</td>
+                    <td>Chama o valor baseado na chave passada</td>
+                    <td><code>const myMap = new Map()<br> myMap.set('nome', 'João')<br>console.log(myMap.get('nome'))</code></td>
+                </tr>
+                <tr>
+                    <td>myMap.size</td>
+                    <td>Diz o tamanho do Map, similar ao .length nos arrays</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>myMap.delete(__)</td>
+                    <td>Delete o elemento de chave passada nos argumentos</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>myMap.clear()</td>
+                    <td>Apaga todos os elementos do Map</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>myMap.forEach(function)</td>
+                    <td>Executa uma função para cada elemento do Map</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>myMap.keys()</td>
+                    <td>Retorna todas as chaves do Map</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>myMap.values()</td>
+                    <td>Retorna toos os valores do Map</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>myMap.has(__)</td>
+                    <td>Verifica se possui a chave do argumento</td>
+                    <td></td>
+                </tr>
+            </table>
+            
+
+
+            <p>Quando se quer usar o map.set() várias vezes pode-se abreviar. A primeira vez que adicionar usa-se o nome do map, e depois somente o .set, serve com o objeto Set com .add também</p>
+            <span>ex:</span>
+            <pre>
+
+    const myMap = new Map()
+    myMap.set('nome', 'João')
+    .set('idade', 20)
+    .set('carro', 'Volvo')
+            </pre>
+
+
+            <h3>SET</h3>
+
+            <h4>Declarar SET</h4>
+
+            <p>Para declarar usa-se a 'new Set()'</p>
+            <code>const mySet = new Set()</code>
+
+            <p>Se quisermos, podemos passar como argumento um array, então esse array se torna um Set.</p>
+
+            <pre>
+
+    const myArray = [1, 2, 3, 4, 5]
+    const mySet = new Set(myArray)
+            </pre>
+
+            <h4>SET Methods:</h4>
+            <table>
+                <tr>
+                    <th>METHOD</th>
+                    <th>Função</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td>set.add(__)</td>
+                    <td>Adiciona ao final do Set</td>
+                    <td><code>const mySet = new Set()<br>mySet.add(5)</code></td>
+                </tr>
+                <tr>
+                    <td>set.delete(__)</td>
+                    <td>Deleta um valor de um Set</td>
+                    <td><code>const myArray = [1, 2, 3, 4]<br>const mySet = new Set(myArray)<br>mySet.delete(3)</code></td>
+                </tr>
+                <tr>
+                    <td>set.clear()</td>
+                    <td>Deleta todos os elementos de um Set</td>
+                    <td><code>const myArray = [1, 2, 3, 4]<br>const mySet = new Set(myArray)<br>mySet.clear()</code></td>
+                </tr>
+                <tr>
+                    <td>set.has(__)</td>
+                    <td>Verifica se o set contem aquele valor e retorna um booleano.<br>Similar ao array.includes</td>
+                    <td><code>const myArray = [1, 2, 3, 4]<br>const mySet = new Set(myArray)<br>console.log(mySet.has(2))</code></td>
+                </tr>
+            </table>
+
+            <h4>Características de um SET</h4>
+            <p>Um Set não permite valores duplicados. Se um valor for repetido ele apenas ignora o valor.</p>
+            <p>Um Set pode conter arrays e objetos.</p>
+            <p>Os elementos de um Set, diferente de um array, não possuem index, então não tem como acessá-los. Set não foi criado para substituir arrays, ele foi criado para dar suporte à coisas que um array não consegue fazer, como remover duplicatas.</p>
+
         </section>
         <section id="functions">
         <h2>Funções</h2>

@@ -81,16 +81,16 @@
             <th>Função</th>
             <th>Característica</th>
           </tr>
-          <td>
+          <tr>
             <td>console.log(__)</td>
             <td>Imprime uma mensagem no console</td>
             <td><hr></td>
-          </td>
-          <td>
+          </tr>
+          <tr>
             <td>console.info()</td>
             <td>Exibe uma informação no console</td>
             <td><hr></td>
-          </td>
+          </tr>
           <tr>
             <td>console.warn(__)</td>
             <td>Exibe aviso no console</td>
@@ -981,7 +981,7 @@
     console.log(result) | Resultado: 10
         </pre>
         </section>
-        <section id="arrayMapSet">
+        <section id="mapSet">
             <h2>MAP / SET</h2>
 
             <p>Array, Map e Set são tipos especiais de objetos JavaScript. Cada um tem características diferentes, que permite com que sejam usados para coisas diferentes.</p>
@@ -1771,6 +1771,212 @@ clearInerval(intervalId)
     }
     object.myFunction()
         </pre>
+        </section>
+        <section id="OOP">
+            <h2>POO - Programação Orientada a Objetos (inacabado)</h2>
+            <h3>O que é</h3>
+            <p>POO, ou <abbr title="Object-Orientated Programming">OOP</abbr>, em inglês, é um <abbr title="Estrutura">paradigma</abbr> de programação, que serve para objetos que tenham características similares, usando classes de objetos</p>
+
+            <p>A POO tem 4 pilares fundamentais ao quão se baseia</p>
+            <img src="../img/pilares-poo.png" alt="Pilares POO">
+            <span>Fonte:https://www.google.com/url?sa=i&url=https%3A%2F%2Fdev.to%2Fthaisplicando%2Fentendendo-programacao-orientada-a-objetos-de-vez-com-harry-potter-5aoa&psig=AOvVaw0H2hZLYzgfdU2evAV97dpD&ust=1695842809068000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDf6rODyYEDFQAAAAAdAAAAABAR</span>
+            <h3>Classes</h3>
+            <p>Para declarar uma nova classe, usa-se a palavra class, seguido do nome da classe e abre-fecha chaves.</p>
+            <span>ex:</span>
+            <pre>
+
+    class Person{
+
+    }   
+            </pre>
+            <p>Por convenção, cria-se o nome de classes com a inicial maiúscula</p>
+            <p>Para instanciar um novo objeto de um classe declara-se uma variável que receba a o comando 'new' e o nome de classe com abre-fecha paranteses</p>
+            <pre>
+
+    class Person{
+
+    }
+    let person1 = new Person()
+            </pre>
+            <p>Para criar uma propriedade ou atributo de um objeto dentro de uma classe, não é necessário usar let, var ou const. Basta colocar o nome do atributo</p>
+
+            <pre>
+
+    class Carro{
+        cor = 'vermelho'
+        rodas = 4
+    }
+    let c1 = new Carro()
+    console.log(c1) | Resultado : Carro { cor: 'vermelho', rodas: 4 }
+            </pre>
+
+
+            <h3>Constructor</h3>
+            <p>A classe construtor serve para dar um padrão aos objetos</p>
+            <p>Dentro de toda classe, existe um método chamado constructor. Esse método é chamado toda vez que um novo objeto for instanciado.</p>
+            <pre>
+    class Car{
+        constructor(){
+            
+        }
+    }
+            </pre>
+            <p>Pode-se declarar um atributo dentro do método construtor, porém é necessário usar a palavra 'this.' antes, para dizer que faz parte desta classe</p>
+
+            <pre>
+
+    class Car{
+        constructor(){
+
+            this.color = 'white'
+        }
+    }
+    let c1 = new Car()
+            </pre>
+            <p>Para definir objetos com atributos variáveis, usa-se os parâmetros da classe construtor para definir as propriedades.</p>
+            <pre>
+
+    class Person{
+        constructor(n, a, g){
+            this.name = n
+            this.age = a
+            this.gender = g
+        }
+    }
+    let person1 = new Person('Lucas', 21, 'Masculine')
+    console.log(person1)
+            </pre>
+
+            <h3>Métodos</h3>
+            <p>Quando uma função é criada dentro de um objeto, se chama método.</p>
+            <span>ex:</span>
+            <pre>
+
+    class Person{
+        constructor(n, a){
+            this.name = n
+            this.age = a
+        }
+
+        talk(){
+            console.log(this.name + 'talked')
+        }
+    }
+    let person1 = new Person('Lucas', 21)
+    person1.talk()
+            </pre>
+
+            <h3>SETTER e GETTER</h3>
+            <h4>SET</h4>
+            <p>Quando um método serve para setar um valor, ele pode ser escrito de uma maneira especial</p>
+            <span>Método Normal:</span>
+            <pre>
+
+    class Car{
+        fuelPercentage = 0
+
+        fuel(f){
+            this.fuelPercentage = f
+        }
+    }
+    let car1 = new Car()
+    car1.fuel(50)
+            </pre>
+            <span>Método Set</span>
+
+            <pre>
+
+    class Car{
+        fuelPercentage = 0
+
+        set fuel(f){
+            this.fuelPercentage = f
+        }
+    }
+    let car1 = new Car()
+    car1.fuelPercentage = 100
+            </pre>
+            <p>Métodos Set tem que ter obrigatoriamente um parâmetro</p>
+
+            <h4>GET</h4>
+            <p>Metodos que retornam valores tem o nome get e se escrevem um pouco diferente</p>
+            <span>Método Normal:</span>
+            <pre>
+
+    class Car{
+        fuelPercentage = 0
+
+        fuel(){
+            return this.fuelPercentage
+        }
+    }
+    let car1 = new Car()
+    console.log(car1.fuel())
+            </pre>
+            <span>Método Get</span>
+            <pre>
+
+    class Car{
+        fuelPercentage = 0
+
+        get fuel(){
+            return this.fuelPercentage
+        }
+    }
+    let car1 = new Car()
+    console.log(car1.fuel)
+            </pre>
+            <p>Basicamente, a difença dos métodos geteer e setter para métodos normais é que para chamá-los, não é necessário usar abre-fecha parenteses.</p>
+
+            <h3>Static</h3>
+            <p>Faz com que um método ou propriedade definada com essa palavra pertença diretamente à classe, e não ao objeto. Ou seja, o valor static é sempre o mesmo para todos os objetos. Se mudar o static de um objeto, muda para todos.</p>
+            <p>Podemos mudar o valor do Static chamando a classe diretamente.</p>
+            <p>Um valor Static tem que ser declarado fora do construtor.</p>
+
+            <pre>
+
+    class Person{
+        static alive = true
+    }
+    let person1 = new Person()
+    Person.alive = false
+    console.log(person1)
+            </pre>
+
+            <h3>Herança</h3>
+            <p>A herança introduz o conceito de Classe Pai e Classe Filho. A classe filho contém dentro de si e pode utilizar tudo o que a Classe Pai tem.</p>
+            <p>Para declarar uma classe Filho usa-se a palavra extends junto do nome da classe pai</p>
+            <span>ex:</span>
+            
+            <pre>
+
+    class Car{
+
+    }
+    class CombatCar extends Car{
+
+    }
+            </pre>
+
+            <p>Quando queremos modificar algum atributo da classe filho que está dentro da classe pai, usa-se a palavra 'super' com abre-fecha parenteses dentro do construtor, passando como parâmetro os parâmetros da classe pai</p>
+            <span>ex:</span>
+
+            <pre>
+    
+    class Car{
+        constructor(fuelType){
+            this.fuelType = fuelType
+        }
+    }
+    class CombatCar extends Car{
+        constructor(){
+            super('Diesel')
+        }
+    }
+    let c1 = new CombatCar()
+    console.log(c1)
+            </pre>
+
         </section>
         <section id="RegEx">
         <h2>RegEx - Regular Expressions</h2>

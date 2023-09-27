@@ -1869,6 +1869,25 @@ clearInerval(intervalId)
         <span>RegEx CPF:</span><code> /[0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}/g</code>
 
         </section>
+        <section id="asynchronousJavaScript">
+            <h2>Assynchronous JavaScript</h2>
+
+            <h3>Callback</h3>
+            <p>Callback é quando uma função dentro de si chama outra função.</p>
+            <span>ex:</span>
+            <pre>
+
+    function one(call){
+        console.log('Step one')
+        call()
+    }
+
+    function two(){
+        console.log('Step two')
+    }
+    one(two)
+            </pre>
+        </section>
         <section id="usefulCommands">
         <h2>Comandos Úteis</h2>
         <h3>Formatar Dinheiro:</h3>

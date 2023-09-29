@@ -29,14 +29,17 @@
         <h5><a href="#libraries">Bibliotecas JavaScript</a></h5>
         <h5><a href="#primitiveTypes">Tipos Primitivos</a></h5>
         <h5><a href="#jsCommandTable">Tabela de Comandos JavaScript</a></h5>
-        <h5><a href="#ternaryOperator">Operadores Ternários</a></h5>
         <h5><a href="#DOM">DOM - Document Object Model</a></h5>
         <h5><a href="#conditions">Condições JavaScript</a></h5>
         <h5><a href="#dates">Datas</a></h5>
-        <h5><a href="#loops">Repetições</a></h5>
+        <h5><a href="#loops">Loops</a></h5>
         <h5><a href="#arrays">Array / Variáveis Compostas / Vetores</a></h5>
+        <h5><a href="#mapSet">MAP and SET</a></h5>
         <h5><a href="#functions">Operadores Ternarios</a></h5>
         <h5><a href="#objects">Objetos JavaScript e JSON</a></h5>
+        <h5><a href="#RegEx">RegEx</a></h5>
+        <h5><a href="#asynchronousJavaScript">Async JavaScript</a></h5>
+        <h5><a href="#httpRequests">Fetch API</a></h5>
         <h5><a href="#usefulCommands">Comandos Úteis</a></h5>
         <h5><a href="#nextSteps">Próximos Passos</a></h5>
         </section>
@@ -981,7 +984,7 @@
     console.log(result) | Resultado: 10
         </pre>
         </section>
-        <section id="arrayMapSet">
+        <section id="mapSet">
             <h2>MAP / SET</h2>
 
             <p>Array, Map e Set são tipos especiais de objetos JavaScript. Cada um tem características diferentes, que permite com que sejam usados para coisas diferentes.</p>
@@ -1756,10 +1759,10 @@ clearInerval(intervalId)
     }
     object.myFunction()
         </pre>
-        <span
+        <spang
           >Para isso há um atalho. Não é necessário passar a propriedade, basta
           escrever o nome da função abre-fecha parenteses abre-fecha
-          chaves</span
+          chaves</spang
         >
         <pre>
 
@@ -1872,6 +1875,24 @@ clearInerval(intervalId)
         <section id="asynchronousJavaScript">
             <h2>Assynchronous JavaScript</h2>
 
+            <p>Javascript Assíncrono é muito utilizado as vezes necessitamos, pegar iformações de outros códigos, e para isso temos que esperar o tempo para isso acontecer e voltar ao nosso codigo.</p>
+
+            <h3>TRY e CATCH</h3>
+            <p>É necessário aprender a lidar com erros que pode acontecer com o código. É possível que a API que consultamos nao está funcionando, então o nosso código não funcionará, e precisamos de um jeito de mostrar isso ao usuário, isso se faz com try catch</p>
+            <span>Syntax ex:</span>
+
+            <pre>
+
+    try{
+
+        console.log(variable) // Tentando mostrar uma variável que não foi criada, gerará um erro.
+
+    }catch (error) {
+        console.log(`Deu erro no código, e o erro é esse: ${error}`)
+    }
+            </pre>
+            <p>Quando há um erro no código, o código simpesmente para de ser executado, porém com o try catch, mesmo que haja algum erro, ele continuará executando o código.</p>
+
             <h3>Callback</h3>
             <p>Callback é quando uma função dentro de si chama outra função.</p>
             <span>ex:</span>
@@ -1887,6 +1908,136 @@ clearInerval(intervalId)
     }
     one(two)
             </pre>
+
+
+            <h3>PROMISES</h3>
+
+            <p>Promises funcionam como promessass na vida real. E caso essa promeça seja cumprida acontecerá resolve, caso contrário reject.</p>
+            <p>Promises são objetos e necessitam obrigatoriamente ter uma função como parâmetro. E essa função deve ter 2 parâmetros, por convenção é utilizado resolve e reject, que devem ser callbacks</p>
+            <p>Promises são assíncronas, ela não espera uma dar certo para continuar lendo o código.</p>
+            
+            <h4>Declarando Promises</h4>
+            <p>Para declarar uma promise, faz-se como se fosse um Map ou Set, so que com a palavra Promise</p>
+            <span>ex:</span>
+            <pre>
+                
+                const myPromise = new Promise((resolve, reject) => { })
+            </pre>
+            <h4>THEN() e CATCH()</h4>
+            
+            <p>O argumento do resolve() vai ser colocado no .then(), que recebe como parâmetro uma função que tem como parâmetro o nome que queremos dar ao conteúdo do resolve.</p>
+            <p>O argumento do reject() vai ser colocado no catch(), que recebe como parâmtro uma função que tem como parâmetro o nome que queremos dar ao conteúdo do reject.</p>
+
+            <pre>
+
+    const myPromise = new Promise((resolve, reject) => {
+        cont name = 'Lucas'
+
+        if(name === 'Lucas'){
+            resolve('Usuário Encontrado')
+        }else{
+            reject('Usuário não encontrado')
+        }
+    })
+    myPromise.then( data => {
+        console.log(data)
+    }).catch( err => console.log(err))
+            </pre>
+
+            <h4>Promise.all([])</h4>
+            <p>Quando existem muitas promises e nós queremos dar a resposta de várias ao mesmo tempo, sem precisar escrever o que acontece em caso resolve e caso reject individualmente para cada uma delas, usa-se o método Promise.all([]), Passando dentro do array o nome de todas as promises. Para o metodo all ser executado, todas as promessas tem que ser resolvidas</p>
+            <span>ex:</span>
+
+            <pre>
+
+    const p1 = new Promise((resolve, reject) => {
+        resolve('P1 is ok!')
+    })
+    const p2 = new Promise((resolve, reject) => {
+        resolve('P2 is ok!')
+    })
+    const p3 = new Promise((resolve, reject) => {
+        resolve('P3 is ok!')
+    })
+
+    const resolveAll = Promise.all([p1, p2, p3]).then((data) => {
+        console.log(data)
+    })
+            </pre>
+
+            <h4>Promise.race([])</h4>
+            <p>Serve como o Promise.all([]), só que ao invés de ser chamado só quando todas as promises forem resolvidas, é chamado quando qualquer uma promise tiver sido resolvida pela primeira vez.</p>
+            <p>É como uma corrido, e ele pega o primeiro resolve que ganhar.</p>
+            <span>ex:</span>
+            <pre>
+
+    const p1 = new Promise((resolve, reject) => {
+        resolve('P1 is ok!')
+    })
+    const p2 = new Promise((resolve, reject) => {
+        resolve('P2 is ok!')
+    })
+    const p3 = new Promise((resolve, reject) => {
+        resolve('P3 is ok!')
+    })
+
+    const resolveRace = Promise.Race([p1, p2, p3]).then((data) => {
+        console.log(data)
+    })
+            </pre>
+            
+            <p>O Fetch retorna uma promise, podemos interagir com then e catch</p>
+
+            <h3>ASYNC e AWAIT</h3>
+
+            <h4>Async</h4>
+            <p>As funções assíncronas funcionam como Promises, é uma promessa de que alguma informação será enviada em um ponto futuro do nosso código.</p>
+            <p>Precisa-se declarar a função com a palavra async.</p>  
+            <p>Quando precisamos aguardar por algo a instrução precisa do await.</p>
+            <p>Await só pode ser utilizado em uma função async, caso contrário dá erro.</p>
+            <p>Exemplo de uso: Inserção de dados no DB</p>
+
+            <span>Função Async ex:</span>
+            <pre>
+
+    async function() {
+        console.log('Hi')
+    }
+            </pre>
+
+            <h4>Await</h4>
+            <p>Await faz com que só se continue lendo o código após a função passada com o await tiver sido resolvida, caso contrário ele pará o código ali mesmo.</p>
+            <span>ex:</span>
+            <pre>
+
+    function primeiraFuncao(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                console.log('Esperando isso aqui')
+                resolve()
+            }, 2000)
+        })
+    }
+
+    async function segundaFuncao(){
+        console.log('Iniciou')
+
+        await primeiraFuncao()
+
+        console.log('Terminou')
+    }
+
+    segundaFuncao()
+            </pre>
+        </section>
+        <section id="httpRequests">
+            <h2>Requisições HTTP (inacabado)</h2>
+            <h3>FETCH API</h3>
+            <p>Fetch API é um recurso nativo javascript para fazer requisições assíncronas javascript.</p>
+
+            <p>Podemos utilizar com Promises ou async/await</p>
+            <p>Se a requisição for GET, é preciso passar apenas a URL do recurso que estamos resgatando da API, caso seja outro verbo, precisamos configurar a requisição com: method, body e headers.</p>
+            <p>O fetch é muito utilizado com frameworks/libs como: React, Vue e Angular</p>
         </section>
         <section id="usefulCommands">
         <h2>Comandos Úteis</h2>
@@ -1908,16 +2059,13 @@ clearInerval(intervalId)
           reias para centavos é só multiplicar por 100.
         </p>
         </section>
-        <section id="nextSteps">
+        <section id="nextSteps">    
         <h2>Próximos passos JavaScript</h2>
         <ul>
-          <li>Arrays</li>
-          <li>Functions</li>
-          <li>Modularização</li>
+          <li>Modules</li>
           <li>AJAX</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>MongoDB</li>
+          <li>Filter(), Fill(), Reduce(), some(), forEach()</li>
+          <li>Session Storage</li>
         </ul>
         </section>
     </main>
@@ -1926,4 +2074,4 @@ clearInerval(intervalId)
     </footer>
   </body>
 </html>
- 
+

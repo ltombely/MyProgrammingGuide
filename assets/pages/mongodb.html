@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Olá, este é meu site teste">
+    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/mongodb.css">
+    <title>Guia de Programação - MongoDB</title>
+</head>
+<body>
+    <header>
+        <img src="../img/favicon.png" alt="Logo do site">
+        <h1>Programmer Guide - MONGO DB</h1>
+    </header>
+    <nav>
+        <a href="../index.html"><span>Página Inicial</span></a>
+        <span>></span>
+        <a href="#"><span>MongoDB</span></a>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Introdução ao MONGODB</h2>
+            <p>MongoDB é um NoSQL BD, ou seja ele sai do formato SQL com tabelas que é usado em diversos bancos de dados no passado.</p>
+            <img src="../img/sql-nosql.jpg" alt="SQL vs NoSQL" class="sql-vs-nosql">
+            <br>
+            <span>Font: <a href="https://www.youtube.com/@BroCodez">Bro Code</a> - Learn MongoDB in 1 hour 🍃 (2023)</span>
+            <p>A ideia do MongoDB é se parecer com um JSON, os dados são armazenados em objetos.</p>
+            <p>Informações que estão relacionadas são colocadas no mesmo documento.</p>
+            <p>Os dados são armazenados em pares similares a um formato JSON, porém na verdade é BJSON(binary JavaScript Object Notation)</p>
+            <p>Um documento do MongoDB é um grupo de pares de Campo-Valor </p>
+            <p>Uma coleção é um grupo de 1 ou mais documentos.</p>
+            <p>Um DataBase é um grupo de 1 ou mais coleções.</p>
+
+            <p>Mongo DB Compass é a interface gráfica pro MongoDB, quenem MySQL Workbench para o MySQL  </p>
+        </section>
+        <section mongDBComands>
+            <h2>MongoDB Commands</h2>
+            <h3>Comandos</h3>
+            <table>
+                <tr>
+                    <th>COMANDO</th>
+                    <th>Função</th>
+                </tr>
+                <tr>
+                    <td>show dbs</td>
+                    <td>Mostra todos os DataBases</td>
+                </tr>
+                <tr>
+                    <td>use data_base_name</td>
+                    <td>Seleciona um banco de dados. <br> Caso esse banco não exista, ele cria esse banco. <br> Ele não aparecerá na lista do show dbs porque está vazio ainda.</td>
+                </tr>
+                <tr>
+                    <td>db.createCollection('collection_name')</td>
+                    <td>Cria uma coleção no Banco</td>
+                </tr>
+                <tr>
+                    <td>db.dropDatabase()</td>
+                    <td>Deleta um DataBase</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.insertOne({document_info})</td>
+                    <td>Insere um dado no banco de dados. Caso a coleção não exista ele cria ela.</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.find()</td>
+                    <td>Retorna todos os documentos dentro da coleção.</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.insertMany([{document_one}, {document_two}, {document_three}...])</td>
+                    <td>Insere vários documentos em uma coleção</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.find().sort({propertie_name: 1})</td>
+                    <td>Retorna os documentos em ordem alfabética baseando-se na propriedade escolhida.<br> Para inverter a ordem alfabética usa-se -1.</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.find().limit(limit_number)</td>
+                    <td>Seleciona quantos documentos quer que sejam retornados.</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.updateOne(filter, update)</td>
+                    <td>Atualiza um dado. No primeiro parâmetro selecionamos qual documento, o segundo o que mudaremos.<br>Para mudar o valor de um campo, usa-se o $set.</td>
+                </tr>
+                <tr>
+                    <td>$set:{}</td>
+                    <td>Set operator: muda o valor de um campo</td>
+                </tr>
+                <tr>
+                    <td>$unset:{}</td>
+                    <td>Unset Operator: remove um campo. O campo tem que ser renomeado para uma string vazia para ser removido.</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.updateMany()</td>
+                    <td>Modifica vários documentos.</td>
+                </tr>
+                <tr>
+                    <td>$exists:</td>
+                    <td>Seleciona se existe.<br> Caso coloquemos $exists:false seleciona os que nçao existem.</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.deleteOne(filter)</td>
+                    <td>Deleta o documento</td>
+                </tr>
+                <tr>
+                    <td>$ne:</td>
+                    <td>Not Equal Operator -> Seleciona todos que não sejam igual a...</td>
+                </tr>
+                <tr>
+                    <td>$lt:</td>
+                    <td>Less Than -> Seleciona todos menor que...</td>
+                </tr>
+                <tr>
+                    <td>$gt:</td>
+                    <td>Greater Than -> Seleciona todos os menores que...</td>
+                </tr>
+                <tr>
+                    <td>$lte:</td>
+                    <td>Less Than Equal -> Menor ou igual</td>
+                </tr>
+                <tr>
+                    <td>$gte:</td>
+                    <td>Greater Than Equals -> Maior ou igual</td>
+                </tr>
+                <tr>
+                    <td>$in:[]</td>
+                    <td>Retorna todos que tenham algum dos valores dentro o array no campo determinado</td>
+                </tr>
+                <tr>
+                    <td>$nin:[]</td>
+                    <td>Retorna todos que não tenham algum dos valores dentro do array no campo determinado</td>
+                </tr>
+                </tr>
+                <tr>
+                    <td>$and:[]</td>
+                    <td>Para retornar, todas as condições dentro dos colchetes tem que ser satisfeitas.</td>
+                </tr>
+                <tr>
+                    <td>$or:[]</td>
+                    <td>Para retornar, pelo menos uma das condições dentro dos colchetes tem quer satisfeita</td>
+                </tr>
+                <tr>
+                    <td>$nor:[]</td>
+                    <td>Retorna todos que nenhuma das condições satisfaça<br>É como um $and ao contrário.</td>
+                </tr>
+                <tr>
+                    <td>$not:{}</td>
+                    <td>Negação</td>
+                </tr>
+                <tr>
+                    <td>db_collection_name.find({...}).explain('executionStats')</td>
+                    <td>Pede para que o terminal explique o status de execução da query</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.createIndex(apply_field: 1)</td>
+                    <td>Coloca um index em um campo desejado.<br> 1 deixa ordem crescente, -1 deixa ordem decrescente.<br>O MongoDB lê todos os documentos até achar o que nós queremos, com index ele lê apenas o que tenha o index que queremos, agilizando muito o processo.<br>Usar index de maneira moderada, pois facilita na busca, porém ocupa mais memória e demora mais para inserir, remover ou deletar.</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.getIndexes()</td>
+                    <td>Mostra todos os index's que temos</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.dropIndex('index_name')</td>
+                    <td>Remove todos os index com aquele nome</td>
+                </tr>
+                <tr>
+                    <td>show collections</td>
+                    <td>Mostra todas as coleções</td>
+                </tr>
+                <tr>
+                    <td>db.collection_name.drop()</td>
+                    <td>Deleta coleção</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <h4>Find Method</h4>
+
+            <p>O método find() recebe dois parâmetros, que se chamam query e projection.</p>
+            <p>Query -> Define a caracerística do documento que queremos retornar. É Opcional.</p>
+            <p>Projection -> Define qual campo do documento queremos. Também é opcional. Deve receber true para ser retornado o valor.</p>
+            <span>ex:</span>
+            <code>db.students.find({}, {id_:false, name:true}) || Result: Retorna o nome de todos os estudantes e remove o id</code>
+
+            <h4>Create Collection</h4>
+            <p>Podemos passar alguns argumentos logo ao criar uma coleção.</p>
+            <span>{capped:true size:1000000, max:100} -> Define uma capacidade maxima de 1.000.000 de bytes e no máximo 100 documentos</span>  
+            <span>{autoIndex:true/false} -> Cria indexes automaticamente ou não.</span>
+            </section>
+            <section>
+                <h2>Próximos Passos MongoDB</h2>
+                <p>
+                    This video will give you and introduction to MongoDB in 1 Hour.
+                    Afterwards I recommend exploring aggregation, replication, and sharding.
+                    Comment below if you would like an extended version of this video.
+                </p>
+            </section>
+     </main>
+     <footer>
+        <p>&copy;LucasTombely</p>
+    </footer>
+</body>
+</html>

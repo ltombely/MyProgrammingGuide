@@ -13,12 +13,11 @@
 - [x] Página Index
 - [x] Página HTML5
 - [ ] Página CSS3
-- [ ] Página JavaScript
+- [x] Página JavaScript
 - [x] Página Markdown
 - [ ] Página MySQL **Abortado**
-- [ ] Página Typescript
 - [ ] Página Node.js
-- [ ] Página MongoDB
+- [x] Página MongoDB
 
 ### Tabela
 

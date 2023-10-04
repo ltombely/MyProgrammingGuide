@@ -2039,6 +2039,52 @@ clearInerval(intervalId)
             <p>Se a requisição for GET, é preciso passar apenas a URL do recurso que estamos resgatando da API, caso seja outro verbo, precisamos configurar a requisição com: method, body e headers.</p>
             <p>O fetch é muito utilizado com frameworks/libs como: React, Vue e Angular</p>
         </section>
+        <section>
+            <h2>Módulos</h2>
+            <p>Quando uma página HTML tem mais de um script dentro dela, é como se pegasse todos os scripts e misturassem no mesmo documento, fomando um só documento grande.</p>
+            <p>O problema disso é que quand criamos uma variável dentro de um documento, pode ocorrer de criar-mos ela ou utilizarmos ela em outro documento de forma indesejada, causando conflitos de nome.</p>
+            <p>Com módulos, uma variável criada fica dentro do arquivo e não interefere em outros.</p>
+
+            <p>Quando utilizamos o comando HTML 'script src', ele vai ler todo o documento, criando assim conflitos de nome. Removendo a stag script e usando módulos, não ocorre esse conflito.</p>
+
+            <h3>Como Utilizar</h3>
+            <p>Para aplicar módulos existem 3 passos:</p>
+            <ul>
+                <li>Adicionar o atributo type='module' na tag script</li>
+                <li>Exportar</li>
+                <li>Importar</li>
+            </ul>
+
+            <p>Ao adicionar o type='module', o conflito funciona imediatamente, porém então é necessário aprender a utilizar essa variável fora deste projeto, e isso se faz com Export e Import</p>
+
+            <p>Quando queremos Exportar uma variável, utilzamos a palavra Export ao declará-la.</p>
+            <code>import const cart = []</code>
+
+            <p>Quando queremos Importar uma variável, utilizamos a palavra Import, o nome da variável entre chaves, a palavra from e o caminho do documento que diz de que arquivo nos queremos importar.</p>
+            <code>import const cart = [] | Arquivo cart.js</code>
+            <br>
+            <code>export {cart} from './cart.js' | Outro Arquivo</code>
+
+            <p>Esse modo de tratar as variáveis evita conflitos de nome, porém mesmo assim se criarmos uma variável de mesmo nome que a variável que importamos, volatermos a ter confito, então existe mais um recurso para resolver isso.</p>
+
+            <h4>import {__ as __}</h4>
+
+            <code>export const cart = [] | Arquivo 1</code>
+            <br>
+            <code>import {cart as myCart}</code>
+
+            <p>Isso vai importar a variável cart e renomear ela para myCart.</p>
+
+            <h3>Detalhes</h3>
+            <p>Para os módulos funcionarem, é necessário colocar todosos imports no topo do arquivo.</p>
+            <p>Para os módulos funcionarem, é necessário estar utilizando Live Server</p>
+            <p>Caso o documeto que queremos importar esteja no mesmo diretória, ao importar é necessários especificarmos o caminho como antes do nome do arquivo. './'</p>
+            <p>Não se pode alterar o valor de uma variável importada.</p>
+            
+            <h3>Vantagens dos Módulos</h3>
+            <p>Quando não utilizamos módulos e queremos utilizar uma variável em outro arquivo, temos que nos certificar que a ordem das tags scripts condiz, tendo em cima scripts que tenham criado a variável e em baixo que o utilizem. Com módulos não importa a ordem dos Scripts, ele vai sempre ler.</p>
+
+        </section>
         <section id="usefulCommands">
         <h2>Comandos Úteis</h2>
         <h3>Formatar Dinheiro:</h3>
@@ -2062,7 +2108,6 @@ clearInerval(intervalId)
         <section id="nextSteps">    
         <h2>Próximos passos JavaScript</h2>
         <ul>
-          <li>Modules</li>
           <li>AJAX</li>
           <li>Filter(), Fill(), Reduce(), some(), forEach()</li>
           <li>Session Storage</li>

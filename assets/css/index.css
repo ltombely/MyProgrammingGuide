@@ -53,15 +53,18 @@ body > main > section:nth-child(3) > a > article{
     background-image: url('../img/javascript.jpg');
 }
 body > main > section:nth-child(4) > a > article{
-    background-image: url('../img/mongodb.jpg');
+    background-image: url('../img/node.jpg');
 }
 body > main > section:nth-child(5) > a > article{
-    background-image: url('../img/mardown.jpg');
+    background-image: url('../img/mongodb.jpg');
 }
 body > main > section:nth-child(6) > a > article{
-    background-image: url('../img/sql.jpg');
+    background-image: url('../img/mardown.jpg');
 }
 body > main > section:nth-child(7) > a > article{
+    background-image: url('../img/sql.jpg');
+}
+body > main > section:nth-child(8) > a > article{
     background-image: url('../img/visual-studio.jpg');
 }
 
@@ -82,7 +85,7 @@ body > main > section > div{
     padding: 0.5rem;
 }
 body > main > section > div > img{
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-right: 0.3rem;
 }

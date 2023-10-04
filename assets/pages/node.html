@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Olá, este é meu site teste">
+    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Guia de Programação - Node.js/</title>
+</head>
+<body>
+    <header>
+        <img src="../img/favicon.png" alt="Logo do site">
+        <h1>Programmer Guide - Node.js</h1> 
+    </header>
+    <nav>
+        <a href="../index.html"><span>Página Inicial</span></a>
+        <span>></span>
+        <a href="#"><span>Node.js</span></a>
+    </nav>
+
+    <main>
+       <section id="introduction">
+            <h2>Node.js</h2>
+
+            <h3>O que é</h3>
+
+            <p>O Node.js é um Runtime de JavaScript. Um Runtimee é um ambiente de execução no qual um código é executado. Node.js usa o motor do Google Chrome, V8, para rodar códigos javascript fora do navegador.</p>
+
+        
+        </section>
+        <section id="nodeBasics">
+            
+            <h2>Node.js Basics</h2>
+            
+            <p>Para Roda um arquivo no node, basta escrevê-lo no terminal.</p>
+            
+            <p>Também poedemos escolher arquivos para o node rodar, entrado com o termina no diretório do arquivo e digitando a palavra node e o nome do arquivo que se quer utilizar. Escrever o .js no final do nome do arquivo é opcional.</p>
+            
+            <p>O Node.js não roda no navegador, então o console deixa de ser o console do navegador e passa ser a janela do terminal.</p>
+            
+            <p>No navegador, a palavra window se refere ao objeto window. Em Node, a variável chamada global, é uma palavra chave do node para se referir ao objeto global. Podemos verificar seus métodos com console.log(global), que são é muito menor que o window</p>
+            
+            <p>O Node.js inclui dentro de si várias bibliotecas e módulos integrados que dão acessa à funcionalidades específicas do sistema. No JavaScript vanilla usaria-se imports, porém em node.js ao invés de import, usa-se o comando require('')</p>
+            <span>Node require ex:</span>
+            <pre>
+    
+    const os = require('os') || os é um módulo do node que fornece infomações do sistema, ele possui alguns metodos como type(), version() e homedir()
+
+    console.log(os.type())
+    console.log(os.version())
+    console.log(homedir())
+            </pre>
+            
+
+
+        </section>
+        <section id="nodeCommands">
+
+            <h2>Node.js Commands</h2>
+
+            <table>
+                <tr>
+                    <th>COMANDO</th>
+                    <th>Função</th>
+                    <th>Exemplo:</th>
+                </tr>
+                <tr>
+                    <td>__dirname</td>
+                    <td>Retorna o nome do diretório que node está executando. São 2 underlines</td>
+                    <td>console.log(__dirnmae)</td>
+                </tr>
+                <tr>
+                    <td>__filename</td>
+                    <td>Retorna o nome do Arquivo sendo executado</td>
+                    <td>console.log(__filename)</td>
+                </tr>
+            </table>
+        </section>
+        <section id="nodeModules">
+
+            <h2>Módulos Node.js</h2>
+
+            <p>Existem muitos módulos nativos do node.js que podemos importá-los, porém também podemos criar nossos próprios módulos e importar módulos de outros desenvolvedores.</p>
+
+            <p>Para exportar as funções de um módulo usa-se o comando module.exports e passa as funções dentro de um objeto</p>
+            <span>ex:</span>
+
+            <pre>
+
+    || math.js Archive
+    const add = (a, b) => a + b;
+    const subtract = (a, b) => a - b;
+    const multiply = (a, b) => a * b;
+    const divide = (a, b) => a / b;
+    
+    module.exports = {add, subtract, multiply, divide}
+
+    ||other Archive
+    const math = require('.math') 
+
+    console.log(math.add(2,5))
+            </pre>
+            <p>Podemos também desestruturarr essa meneira de importar</p>
+            <span>ex:</span>
+
+            <pre>
+
+    const { add, subtract, multiply, divide } = require('./math')
+
+    console.log(add(3, 9))
+            </pre>
+
+            <p>Podemos desestruturar o módulo que criamos também eliminando o const e importando diretamente com o comando inline exports. sem necessidade de usar o module.exports</p>
+
+            <span>ex:</span>
+
+            <pre>
+
+    exports.add = (a, b) => a + b;
+    exports.subtract = (a, b) => a - b;
+    exports.multiply = (a, b) => a * b;
+    exports.divide = (a, b) => a / b;
+            </pre>
+
+            <p>O node.js não tem algumas API's nativas do js, como por exemplo Fetch</p>
+
+
+            <p>Todos os módulos tem que ser importados antes de serem chamados, declarando-o como uma variável e usando require('')</p>
+            <span>ex:</span>
+            <code>const os = require('os')</code>
+
+            <h3>os</h3>
+            <p>Módulo os traz informações do sistema operacional (Operational System).</p>
+
+            <h4>os methods</h4>
+
+            <table>
+                <tr>
+                    <th>os methods</th>
+                    <th>Função</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td>.type()</td>
+                    <td>Retorna a Versão do SI.</td>
+                    <td>console.log(os.type())</td>
+                </tr>
+                <tr>
+                    <td>.version()</td>
+                    <td>Retorna a Versão do SI</td>
+                    <td>console.log(os.version())</td>
+                </tr>
+                <tr>
+                    <td>.homedir()</td>
+                    <td>Retorna o diretório home do usuário</td>
+                    <td>console.log(os.homedir())</td>
+                </tr>
+            </table>
+            
+            <h3>path</h3>
+
+            <p>Módulo path contém métodos com caminhos de diretórios.</p>
+
+            <h4>path methods</h4>
+
+            <table>
+                <tr>
+                    <th>path methods</th>
+                    <th>Função</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td>.dirname()</td>
+                    <td>Retorna o nome do diretório.</td>
+                    <td>console.log(path.dirname(__filename))</td>
+                </tr>
+                <tr>
+                    <td>.basename()</td>
+                    <td>Retora unicamente o nome do arquivo, sem o caminho</td>
+                    <td>console.log(path.basename(__filename))</td>
+                </tr>
+                <tr>
+                    <td>.extname()</td>
+                    <td>Retorna unicamente a exetensão do arquivo. (letras após o . )</td>
+                    <td>console.log(path.extname(__filename))</td>
+                </tr>
+                <tr>
+                    <td>.parse()</td>
+                    <td>Retorna um ojeto que mostra a root, a dir, base, ext e name</td>
+                    <td>console.log(path.parse(__filename))</td>
+                </tr>
+                <tr>
+                    <td>.join(__dirname , ' ', ' ')</td>
+                    <td>É um jeito melhor de direcionar caminhos<br>Entre as aspas vai o nome das pastas até chegar ao arquivo que queremos</td>
+                    <td>path.join(__dirname, 'files', 'texts', 'hello_world.txt')</td>
+                </tr>
+            </table>
+
+           <h3>fs</h3>
+           
+           <p>Módulo fs contém métodos que são capazes de ler documentos, como txt por exemplo</p>
+
+            <table>
+                <tr>
+                    <th>fs methods</th>
+                    <th>Função</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td>.readFile('url', (err, data) => {})</td>
+                    <td>Lê um texto. Recebe como argumentos o caminho do texto e uma função assíncrona com a função com caso de dar erro.</td>
+                    <td>fs.readFile('./lorem.txt', )</td>
+                </tr>
+
+
+            </table>
+
+        </section>
+     </main>
+
+     <footer>
+        <p>&copy;LucasTombely</p>
+    </footer>
+</body>
+</html>

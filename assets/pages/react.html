@@ -1,68 +1,383 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Olá, este é meu site teste">
-    <meta name="keywords" content="HTML, CSS, JS, programação, programar, programas, web, front-end">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Olá, este é meu site teste" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, programação, programar, programas, web, front-end"
+    />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Guia de Programação - React</title>
-</head>
-<body>
+    <style>
+      section > img {
+        width: 25rem;
+        border-radius: 0;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <img src="../img/favicon.png" alt="Logo do site">
-        <h1>Programmer Guide - React</h1>
+      <img src="../img/favicon.png" alt="Logo do site" />
+      <h1>Programmer Guide - React</h1>
     </header>
     <nav>
-        <a href="../index.html"><span>Página Inicial</span></a>
-        <span>></span>
-        <a href="#"><span>React</span></a>
+      <a href="../index.html"><span>Página Inicial</span></a>
+      <span>></span>
+      <a href="#"><span>React</span></a>
     </nav>
 
     <main>
-       <section id="introduction">
-            <h2>Introdução ao React</h2>
+      <section id="introduction">
+        <h2>Introdução ao React</h2>
 
-            <h3>O que é o React</h3>
-            <p>O React é uma Framework/biblioteca JavaScript para Frontend.</p>
-            <p>Utilizado para construir SPAs (Single Page Application)</p>
-            <p>Baseado em Componentes.</p>
-            <p>Utiliza JSX para renderizar HTML (JavaScript and XML)</p>
-            <p>Aplica o Virtual DOM para realizar alterações no DOM</p>
-            <p>Podemos adicionar a um projeto ou criar um projeto com ele</p>
+        <h3>O que é o React</h3>
+        <p>O React é uma Framework/biblioteca JavaScript para Frontend.</p>
+        <p>Utilizado para construir SPAs (Single Page Application)</p>
+        <p>Baseado em Componentes.</p>
+        <p>Utiliza JSX para renderizar HTML (JavaScript and XML)</p>
+        <p>Aplica o Virtual DOM para realizar alterações no DOM</p>
+        <p>Podemos adicionar a um projeto ou criar um projeto com ele</p>
 
-            <h3>Criação Projeto React</h3>
-            <p>Antigamente utilizava-se a ferramente 'Create React App', porém essa ferramente criava muitos documentos que não iam ser utilizados e dificultava a manutenção no código, então agora é utiliado 'Vite' para criar.</p>
+        <h3>Criação Projeto React</h3>
+        <p>
+          Antigamente utilizava-se a ferramente 'Create React App', porém essa
+          ferramente criava muitos documentos que não iam ser utilizados e
+          dificultava a manutenção no código, então agora é utiliado 'Vite' para
+          criar.
+        </p>
 
-            <h4>Criação do Projeto:</h4>
-            <ul>
-                <li>Criar a Pasta do Projeto</li>
-                <li>Abrir ela no cmd</li>
-                <li>Digitar npm create vite@latest</li>
-                <li>Confirmar com y (se for a primeira vez)</li>
-                <li>Definir o nome do projeto</li>
-                <li>Escolher o Framework</li>
-                <li>Escolher Variante (melhor pegar com SWC)</li>
-                <li>Ir para a pasta Criada (através do cmd)</li>
-                <li>Digitar npm install</li>
-                <li>Digitar npm run dev</li>
-            </ul>
-       </section>
+        <h4>Criação do Projeto:</h4>
+        <ul>
+          <li>Criar a Pasta do Projeto</li>
+          <li>Abrir ela no cmd</li>
+          <li>Digitar npm create vite@latest</li>
+          <li>Confirmar com y (se for a primeira vez)</li>
+          <li>Definir o nome do projeto</li>
+          <li>Escolher o Framework</li>
+          <li>Escolher Variante (melhor pegar com SWC)</li>
+          <li>Ir para a pasta Criada (através do cmd)</li>
+          <li>Digitar npm install</li>
+          <li>Digitar npm run dev</li>
+        </ul>
+      </section>
 
-       <section id="basics">
+      <section id="basics">
         <h2>React Basics</h2>
 
-        <p>JSX -> é como HTML só que dentro do JavaScript </p>
-        <p>{ } -> Chaves podem ser usados para interpolar variáveis no conteúdo HTML</p>
-        <p>Os componentes são criados com funções que retornam um HTML. Toda função que é um componente inicia-se com letra maiúscula. Escreve-se o HTML dentro de () depois do return.</p>
-       </section>
+        <p>JSX -> é como HTML só que dentro do JavaScript</p>
+        <p>
+          { } -> Chaves podem ser usados para interpolar variáveis no conteúdo
+          HTML
+        </p>
+        <p>
+          Os componentes são criados com funções que retornam um HTML. Toda
+          função que é um componente inicia-se com letra maiúscula. Escreve-se o
+          HTML dentro de () depois do return.
+        </p>
+        <p>
+          Toda vez que se quer que o react interprete algo como sendo código
+          javascript basta colocar entre chaves { }
+        </p>
+        <p>
+          Um documento JSX tem que estar iteiro envolto à alguma tag. Ou seja,
+          uma única tag pai.
+        </p>
+        <p>
+          O React reserva a palavra clas para outra coisa. Então quando queremos
+          colocar uma class em uma tag html utilizamos 'className'
+        </p>
+      </section>
+      <section id="components">
+        <h2>Components</h2>
+        <p>Permite dividir aplicação em partes.</p>
+        <p>Renderizam JSX</p>
+        <p>Criar uma pasta e um arquivo para cada Componente.</p>
+        <p>Precisamos importar o componente onde quisermos utilizar.</p>
+        <p>Ficam normalmente em uma pasta chamada components.</p>
 
-     </main>
-     
-     <footer>
-        <p>&copy;LucasTombely</p>
+        <p>
+          Ao criar um novo componente, a função normalmente tem o mesmo nome do
+          arquivo.
+        </p>
+
+        <p>
+          Para utilizar um componente, devemos importálo e dentro do return da
+          função esrevemos o nome do componente entre uma tag &lt; e /&gt;
+        </p>
+
+        <p>Os componentes devem ser reutilizáveis.</p>
+      </section>
+
+      <section id="props">
+        <h2>Props</h2>
+        <p>Props são valores passados para os componentes.</p>
+        <p>Podemos deixá-los dinâmicos.</p>
+        <p>É passado como um atributo na chamada do componente.</p>
+        <p>É preciso ser resgatado dentro de uma propriedade/argumento.</p>
+
+        <span>Props ex:</span>
+        <br />
+        <span>Component:</span>
+        <pre>
+
+    function SayMyName(props){
+        return (
+            &lt;>
+                &lt;p>Hello {props.name}, how are you?&lt;/p>
+            &lt;/>
+        )
+    }
+        </pre>
+        <span>App.jsx:</span>
+        <pre>
+
+    function App(){
+        return (
+            &lt;>
+                &lt;SayMyName name="Lucas"/>
+            &lt;/>
+        )
+    }
+        </pre>
+
+        <p>
+          Podemos desestruturar o props com o nome das variáveis que queremos
+          entre chaves { }
+        </p>
+
+        <h3>PropTypes</h3>
+
+        <p>PropTypes é um pacote que vem com o react, se importa escrevendo:</p>
+        <p>import PropTypes from 'prop-types'</p>
+        <p>
+          O pacote PropTypes serve para declarar propriedades das props. Se
+          declara essas propriedades fora da função do componente
+        </p>
+        <p>As propriedades são declaradas na forma de objeto javascript</p>
+
+        <h4>PropTypes de Validação</h4>
+        <span>ex:</span>
+
+        <pre>
+    || O nome do componente é Item
+    Item.propTypes = {
+        marca: PropTypes.string,
+        ano_lancamento: PropTypes.number.isRequired
+    }
+        </pre>
+        <p>
+          Esta forma de validação não causará erro na execução do código, porém
+          mostrará erro ao no console. Isso serve para que outros
+          desenvolvedores leiam o seu código.
+        </p>
+
+        <h4>PropTypes de Valor Default</h4>
+
+        <pre>
+
+    Item.defaultProps = {
+        marca: 'Faltou a Marca',
+        ano_lancamento: 0
+    }
+        </pre>
+      </section>
+      <section id="css">
+        <h2>CSS</h2>
+        <p>Pode ser adicionado globalmente no index.css</p>
+        <p>É possível estilizar a nível de componente.</p>
+        <p>Se estiliza componentes com o CSS modules.</p>
+        <p>
+          Basta criar um arquivo com o nome do compente com um ., module e css
+        </p>
+        <code>Componente.module.css</code>
+        <p>
+          Chamar o CSS no componente, utilizando 'import styles from 'path'', o
+          styles é uma convenção.
+        </p>
+        <p>
+          Utilizando o .module.css evita que o style seja aplicado a outros
+          componentes.
+        </p>
+      </section>
+
+      <section id="fragments">
+        <h2>React Fragments</h2>
+
+        <p>Fragmentos permitem a criação de elementos sem um elemento pai.</p>
+        <p>O propósito é descomplicar o DOM</p>
+        <p>A Sintaxe é &lt;&gt; e &lt;/&gt;</p>
+      </section>
+
+      <section id="events">
+        <h2>Eventos</h2>
+        <h3>Forma de Fazer</h3>
+        <p>Os Eventos React são os mesmos eventos do DOM</p>
+        <p>O evento é atrelado a uma tag que irá executá-lo</p>
+        <p>Geralmente um método é atribuído ao evento.</p>
+        <p>Este método deve ser criado no componente.</p>
+
+        <span>ex:</span>
+        <img
+          src="../img/react-page-img/evento.png"
+          alt="Foto do uso do Evento"
+        />
+
+        <h3>Forms com React</h3>
+        <p>
+          Para impedir que um form recarregue a página, chamase o parâmetro da
+          função com a função preventDefault()
+        </p>
+        <span>ex:</span>
+        <img src="../img/react-page-img/form.png" alt="Foto Formulário" />
+      </section>
+
+      <section id="useState">
+        <h2>useState</h2>
+        <ul>
+          <li>O useState é um hook do react</li>
+          <li>
+            Com ele conseguimos manusear o estado(dado) de um componente de
+            forma simples;
+          </li>
+          <li>Esse hook funciona muito bem com eventos</li>
+          <li>Podemos atrelar um evento à mudança de state</li>
+          <li>Todos os hooks tem que ser importados.</li>
+          <li>import { useState } from 'react'</li>
+          <li>
+            O useState é um jeito de abreviar a aleterção de algum valor na
+            tela. Normalmente definiría-se uma variável e usaria querySelector
+            para selecionar um elemento do DOM e implementar no DOM essa
+            varíavel com o innerText. useState abrevia isso.
+          </li>
+          <li>
+            Forma:<br />
+            <code
+              >const [variavel, setVariavel] = useState(valor_da_variavel)<br />setVariavel(alteração
+              que acontecerá)</code
+            >
+          </li>
+        </ul>
+
+        <span>useState ex:</span><br />
+        <img
+          src="../img/react-page-img/useState.png"
+          alt="Imagem de useState"
+        />
+        <br />
+        <span>Outro Exemplo de useState:</span><br />
+        <img
+          src="../img/react-page-img/useState002.png"
+          alt="Imagem de useState"
+        />
+
+        <p>
+          Dica: Quando uma função é chamada dentro de um evento no react, o
+          react passa automaticamente o evento desta tag como argumento para
+          esta função. O .target serve para selecionar a tag ao qual este evento
+          está inserido, o value serve para acessar o valor desta tag.
+        </p>
+      </section>
+
+
+
+      <section id="conditionalRender">
+        <h2>Renderização Condicional</h2>
+        <ul>
+            <li>Podemos atrelar a exibição de algum elemento a um if;</li>
+            <li>Esta ação é chamada renderização condicional;</li>
+            <li>Envolvemos as Tags em Chaves { };</li>
+            <li>Como as chaves executam JavaScript, criamos condições;</li>
+            <li>É possível usar o state para criar condições.</li>
+            <li>Em react o operador && serve para Renderizações condicionais, diferente do JavaScript tradicional;</li>
+            <li>&& -> Renderize o elemento à direita se o a esquerda for verdadeiro.</li>
+        </ul>
+        <span>ex:</span><br>
+        <img src="../img/react-page-img/conditionalRender.png" alt="Renderização Condicional">
+
+        <p>É preferível utilizar && em condicionais, porém é utilizado operadores ternários.</p>
+        <span>ex:</span><br>
+        <img src="../img/react-page-img/conditionalRenderTernaryOperator.png" alt="">
+
+
+      </section>
+
+      <section id="listRender">
+        <h2>Renderização de Listas</h2>
+        <ul>
+            <li>Para renderizar listas vamos precisar de um Array;</li>
+            <li>Depois utilizamos a função Map para percorrer cada um dos itens;</li>
+            <li>Podendo assim renderizar algo na tela;</li>
+            <li>É possível unir operadores condicionais com a renderização de listas.</li>
+        </ul>
+        <span>ex:</span>
+        <br>
+        <img src="../img/react-page-img/list.png" alt="Foto de Lista">
+      </section>
+      <section id="stateLift">
+        <h2>State Lift</h2>
+        <ul>
+            <li>State Lift é um técnica utilizada para compartilhar o state.</li>
+            <li>É normal vários componentes dependerem do mesmo estado;</li>
+            <li>Então precisamos elevar o nível do mesmo a um componente pai;</li>
+            <li>Então centralizamos o state no pai, e definimos quem usa e quem define (setState)</li>
+            <li>Serve para usar a mesma var do useState em vários componentes. Isso se faz criando no componente pai e se passa atrvés de props e parâmetro da função filha.</li>
+        </ul>
+
+      </section>
+      <section id="reactRouter">
+        <h2>React Router</h2>
+        <ul>
+            <li>O React Router é um pacote para mudanla de URLs da aplicação;</li>
+            <li>Podemos assim acessar outras views, sem o page reload;</li>
+            <li>Trocando ae=penas uma parte do layout da aplicação, ou seja, o que muda de view para view;</li>
+            <li>Precisamos instalar este pacote no projeto;</li>
+            <li>E também realizar algumas mudanças como o App é estruturado.</li>
+        </ul>
+        <h3>Instalando React Router</h3>
+        <ol>
+            <li>No terminal: npm install react-router-dom</li>
+            <li>Importar no App.jsx: import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'</li>
+        </ol>
+        <h3>Utilizando o React Router</h3>
+        <ul>
+            <li>Envolver todo o return do componente na tag &lt;Router> &lt;/Router></li>
+            <li>Para colocar um link, utiizar a tag &lt;Link> &lt;/Link>, ao invés de usar href, utilizar to=""</li>
+            <li></li>
+            <li></li>
+        </ul>
+
+      </section>
+
+      <section id="useEffect">
+        <h2>Use Effect</h2>
+        <ul>
+            <li>O useEffect faz algo apartir de uma ação nossa. Usar um efeito após uma ação do programa.</li>
+            <li>Dentro dos parenteses do use effect, colocamos uma função, que é o que será executado.</li>
+            <li></li>
+        </ul>
+
+      </section>
+      <section id='reactIcons'>
+        <h2>React Icons</h2>
+        <ul>
+            <li>React Icons é um pacote de ícones externo muito utilizado;</li>
+            <li>Precisaos adicionar ao projeto através do npm;</li>
+            <li>Ele nos permite adicionar ícones ao projeto com uma sintaxe similar a de componentes;</li>
+            <li>Há uma grande quantidade de ícones disponíveis e é muito utilizado.</li>
+            <li>No Terminal: npm install react-icons</li>
+            <li>Importar: import { nomeDoIcone } from 'react-icons/fa'</li>
+            <li>Chamar o Ícone: &lt;nomeDoIcone/>></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy;LucasTombely</p>
     </footer>
-</body>
+  </body>
 </html>

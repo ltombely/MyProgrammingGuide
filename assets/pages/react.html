@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <title>Guia de Programação - React</title>
     <style>
-      section > img {
+      section img {
         width: 25rem;
         border-radius: 0;
         margin: 1rem;
@@ -150,11 +150,19 @@
           entre chaves { }
         </p>
 
-        <h3>PropTypes</h3>
+        
+      </section>
+      <section id="propTypes">
+        <h2>Prop Types</h2>
 
-        <p>PropTypes é um pacote que vem com o react, se importa escrevendo:</p>
-        <p>import PropTypes from 'prop-types'</p>
-        <p>
+        <p>PropTypes é um pacote do react, para validar props e variáves. Como o faz o Typescript</p>
+
+        <h3>Instalação</h3>
+        <ul>
+          <li>No terminal: npm i prop-types</li>
+          <li>No documento: import PropTypes from 'prop-types'</li> 
+        </ul>
+
           O pacote PropTypes serve para declarar propriedades das props. Se
           declara essas propriedades fora da função do componente
         </p>
@@ -331,36 +339,115 @@
       </section>
       <section id="reactRouter">
         <h2>React Router</h2>
+        
+      
+        <h3>Sobre</h3>
+
+        <p>React Router é um pacote externo ao react que serve para criar diferentes páginas com o react.</p>
+
+        <h3>INSTALAÇÃO REACT ROUTER</h3>
         <ul>
-            <li>O React Router é um pacote para mudanla de URLs da aplicação;</li>
-            <li>Podemos assim acessar outras views, sem o page reload;</li>
-            <li>Trocando ae=penas uma parte do layout da aplicação, ou seja, o que muda de view para view;</li>
-            <li>Precisamos instalar este pacote no projeto;</li>
-            <li>E também realizar algumas mudanças como o App é estruturado.</li>
+          <li>No Terminal Digitar: npm install react-router-dom</li>
         </ul>
-        <h3>Instalando React Router</h3>
-        <ol>
-            <li>No terminal: npm install react-router-dom</li>
-            <li>Importar no App.jsx: import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'</li>
-        </ol>
-        <h3>Utilizando o React Router</h3>
+
+        <h3>CONFIGURAÇÃO REACT ROUTER</h3>
         <ul>
-            <li>Envolver todo o return do componente na tag &lt;Router> &lt;/Router></li>
-            <li>Para colocar um link, utiizar a tag &lt;Link> &lt;/Link>, ao invés de usar href, utilizar to=""</li>
-            <li></li>
-            <li></li>
+          <li>Dentro do SRC, criar a pasta Routes, que terá todas as notas páginas no formato de Componente</li>
+          <li>
+            No main.jsx colocaremos os seguintes comandos:
+          </li>
+          <ul style="list-style-type: '-&gt;'">
+            <li><code>import { createBrowserRouter, routerProvider } from "react-router-dom";</code></li>
+            <li><code>import __NOSSA PÁGINA__ from "__CAMINHO DA NOSSA PÁGINA__"</code></li>
+            <li><code>const router = createBrowserRouter([]);</code> || Esse array vai receber objetos com as propriedades path, que receberá o caminho, e a propriedade element que receberá a tag do componente. A página Home recebe "path: "/" ", as outras recebem o nome da página.</li>
+            <li>Apagar o <code>&lt;App /&gt;</code> e colocar: <code>&lt;RouterProvider router={router} /&gt;</code> || Aquele router é a variável que foi criada anteriormente.</li>
+          </ul>
         </ul>
+        <span>ex:</span><br>
+        <img src="../img/react-page-img/ReactRouterMain.png" alt="Foto Main.jsx">
+
+        <h3>REAPROVEITAMENTO DE ESTRUTURA</h3>
+
+        <ul>
+          <li>É melhor ao invés de colocar as páginas assim, colocar um objeto só que é a página App.jsx, com o <code>path: "/", element: &lt;App /&gt; e children: [__Colocar aqui as páginas__]</code>.</li>
+          <li>Então no App.jsx colocar: <code>import { outlet } from "react-router-dom"</code> e chamar a tag <code>&lt;Outlet /&gt;</code> onde queremos que o componente da página seja renderizado.</li>
+          <li>Assim podemos fazer com que uma página seja um componente renderizado dentro de uma página principal.</li>
+        </ul>
+        <span>ex:</span><br>
+        <span>Main.jsx:</span><br>
+        <img src="../img/react-page-img/ReactRouterReaproveitamento.png" alt="Reaproveitamento React Router Main.jsx">
+        <br>
+        <span>App.jsx:</span><br>
+        <img src="../img/react-page-img/reaproveitamentoApp.png" alt="Reaproveitamento React Router App.jsx">
+      
+        <h3>Error Page</h3>
+
+        <p>Para criar uma página de erro, uma página 404, com o React Router é muito simples.</p>
+        <ul>
+          <li>Criar a página de erro.</li>
+          <li>Importar ao Main.jsx a página chamando a propriedade e a sua tag.</li>
+          <li>Inserir a propriedade "errorElement: &lt;ErrorPage /&gt;" dentro da const router do main</li>
+        </ul>
+
+        <h3>Links</h3>
+
+        <p>O comando "Link" tem que ser importado do react-router-dom</p>
+        <ul>
+          <li>import { Link } from "react-router-dom</li>
+          <li>Cologar dentro das tags Link o que será o link</li>
+          <li>Dentro da abertura da tag Link, colocar a propriedade to="", com o nome da página que foi definido no path do main.jsx.</li>
+        </ul>
+        <span>ex:</span><br>
+        <img src="../img/react-page-img/reactRouterLink.png" alt="React Router Link imagem">
+        
+        <h3>Links Dinâmicos</h3>
+        <ul>
+          <li>É possível criar Links Dinâmicos com o React Router, onde o link pode mudar</li>
+          <li>O ":" define que a próxima palavra será dinâmica, normalmente escolhe-se a palavra id para identificar.</li>
+        </ul>
+        
+        <span>ex:</span><br>
+        <span>Main.jsx:</span><br>
+
+        <img src="../img/react-page-img/dinamicPagesMain.png" alt="Paginas Dinâmicas com React Router">
+        <br>
+        <span>Contact.jsx:</span><br>
+        <img src="../img/react-page-img/diamicPagesContact.png" alt="Páginas Dinâmicas com React Router Contact.jsx">
+
+        <h4>Use Params</h4>
+
+        <ul>
+          <li>useParams é um hook do React Router que permite extrair as informações que vem da URL dinâmica</li>
+          <li><code>import { useParams } from "react-router-dom"</code></li>
+          <li><code>const { id } = useParams();</code> Essa variável id tem que coincidir com o a variável do link dinâmico ":id" colocado no main.jsx</li>
+        </ul>
+
+        <span>ex:</span><br>
+        <span>ContactDetails.jsx - /contact/:id</span>
+        <img src="../img/react-page-img/useParams.png" alt="Use Params ">
+
+        <h3>Use Navigate</h3>
+
+        <ul>
+          <li>useNavigate() é um Hook do react-router-dom que serve para redirecionar uma pessoa na lógic.</li>
+          <li><code>import { useNavigate } from "react-dom-router"</code></li>
+          <li><code>const navigate = useNavigate()</code></li>
+        </ul>
+
+        <span>ex:</span><br>
+        <img src="../img/react-page-img/useNavigate.png" alt="Use Navigate React Router Hook">
+
+        <h3>Navigate</h3>
+
+        <ul>
+          <li>Isso serve para páginas que deixaram de existir. Então quando a pessoa acessa essa página ela é automaticamente redirecionada para outra página.</li>
+          <li>No Main.jsx:<code>import { Navigate } from "react-router-dom"</code></li>
+          <li>No Router: <code>{path: "oldcontact", element: &lt;Navigate to="/contact" /&gt;}</code></li>
+        </ul>
+
+
 
       </section>
-
-      <section id="useEffect">
-        <h2>Use Effect</h2>
-        <ul>
-            <li>O useEffect faz algo apartir de uma ação nossa. Usar um efeito após uma ação do programa.</li>
-            <li>Dentro dos parenteses do use effect, colocamos uma função, que é o que será executado.</li>
-            <li></li>
-        </ul>
-
       </section>
       <section id='reactIcons'>
         <h2>React Icons</h2>
@@ -373,6 +460,93 @@
             <li>Importar: import { nomeDoIcone } from 'react-icons/fa'</li>
             <li>Chamar o Ícone: &lt;nomeDoIcone/>></li>
         </ul>
+      </section>
+      
+      <section id="hooks">
+        <h2>React Hooks</h2>
+        <div> 
+          <h3>Use State</h3>
+
+        </div>
+
+        <div>
+          <h3>Use Effect</h3>
+          
+          <h4>Visão Geral:</h4>
+            
+          <ul>
+            <li>Executa uma função toda vez que algo acontecer</li>
+            <li>Recebe 2 parâmetros. 1 -> A função que será executada. 2 -> Um array que contenha as variáveis que ao atualizar, ativarão o useEffect()</li>
+            <li>Caso não seja passado o segudo parâmetro, ele executa toda vez que qualquer um dos componentes renderizarem.</li>
+          </ul>
+
+
+        </div>
+
+        <div>
+          <h3>Use Ref</h3>
+          
+          <h4>Visão Geral:</h4>
+
+          <ul>
+            <li>A vantagem do useRef() é que quando atualiza seu valor, ele não atualiza re-renderiza o componente.</li>
+            <li>Caso um useEffect tenha dentro de si um useState e não tenha alguma variável de controle, ele cai num loop infinito. useRef() resolve esse problmea</li>
+            <li>Declar ref: <code>const numberRef = useRef(0)</code></li>
+            <li>Recebe valor inicial dentro dos parenteses</li>
+            <li>useRef na verdade é um objeto que possui a propriedade current.</li>
+            <li>Para acessaro valor temos que usar o nome da variável.current</li>
+            <li>Isso faz com que o número altere na tela porem não re-renderize a página.</li>
+          </ul>
+          <span>ex:</span><br>
+          <img src="../img/react-page-img/useRef.png" alt="Use ref imagem">
+
+          <h4>Segunda função useRef() <br> Pegar Elementos DOM</h4>
+
+          <ul>
+            <li>Toda tag html dentro do JSX tem uma propriedade chamada "ref".</li>
+            <li>Podemos dizer que essa propriedade recebe uma useRef, então a propriedade current do useRef recebe a tag html</li>
+            <li>Isso serve para fazer manipulação DOM</li>
+            <li>Podemos então fazer com que o próprio computador gere um evento, utilizando o nome do evento com abre-fecha parenteses.</li>
+          </ul>
+          <span>ex:</span><br>
+          <img src="../img/react-page-img/useRef2.png" alt="Segunda imagem use ref">
+
+          <h4>Terceira função useRef() <br> Salvar Valores anteriores useState()</h4>
+
+          <un>
+            <li>Utilizando o currento do useRef dentro de um useEffect() recebendo o valor de um useState(), depois que atualiza ele salva o valor pré-atualização.</li>
+            <li></li>
+          </un>
+          <span>Ex:</span><br>
+          <img src="../img/react-page-img/useRef3.png" alt="Terceira imagem use Ref">
+
+
+
+        </div>
+        <div>
+          <h3>Use Context</h3>
+
+          <h4>Visão Geral:</h4>
+
+          <p>Serve para fazer variáveis serem englobadas em vários componentes.</p>
+          
+          <h4>Criar Context:</h4>
+          <ul>
+            <li><code>import { createContext } from "react"</code></li>
+            <li><code>const AppContext = createContext()</code></li>
+            <li>Envoler nas tags <code>&ltAppContext.Provider value={{variaveis}}&gt;&lt/AppContext.Provider&gt;</code> o que queremos que esteja dentro do contexto</li>
+            <!-- <ul  style="list-style-type: '-&gt;'">
+              <li><code>import { createContext } from "react"</code></li>
+              <li>2</li> -->
+            </ul> 
+
+            <h4>Usar Context</h4>
+            <ul>
+              <li>Após criar o context, chamamos ele através do useContext</li>
+              <li><code>import { useContext } from "react"</code></li>
+              <li><code>const { name, setName } = useContext(AppContext)</code></li>
+            </ul>
+        </div>
       </section>
     </main>
 

@@ -535,9 +535,6 @@
             <li><code>import { createContext } from "react"</code></li>
             <li><code>const AppContext = createContext()</code></li>
             <li>Envoler nas tags <code>&ltAppContext.Provider value={{variaveis}}&gt;&lt/AppContext.Provider&gt;</code> o que queremos que esteja dentro do contexto</li>
-            <!-- <ul  style="list-style-type: '-&gt;'">
-              <li><code>import { createContext } from "react"</code></li>
-              <li>2</li> -->
             </ul> 
 
             <h4>Usar Context</h4>
@@ -546,6 +543,19 @@
               <li><code>import { useContext } from "react"</code></li>
               <li><code>const { name, setName } = useContext(AppContext)</code></li>
             </ul>
+        </div>
+        <div>
+          <h3>Use Memo</h3>
+          <h4>Visão Geral:</h4>
+          <ul>
+            <li>Toda vez que um componente é renderizado, todo o código do componente é lido novamente. Isso pode causar problemas de performace.</li>
+            <li>useMemo() faz com que enquanto o array de depenências não mude, ele usa o mesmo valor da renderização passada.</li>
+          </ul>
+
+          <h4>Utilizando useMemo()</h4>
+          
+
+
         </div>
       </section>
     </main>

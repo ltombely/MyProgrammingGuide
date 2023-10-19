@@ -962,11 +962,79 @@
         </tr>
         <tr>
           <td>array.map(callback)</td>
-          <td>Aplica a função a todos os elementos de um array. O parâmetro da função tem que ser o nome que queremos chamar cada elemento do array</td>
+          <td>Retorna um novo array, aplicando a função para cada um dos elementos do array. A callback function recebe de 1 a 3 parâmetros. 1º -> O elemento. 2º -> O índice do elemento 3º -> O array original. Utiliza-se o return</td>
           <td>
               const numbers = [1, 2, 3]<br>
-              const doubledNumbers = numbers.map(number => number*2)
+              const doubledNumbers = numbers.map((number) => {return number*2})
           </td>
+          </tr>
+          <tr>
+            <td>array.forEach(callback)</td>
+            <td>Itera todos os elementos de um array. A callback function recebe de 1 a 3 parâmetros. 1º -> O elemento. 2º -> O Índice do elemento. 3º -> O array original.<br>Note que é quase igual ao map, porém o map retorna um novo array, o forEach apenas aplica a função aos elementos. Não é necessário utilizar o return</td>
+            <td>const numbers = [1, 2, 3]<br>
+              numbers.forEach(number => console.log(number))</td>
+          </tr>
+          <tr>
+            <td>array.filter(callback)</td>
+            <td>Retorna um novo array com todos os elementos que correspondem true à função. Utiliza o return</td>
+            <td><pre>
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenNumbers = numbers.filter((element) => {
+  return element % 2 == 0;
+});
+console.log(evenNumbers);
+
+            </pre></td>
+          </tr>
+          <tr>
+            <td>array.reduce(callback)</td>
+            <td>Aplica callback function em todos os elementos de um array, e retorna apenas um único valor de saída. A reduce recebe dois parâmetros. 1º -> Callback Function. 2º -> Valor inicial do acumulador. A callback functions recebe de 2 a 4 parâmetros. 1º -> O valor do acumulador. 2º -> O elemento. 3º -> O índice do elemento. 4 -> O array original</td>
+            <td>
+              <pre>
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const total = numbers.reduce((acumulator, value) => {
+  return acumulator + value;
+}, 0);
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <td>array.fill()</td>
+            <td>Modifica o array original, substituindo todos os elementos do array por um valor definido. Recebe de 1 à 3 parâmetros. 1º -> Valor que será inserido. 2º -> Índice inicial ao qual iniciará a substituição. 3º -> Índice final ao qual terminará a substituição. Não altera o valor do índice passado nos parâmetros.</td>
+            <td>
+              <pre>
+function createArray(n) {
+  return Array(n)
+    .fill(0)
+    .map((_, i) => {
+      return i + 1;
+    });
+}
+console.log(createArray(10));
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <td>array.every(callback)</td>
+            <td>Caso todos os elementos do array sejam retornados, retorna true. Caso contrário false. A callback function recebe de 1 a 3 parâmetros. 1º -> O elemento. 2º -> Index do item. 3º -> O array original</td>
+            <td>
+              <pre>
+const array = [-1, 0, 1, 2, 3];
+
+const res = array.every((item) => {
+  return item >= 0;
+});
+console.log(res);
+
+              </pre>
+            </td>
+          </tr>
+          <tr>
+            <td>array.some(callback, index, array)</td>
+            <td>Se pelo menos um elemento retorna true. Ele retorna true</td>
+            <td></td>
+          </tr>
         </table>
 
         <h4>Padrão acumulador</h4>

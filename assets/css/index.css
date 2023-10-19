@@ -53,18 +53,21 @@ body > main > section:nth-child(3) > a > article{
     background-image: url('../img/javascript.jpg');
 }
 body > main > section:nth-child(4) > a > article{
-    background-image: url('../img/node.jpg');
+  background-image: url('../img/react.jpg');
 }
 body > main > section:nth-child(5) > a > article{
-    background-image: url('../img/mongodb.jpg');
+    background-image: url('../img/node.jpg');
 }
 body > main > section:nth-child(6) > a > article{
-    background-image: url('../img/mardown.jpg');
+    background-image: url('../img/mongodb.jpg');
 }
 body > main > section:nth-child(7) > a > article{
-    background-image: url('../img/sql.jpg');
+    background-image: url('../img/mardown.jpg');
 }
 body > main > section:nth-child(8) > a > article{
+    background-image: url('../img/sql.jpg');
+}
+body > main > section:nth-child(9) > a > article{
     background-image: url('../img/visual-studio.jpg');
 }
 

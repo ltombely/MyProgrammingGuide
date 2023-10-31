@@ -12,13 +12,6 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Guia de Programação - React</title>
-    <style>
-      section img {
-        width: 25rem;
-        border-radius: 0;
-        margin: 1rem;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -556,6 +549,31 @@
           
 
 
+        </div>
+
+        <div>
+          <h3>Use Reducer</h3>
+
+          <h4>Visão Geral</h4>
+          <ul>
+            <li>Use Reducer funciona quenem o useState, porém permite criar vários states juntos.</li>
+            <li>É declarado de forma parecida com useState.</li>
+            <li><code>const [state, dispatch] = useReducer()</code></li>
+            <li>useReducer recebe 2 ou 3 argumentos. Uma Função reducer (será ativada toda vez que algum state for "despachado"). Estdado Inicial (caso tenha mais de um state, coloca-se na forma de objeto)</li>
+            <li>O próprio react, automaticamente passa 2 parâmetros para esta função reducer. state e action.</li>
+            <li>O State é o estado dos "useStates" do useReducer</li>
+            <li>O Action é a função que o dispatch vai di sparar</li>
+            <li>Dentro da função reducer, utiliza-se um switch case. Esses switch cases terão o que será feito em cada state.</li>
+            <li>Para chamar a função, usa-se dispatch({type: "a"})</li>
+            <li></li>
+            <li></li>
+          </ul>
+
+<span>Problema que use Reducer vem para resolver:</span><br/>
+<img src="../img/react-page-img/noUseReducerProblem.png" alt="Problema de não utilizar use Reducer">
+<span>Exemplo de use reducer:</span>
+<br/>
+<img src="../img/react-page-img/useReducer.png" alt="Exemplo de use Reducer">
         </div>
       </section>
     </main>

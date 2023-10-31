@@ -55,8 +55,11 @@ section{
     padding: 1.5rem;
     border-radius: 1rem;
 }
-section img{
-    border-radius: 2rem;
+section img {
+  border-radius: 2rem;
+  width: 25rem;
+  border-radius: 0;
+  margin: 1rem;
 }
 
 /*TABLE*/

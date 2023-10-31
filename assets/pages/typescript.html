@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Olá, este é meu site teste" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, programação, programar, programas, web, front-end"
+    />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Guia de Programação - TypeScript</title>
+  </head>
+  <body>
+    <header>
+      <img src="../img/favicon.png" alt="Logo do site" />
+      <h1>Programmer Guide - TypeScript</h1>
+    </header>
+    <nav>
+      <a href="../index.html"><span>Página Inicial</span></a>
+      <span>></span>
+      <a href="#"><span>TypeScript</span></a>
+    </nav>
+
+    <main>
+      <section id="sobre">
+        <h2>TypeScript</h2>
+        <h3>Sobre</h3>
+        <p>TypesScript é JavaScript, porém com sintaxe para tipos de dados.</p>
+        <p>
+          A pessoa que criou c# é a mesma que criou TypeScript, um empregado da
+          Microsoft chamado Anders Hejlsberg.
+        </p>
+        <p>
+          TypeScript quando é lido pela máquina é transformado em JavaScript
+          normal, TS é uma ferramenta para desenvolvedores.
+        </p>
+        <p>TS é um super set de JS</p>
+
+        <h3>Algumas Vantagens:</h3>
+        <ul>
+          <li>Documentação Própria.</li>
+          <li>Descobrir erros durante o desenvolvimento.</li>
+          <li>Ótimo para trabalho em grupo.</li>
+          <li></li>
+        </ul>
+
+        <h3>Instalação</h3>
+        <ul>
+          <li>No terminal: npm install typescript -g</li>
+          <li>
+            Para compilar Ts para JS no Terminal: tsc main.ts(nome do arquivo)
+          </li>
+          <li>Compilar automaticamente: tsc main.ts(nome do arquivo) -w</li>
+        </ul>
+        <h3>Configuração</h3>
+        <ul>
+          <li>
+            Normalmente Projetos tem a pasta src e build. Na build é colocado o
+            HTML e uma pasta chamada js, que terá o ts compilado. Dentro do SRC
+            terá o ts
+          </li>
+          <li>No Terminal: tsc --init</li>
+          <li>tsconfig.json: "rootDir": "./src"</li>
+          <li>tsconfig.json: "outDir": "./build/js"</li>
+          <li>tsconfig.json, no final: "include": ["src"]</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tipagem de Dados</h2>
+        <ul>
+          <li>
+            Typescript adiciona uma "classe" chamada enum. Ela pode receber
+            vários valores, e retornará a posição dele.<br />
+            enum Grade {A, B, C}; Grade.A
+          </li>
+          <li>
+            Podemos especificar o ue uma função retornará:<br /><code
+              >function(a: number, b:number): number {return a + b}</code
+            >
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+
+        <h3>Tipagem de Variáveis</h3>
+        <p>Declara-se o tipo primitivo da variável com ":" e o tipo.</p>
+        <p>
+          Caso não se declare o tipo primitivo explicitamente, o ts tenta
+          advinhar o tipo primitivo baseado no dado que a variável armazena.
+          Caso ele não tenha como saber, armenza com o tipo "any".
+        </p>
+        <p>
+          O tipo primitivo do dado não pode ser alterado, ts mostra erro caso
+          seja.
+        </p>
+        <img
+          src="../img/ts-page-img/tipagemVariaveis.png"
+          alt="Tipagem de variáveis"
+        />
+
+        <h3>Tipagem de mais de um tipo</h3>
+        <p>
+          Podemos dizer que uma variável recebe um tipo primitivo ou outro
+          utilizando "|" entre parenteses.
+        </p>
+        <img
+          src="../img/ts-page-img/maisDeUmTipo.png"
+          alt="Mais de um tipo Primitivo"
+        />
+
+        <h3>Tipagem de Arrays</h3>
+
+        <h4>Tipagem Comum</h4>
+        <p>
+          Quando declaramos um array, ele automaticamente tenta advinhar os
+          tipos de dados do array caso não especifiquemos.
+        </p>
+        <p>Podemos também especificar utilizando o tipo e [].</p>
+        <img
+          src="../img/ts-page-img/tipagemArray.png"
+          alt="Tipagem comum de arrays."
+        />
+
+        <h4>Tuple (Tipagem Individual)</h4>
+        <p>
+          Podemos dizer que cada elemento do array é um tipo específico de dado.
+        </p>
+        <img src="../img/ts-page-img/tuple.png" alt="Imagem de Tuple" />
+
+        <h3>Estrutura de Dados</h3>
+        <p>
+          Podemos criar novas estruturar de dados com as palavras chave type ou
+          interface. Então podemos dizer que um dado recebe essa estrutura.
+        </p>
+
+        <h4>Type Structure</h4>
+        <p>
+          Podemos fazer com que um dado seja opcional colocando ? antes do :,
+          isso fará com que não cause erro caso não haja aquele dado.
+        </p>
+        <img src="../img/ts-page-img/typeStructure.png" alt="Estrutura type" />
+
+        <h4>Interface Structure</h4>
+        <p>
+          É muito similar à type, porém utiliza-se a palavra chave interface e
+          não utiliza-se o símbolo de "=".
+        </p>
+        <img
+          src="../img/ts-page-img/interfaceStructure.png"
+          alt="Estrutura de Interface."
+        />
+
+        <h4>Outro Tipo</h4>
+        <p>Podemos também declarar um tipo que recebe mais de um primitivo.</p>
+        <img
+          src="../img/ts-page-img/strOrNumArr.png"
+          alt="String or Number Array"
+        />
+
+        <h3>Tipagem de Funções</h3>
+        <h4>Tipagem de Parâmetros</h4>
+        <p>
+          Podemos definir o tipo dos parâmetros de uma função e até definir o
+          tipo de valor que ela retorna.
+        </p>
+        <img
+          src="../img/ts-page-img/tipagemFunction.png"
+          alt="Tipagem de Funções"
+        />
+        <h4>Void Function</h4>
+        <p>
+          Quando uma função não retorna nenhum valor, dizemos ue é uma função
+          void.
+        </p>
+        <img src="../img/ts-page-img/voidFunction.png" alt="Void Function" />
+
+        <h4>Function Type</h4>
+        <p>Podemos também criar um type para funções de um tipo específico.</p>
+        <img src="../img/ts-page-img/mathFunction.png" alt="Tipo de função" />
+
+        <h4>Default Value Parameter</h4>
+        <p>
+          Caso um parâmetro seja opcional, ele pode receber um valor padrão.
+        </p>
+        <img
+          src="../img/ts-page-img/defaultParam.png"
+          alt="Parâmetro com valor Padrão"
+        />
+
+        <h4>Rest Parameters</h4>
+        <p>
+          Parece muito com o spread operator. Diz que vai receber um array de
+          números.
+        </p>
+        <img
+          src="../img/ts-page-img/restParam.png"
+          alt="Tipagem com Rest Parâmeters"
+        />
+
+        <h4>Never type Function</h4>
+        <p>
+          Quando uma função retorna um erro com o comando "throw new Error()", o
+          nome do valor que ela retorna é "never".
+        </p>
+        <img
+          src="../img/ts-page-img/neverFunction.png"
+          alt="Função tipo Never"
+        />
+
+        <h3>Enum</h3>
+        <p>
+          Serve para enumerar uma lista, caso não definimaos um valor para o
+          primeiro enum, ele será 0. Então os próximos elementos terão valore
+          sucessivos.
+        </p>
+        <img src="../img/ts-page-img/enum.png" alt="Imagem de Enum" />
+
+        <h3>Literal Types</h3>
+        <p>
+          Podemos fazer com que uma variável seja obrigada a receber um valor
+          específico.
+        </p>
+        <img src="../img/ts-page-img/literalTypes.png" alt="Tipos Literais" />
+
+        <h3>Assertions (Afirmações)</h3>
+        <h4>Conversão com as</h4>
+        <p>
+          Podemos utilizar a palavra chave "as", para dizer que uma variável
+          recebe o valor de uma outra porém com outro tipo.
+        </p>
+        <img src="../img/ts-page-img/as.png" alt="Declarando variável com as" />
+
+        <h4>Conversão com sinais de maior e menor</h4>
+        <p>
+          Há um outro tipo onde se utiliza Maior que e Menor que. Este outro
+          jeito não deve ser usado com React
+        </p>
+        <img
+          src="../img/ts-page-img/menorQueMaiorQue.png"
+          alt="Menor que e Maior que"
+        />
+
+        <h4>Função com mais de um retorno</h4>
+        <p>
+          As vezes uma função pode retornar mais de um tipo de valor, e com isso
+          podemos especificar na variável que a função retorna com "as".
+        </p>
+        <img
+          src="../img/ts-page-img/addOrConcat.png"
+          alt="Função Adicionar ou Concatenar"
+        />
+
+        <h4>Tipo Unknown</h4>
+        <p>
+          Caso digamos que um número é uma string, ele gera erro. Porém se
+          dizemos que esse número é unknown e depois dizermos que é uma string,
+          o ts aceita.
+        </p>
+        <img src="../img/ts-page-img/unknown.png" alt="Foto de Unknown" />
+
+        <h3>DOM</h3>
+        <p>
+          Para cada tag DOM o typescript tem um tipo. "HTMlImageElement",
+          "HTMLButtonElement" ou apenas "HTMLElement
+        </p>
+        <p>
+          Quando pegamos DOM com ts, o ts sempre diz que pode ser que seja nulo
+          o DOM. Para dizer que sabemos que algo não será nulo basta colocar uma
+          "!" no final.
+        </p>
+        <img
+          src="../img/ts-page-img/!imgELement.png"
+          alt="HTML elemento de imagem com exclamação"
+        />
+      </section>
+      <section id="classes">
+        <h2>Classes</h2>
+
+        <h3>Basics</h3>
+        <ul>
+          <li>
+            Uma classe é uma estrutura de dados. Typescript é ótimo com classes
+            pois pode dizer o tipo de variável que a classe recebe
+          </li>
+          <li>
+            Dentro de toda classe, existe o método constructor. Este método é
+            acionado automaticamente cada vez que um novo ojbeto for
+            instanciado. Ele define a estrutura da classe
+          </li>
+        </ul>
+
+        <h4>Padrão de Classes:</h4>
+        <p>
+          Em typescript, na class nós dizemos ao typescript que tipo de dados as
+          variáveis vão armazenar, e depois dentro do construtor nós vamos dizer
+          que dados nós vamos receber. Então declaramos os tipos de dados duas
+          vezes por padrão.
+        </p>
+        <un>
+          <li>Em Typescript existem 2 jeitos de utilizar Classes.</li>
+          <li>
+            1 -> Definindo os tipos de dados que se receberá, e então repetindo
+            eles dentro do constructor
+          </li>
+          <li>2 -> Definindo diretamente dentro o constructor.</li>
+        </un>
+
+        <img src="../img/ts-page-img/tsClass.png" alt="Classe em Typescript" />
+        <img src="../img/ts-page-img/class2.png" alt="Segunda Forma de Class" />
+        <p>
+          Note que na segunda forma, o nome declarado dentro do constructor tem
+          que ser igual à variável dentro this., diferete do primeiro jeito.
+        </p>
+
+        <h4>Herança</h4>
+        <ul>
+          <li>
+            Podemos declarar que uma classe filha herda da classe pai suas
+            características, declarando uma nova classe e usando a palavra
+            extends.
+          </li>
+          <li>
+            Para dizermos que a variável de um classe filha é a mesma variável
+            da classe pai, utilizamos a palavra super dentro do constructor da
+            classe filha.
+          </li>
+        </ul>
+        <img
+          src="../img/ts-page-img/heranca.png"
+          alt="Foto de Herança em Typescript"
+        />
+
+        <h4>Encapsulamento</h4>
+        <ul>
+          <li>
+            Typescript adiciona Encapsulamento às funções em javascript. Isso
+            faz com que informações possar ser acessadas de qualquer lugar do
+            código ou não, baseado no tipo de Encapsulamento.
+          </li>
+          <li>
+            Há 3 tipos de encapsulamento em TypeScript. public, private e
+            protected.
+          </li>
+          <li>
+            Public -> O dado declarado com public pode ser verificado e alterado
+            em qualquer lugar do código.
+          </li>
+          <li>
+            Private -> O dado declarado com Private pode ser acessado e alterado
+            somente dentro da prória classe em que o dado foi declarado.
+          </li>
+          <li>
+            Protected -> O dado declarado como protected pode ser acessado e
+            alterado somente dentro da própria classe e dentro das classes
+            filhas.
+          </li>
+        </ul>
+
+        <img
+          src="../img/ts-page-img/encapsulametno.png"
+          alt="Encapsulamento em Typescript"
+        />
+
+        <h3>Interface e Classes</h3>
+        <p>
+          Em TypeScript, a implementação de uma interface em uma classe é uma
+          maneira de garantir que a classe cumpra um contrato específico
+          definido pela interface. Isso significa que a classe deve fornecer
+          implementações para todos os membros (métodos ou propriedades)
+          definidos na interface.
+        </p>
+        <ul>
+          <li>Cria-se a interface.</li>
+          <li>
+            Cria-se a classe e coloca-se a palavra implements e o nome da
+            interface.
+          </li>
+        </ul>
+        <img
+          src="../img/ts-page-img/interfaceClass.png"
+          alt="Interface Class Imagem"
+        />
+
+        <h3>static</h3>
+
+        <p>
+          A palavra chave static serve para fazer com que o que for definido com
+          a palavra static será exatamente este valor para todas as instâncias
+          desta classe. Isso é bom para definir utilidades da classe, como por
+          exemplo o Id, que é igual a 0 para todos, e toda vez que um novo
+          objeto é instânciado aumenta 1.
+        </p>
+        <img src="../img/ts-page-img/static.png" alt="Imagem de Static" />
+
+        <h3>Getter e Seter</h3>
+        <p>
+          Um metodo Get é um metodo específico para pegar valores de dentro de
+          uma classe. Um metodo Setter é um metodo específico para setar valores
+          dentro de um ojbeto.
+        </p>
+        <img src="../img/ts-page-img/getterSetter.png" alt="Getter e Setter" />
+      </section>
+      <section>
+        <h2>Index Signatures and Keyof Assertions</h2>
+
+        <ul>
+          <li>Existem 2 jeitos de chamar uma propriedade de um objeto.</li>
+          <li>1 -> <code>object.property</code> (com um ponto)</li>
+          <li>
+            2 -> <code>object["property"]</code> (Passando a propriedade como
+            uma string entre colchetes)
+          </li>
+          <li>
+            Nesta segunda forma, podemos substituir o valor da propriedade pro
+            uma variável, caso não saibamos ela.
+          </li>
+          <li>
+            <code
+              >let variable: string = "property";<br />console.log(object[variable]);</code
+            >
+          </li>
+          <li>
+            Typescript não aceita que uma propriedade de um objeto seja acessado
+            por meio de uma variáel. Para fazer isso temos que utilizar uma
+            index signture.
+          </li>
+          <li>
+            Tem 2 jeitos de corrigir isto. Na interface ou direatamente na linha
+            da variável.
+          </li>
+        </ul>
+
+        <h4>Na Interface:</h4>
+        <img
+          src="../img/ts-page-img/keySignature.png"
+          alt="Key Signature dentro da interface"
+        />
+
+        <h4>Na linha:</h4>
+        <img
+          src="../img/ts-page-img/inLineKeySignature.png"
+          alt="Key Signature na linha"
+        />
+      </section>
+
+      <section id="generics">
+        <h2>Tipos Genéricos</h2>
+        <ul>
+          <li>
+            As vezes não sabemos que tipo de valor receberá uma variável. Então
+            podemos definir um tipo genérico.
+          </li>
+          <li>
+            Isso é comum em funções de utilidade. Que servem para verificar
+            valores, por exemplo.
+          </li>
+          <li>
+            Para isso do valor colocamos alguma letra como uma variável enre
+            &lt; e &gt;, então dizemos que o valor é do mesmo tipo deste coocado
+            entre &lt; e &gt;
+          </li>
+          <li></li>
+        </ul>
+
+        <img
+          src="../img/ts-page-img/isNumber.png"
+          alt="Função que verifica se algo é número"
+        />
+      </section>
+      <section id="utilityTypes">
+        <h2>Utility Types</h2>
+        <p>
+          Typescript oferece um monte de tipos úteis, que são úteis em
+          transformações comuns de tipo.
+        </p>
+
+        <h3>Partial</h3>
+        <un>
+          <li>
+            Quando o tipo de uma variável é Partial e mais um outro tipo, como
+            type ou interface, significa que essa variável não tem que
+            corresponder 100% à interface, mas que ela tenha alguma propriedade
+            da interface
+          </li>
+          <img src="../img/ts-page-img/partial.png" alt="Foto de PARTIAL" />
+        </un>
+
+        <h3>Required</h3>
+        <ul>
+          <li>
+            As vezes uma interface tem propriedades opcionais. Quando se coloca
+            Required&lt;interface&gt; ele faz com que todas as propriedades
+            sejam obrigatorias
+          </li>
+        </ul>
+        <img src="../img/ts-page-img/required.png" alt="Usado Required" />
+
+        <h3>Readonly</h3>
+        <ul>
+          <li>
+            Quando declaramos um tipo com Readonly, aquela variável não pode ser
+            alterada, só lida.
+          </li>
+          <li>
+            Não é possível alterar um valor da objeto, porém é possível alterar
+            todos os valores do objeto
+          </li>
+        </ul>
+        <img src="../img/ts-page-img/readonly.png" alt="Foto Read Only" />
+
+        <h3>Record</h3>
+        <un>
+          <li>
+            Record serve para dizer qual o tipo da propriedade e do valor de um
+            objeto.
+          </li>
+        </un>
+        <img src="../img/ts-page-img/record.png" alt="Foto de record" />
+
+        <h3>Pick and Omit</h3>
+        <un>
+          <li>
+            Pick e Omit servem para criar um novo tipo de objeto apartir de
+            outro tipo de objeto já existente.
+          </li>
+          <li>
+            Pick -> Escolhemos quais propriedades queremos que esse novo tipo
+            tenha.
+          </li>
+          <li>
+            Omit -> Pega todas as propriedades da propriedade "pai", omitindo
+            apenas o que dissermos
+          </li>
+        </un>
+        <img src="../img/ts-page-img/pick.png" alt="Imagem de Pick" />
+        <img src="../img/ts-page-img/omit.png" alt="Imagem de Omit" />
+
+        <h3>Extract and Exclude</h3>
+        <un>
+          <li>
+            Funciona igual Pick e Omit, só que Pick e Omit funcionam apenas com
+            objetos.
+          </li>
+          <li>
+            Extract -> Pega todos as propriedades de um tipo que dissermos
+          </li>
+          <li>
+            Exclude -> Pega todas as propriedades de um tipo exceto a que
+            dissermos.
+          </li>
+        </un>
+        <img src="../img/ts-page-img/extract.png" alt="Extract exemplo" />
+        <img src="../img/ts-page-img/exclude.png" alt="Exclude exemplo" />
+
+        <h3>NonNullable</h3>
+        <un>
+          <li>
+            Pega todos os valores de um tipo que não forem null ou undefined
+          </li>
+        </un>
+
+        <img
+          src="../img/ts-page-img/nonnullable.png"
+          alt="Non Nullabel imagem"
+        />
+
+        <h3>ReturnType</h3>
+
+        <ul>
+          <li>
+            Quando uma função retorna um objeto, podemos dizer que um type
+            recebe o return dessa função.
+          </li>
+          <li>Usa-se a palavra ReturnType&lt;typeof __função__&gt;</li>
+        </ul>
+
+        <img src="../img/ts-page-img/ReturnType.png" alt="Tipo Return" />
+
+        <h3>Parameters</h3>
+
+        <un>
+          <li>
+            Ao invés de pegar o retorno de uma função, este pega os parâmetros
+            de uma função na forma de tuple e transforma em um tipo.
+          </li>
+        </un>
+        <img src="../img/ts-page-img/parameters.png" alt="Tipo Parametros" />
+
+        <h3>Awaited</h3>
+
+        <un>
+          <li>Ajuda-nos com ReturnType de uma promise.</li>
+          <li>Isso é muito útil com Fetch</li>
+        </un>
+
+        <img
+          src="../img/ts-page-img/AwaitedReturnType.png"
+          alt="Foto de Awaited Return Type"
+        />
+      </section>
+
+      <section id="props">
+        <h2 style="font-size: 30pt; color: cyan">REACT + TYPESCRIPT</h2>
+
+        <h2>Tipagem com React</h2>
+
+        <h3>Tipagem de Props</h3>
+        <un>
+          <li>Existem 2 jeitos de fazer tpagem de props em typescript.</li>
+          <li>Podemos criar o tipo no topo do document.</li>
+          <li>podemos tipar diretamente dentro dos parâmetros da função.</li>
+          <li></li>
+        </un>
+        <img src="../img/ts-page-img/inlineProps.png" alt="Props inline" />
+        <img src="../img/ts-page-img/headingProps.png" alt="Props com type" />
+
+        <h3>React Hooks</h3>
+        <h4>UseState</h4>
+        <un>
+          <li>
+            Para tipar um useState, coloca-se o tipo entre maior e menor que,
+            entre a palavra useState e o ()
+          </li>
+        </un>
+        <img
+          src="../img/ts-page-img/useState.png"
+          alt="UseState com typescript"
+        />
+
+        <h4>UseCallback</h4>
+        <ul>
+          <li>
+            UseCallback é uma hook que aceita uma callback function e um array
+            de dependências.
+          </li>
+          <li>
+            Esse hook faz com que a função não seja re-renderizada toda vez que
+            o componente for renderizado
+          </li>
+          <li>Muito usado junto do use Memo</li>
+          <li>
+            Podemos usar typescript na função que ele possue e no argumento que
+            recebe
+          </li>
+        </ul>
+
+        <h4>UseMemo</h4>
+
+        <ul>
+          <li>
+            Memoriza um valor, e ele não é recalculado cada vez que o componente
+            é re-renderizado.
+          </li>
+          <li>
+            Ele recebe uma array de dependencias, que quando alguma das
+            variáveis desse array atulizar ele lê o código de novo.
+          </li>
+          <li>
+            Assim como o useState, podemos declarar qual o tpo de valor ele
+            armazenará.
+          </li>
+        </ul>
+        <img
+          src="../img/ts-page-img/useMemo.png"
+          alt="Hook useMemo com TypeScript"
+        />
+
+        <h4>UseRef</h4>
+        <un>
+          <li>UseRef serve para armazenar valores sem causar a renderização do componente.  </li>
+          <li>Para isso, useRef é um objeto que armazena o valor na propriedade current</li>
+          <li>As tags HTMl dentro do jsx tem uma propriedade chamada ref, podemos passar o nome do nosso useRef ali. Então podemos acessar esse elemento DOM Através do useref</li>
+        </un>
+
+        <img src="../img/ts-page-img/useRef.png" alt="Imagem Use ref">
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy;LucasTombely</p>
+      <a href="../tests/typescript/build/main.html"
+        >Página de Testes TypeScript</a
+      >
+    </footer>
+  </body>
+</html>

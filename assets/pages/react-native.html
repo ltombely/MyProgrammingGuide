@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Olá, este é meu site teste" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, programação, programar, programas, web, front-end"
+    />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Guia de Programação - React Native</title>
+  </head>
+  <body>
+    <header>
+      <img src="../img/favicon.png" alt="Logo do site" />
+      <h1>Programmer Guide - React Native</h1>
+    </header>
+    <nav>
+      <a href="../index.html"><span>Página Inicial</span></a>
+      <span>></span>
+      <a href="#"><span>React Native</span></a>
+    </nav>
+    <main>
+      <section>
+        <h2>React Native</h2>
+
+        <h3>Sobre</h3>
+        <p>
+          É uma ferramente para programar apps Android ou IoS com javscript,
+          react.js.
+        </p>
+        <p>
+          Há muitos App que são criado com react Native. Facebook, instagram,
+          skype, pinterest, uber eats e outros
+        </p>
+
+        <h3>React Native CLI | Expo CLI</h3>
+        <p>
+          Há duas maneiras de criar Apps com react native. A primeira é com puro
+          React Native, a segundo é com Expo. Expo é um framework, um grupo de
+          ferramentas, que esconde um monte de complexidades de nós, que faz com
+          que seja muito mais rápido e fácil criar react native apps.
+        </p>
+
+        <p>Está página tratará de Expo CLI</p>
+
+        <h3>Instalação e Configuração</h3>
+        <un>
+          <li>Ter instalado Node e NPM</li>
+          <li>Podemos utilizar Android Studio para Emular. <a href="https://www.youtube.com/watch?v=1Bwp1BzYLx0">Ver Configurações Android Studio</a></li>
+          <li>No Terminal (para javascript): npx create-expo-app nomedoapp</li>
+          <li>No Terminal (para typescript):npx create-expo-app -t expo-template-blank-typescript</li>
+          <li>cd nomedapp</li>
+          <li>npx expo start</li>
+          <li>
+            No Celular, instalar o aplicato Expo, para poder rodar o nosso
+            aplicativo no celular
+          </li>
+          <li>
+            Extensões VS Code para ajudar: React Native Tools,
+            React-Native/React/Redux snippets.
+          </li>
+        </un>
+
+        <h3>Criar Projeto React-Native</h3>
+
+        <un>
+          <li>No Terminal: npx create-expo-app</li>
+          <li>
+            Podemos escolher entre Managed workflow e Bare workflow, ambos com
+            ou sem typescript.
+          </li>
+          <li>
+            Managed worflow -> Nós não veremos as pastas como IoS, Android,
+            veremos somente o javascript
+          </li>
+          <li>
+            Bare workflow -> Vai nos dar um projeto com apenas as mínimas
+            configurações para podermos utilizar o react native
+          </li>
+          <li>Podemos iniciar com Managed workflow.</li>
+          <li>No Terminal, digitar npm start</li>
+          <li>Metro Bundler é uma ferramenta do React Native</li>
+        </un>
+      </section>
+
+      <section id="basics">
+        <p>
+          Funções em ReactNative não retornam HTML como em React, elas retornam
+          Componentes especiais, que devem ser importados de "react-native"
+        </p>
+        <p>
+          Assim como react, react-native se baseia em componetes. Podemos
+          importar vários componentes de "react-native"
+        </p>
+      </section>
+
+      <section id="reactNativeComponents">
+        <h2>Componentes nativos React Native</h2>
+        <h3>Componentes Básicos</h3>
+        
+        <h4>View</h4>
+        <un>
+          <li>Funciona como uma div html comum.</li>
+        </un>
+        <h4>SafeAreaView</h4>
+        <un>
+          <li>Igual View, porém caso esteja em uma area da tela que não de para ver o conteúdo, ele reorganiza o conteúdo.</li>
+        </un>
+
+        <h4>Text</h4>
+        <un>
+          <li>Imprime Textos</li>
+          <li>Propriedades:</li>
+          <li>onPress={function} -> Adiciona função ao pressionar</li>
+          <li>numberOfLines={number} -> Quantas linhas pode ocupar no máximo.</li>
+        </un>
+
+        <h4>Image</h4>
+        <un>
+          <li>Imprime Imagens</li>
+          <li>source={require("path")} -> Propriedade para caminho da foto.</li>
+          <li>source={{uri: "URL", width: number, height: number}} -> Propriedade para fotos por URL, deve conter tamanho.</li>
+          <li>blurRadius={number} -> Adiciona blur na imagem.</li>
+          <li>fadeDuration={number} -> Adiciona fade na imagem. O número é a duração em ms.</li>
+          <li>loadingIndicatorSource={require("path")} -> Mostra isso enquanto a imagem carrega.</li>
+        </un> 
+
+        <h4>Touchables</h4>
+        <un>
+          <li>Transforma qualquer coisa em clicável quando envolvido com tags Touchables, através do evento onPress</li>
+          <li>TouchableWithouFeedback -> Podemos adicionar função, porém não tem nenhum efeito.</li>
+          <li>TouchableOpacity -> Ao pressionar mostra efeito de reduzir opacidade.</li>
+          <li>TouchableHighlight -> Ao pressionar mostra efeito de escurecer por alguns ms.</li>
+          <li>TouchableNativeFeedback -> Ao pressionar mostra efeito de onda. (Android apenas)</li>
+        </un>
+
+
+        <h4>Button</h4>
+        <un>
+          <li>Adiciona um botão na tela</li>
+          <li>title="" -> Texto do botão.</li>
+          <li>onPress={() => {}} -> Adiciona evento</li>
+          <li></li>
+          <li></li>
+        </un>
+
+        <h4>Alert (ioS)</h4>
+        <un>
+          <li>Alert é uma API, é um objeto.</li>
+          <li>alert("") funciona igual no javascript, que é diferente da API Alert.</li>
+          <li>Alert.alert("Título", "Mensagem", [{textoBotao: "yes", onPress={() => {}}}, {textoBotao2: "no", onPress={() => {}}}])</li>
+          <li>Alert.prompt("Título", "Mensagem", (inserir) => {})</li>
+          <li></li>
+          <li></li>
+        </un>
+
+        <h4>Componentes externos</h4>
+        <un>
+          <li>Podemos também baixar componentes externos. Por exemplo um slider.</li>
+          <li>Há uma biblioteca de componentes externos no site docs.expo.dev</li>
+          <li>Temos que pegar o comando para instalar o componente e instalar no terminal</li>
+          <li>Então temos que importá-lo</li>
+        </un>
+
+        <h4>Navigation</h4>
+        <un>
+          <li>Podemos encontrar e baixar componentes que servem para criar diversas telas.</li>
+          <li>Site: <a href="reactnavigation.org">reactnavigation.org</a></li>
+          <li></li>
+        </un>
+      </section>
+
+      <section id="stylesheets">
+        <h2>Stylesheets</h2>
+
+        <p>Os styles em react-native são passados como puro javascript. Podemos passar um inline style ou como uma variável assim: const styles = StyleSheet.create({styles})</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy;LucasTombely</p>
+    </footer> 
+  </body>
+</html>

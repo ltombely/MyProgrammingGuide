@@ -106,17 +106,51 @@
         <un>
           <li>Funciona como uma div html comum.</li>
         </un>
-        <h4>SafeAreaView</h4>
-        <un>
-          <li>Igual View, porém caso esteja em uma area da tela que não de para ver o conteúdo, ele reorganiza o conteúdo.</li>
-        </un>
-
+        
         <h4>Text</h4>
         <un>
           <li>Imprime Textos</li>
           <li>Propriedades:</li>
           <li>onPress={function} -> Adiciona função ao pressionar</li>
           <li>numberOfLines={number} -> Quantas linhas pode ocupar no máximo.</li>
+        </un>
+
+        <h4>TextInput</h4>
+        <un>
+          <li>É o meio que o usuário insere dados no app.</li>
+          <li>O valor sempre retornará uma string. Caso queiramos um números temos que usar o parse.</li>
+          <li>PROPRIEDADES:</li>
+          <li>autocorrect={true/false} -> Corretor Automático</li>
+          <li>placholder="" -> placholder</li>
+          <li>value={this.state.value}</li>
+        </un>
+        
+        <h4>ScrollView</h4>
+        <un>
+          <li>Na internet, qualquer conteúdo que seja maior que a tela automaticamente gera um scroll.</li>
+          <li>Em Mobile não é assim, temos que usar ScrollView para criar um scroll.</li>
+          <li>ScrollView renderiza tudo de uma vez, isso significa que se for uma lista muito grande pode ter problemas de performance. Para isso existe FlatList</li>
+        </un>
+
+        <h4>FlatList</h4>
+        <un>
+          <li>Serve para Listas</li>
+          <li>Caso qualquer prop seja atualizada, FlatList atualiza automaticamente.</li>
+          <li>PROPRIEDADES:</li>
+          <li>data={[]} -> Decide os itens da lista</li>
+          <li>extraData={} -> </li>
+        </un>
+
+        <h4>SectionList</h4>
+        <un>
+          <li>É como uma FlatList, só que cada item da lista é organizado em secções</li>
+          <li>Como por exemplo para organizar em secções de ordem alfabetica</li>
+        </un>
+
+        <h4>ActivityIndicator</h4>
+        <un>
+          <li>É um indicador de Loading</li>
+          <li>Podemos apenas mudar a cor e o tamanho</li>
         </un>
 
         <h4>Image</h4>
@@ -129,16 +163,58 @@
           <li>loadingIndicatorSource={require("path")} -> Mostra isso enquanto a imagem carrega.</li>
         </un> 
 
-        <h4>Touchables</h4>
+        <h4>ImageBackground</h4>
         <un>
-          <li>Transforma qualquer coisa em clicável quando envolvido com tags Touchables, através do evento onPress</li>
-          <li>TouchableWithouFeedback -> Podemos adicionar função, porém não tem nenhum efeito.</li>
-          <li>TouchableOpacity -> Ao pressionar mostra efeito de reduzir opacidade.</li>
-          <li>TouchableHighlight -> Ao pressionar mostra efeito de escurecer por alguns ms.</li>
-          <li>TouchableNativeFeedback -> Ao pressionar mostra efeito de onda. (Android apenas)</li>
+          <li>Coloca uma imagem como fundo, quenem em CSS</li>
+        </un>
+        
+        <h4>KeyboardAvoidingView</h4>
+        <un>
+          <li>Faz com que o teclado empurre o conteúdo da tela para cima, sem cobrir a tela.</li>
+          <li>Funciona somente em Android</li>
+          <li>Muito útil com inputs</li>
+        </un>
+
+        <h4>Modal</h4>
+        <un>
+          <li>É um Modal simples, não muito usado.</li>
+        </un>
+
+        <h4>RefreshControl</h4>
+        <un>
+          <li>Usado dentro de uma ScrollView ou Lista, então ele pode recarregar rápido itens.</li>
+        </un>
+
+        <h4>SafeAreaView</h4>
+        <un>
+          <li>Igual View, porém caso esteja em uma area da tela que não de para ver o conteúdo, ele reorganiza o conteúdo.</li>
+        </un>
+
+        <h4>StatusBar</h4>
+        <un>
+          <li>Controla a barra de status do celular no aplicativo</li>
         </un>
 
 
+        <h4>Switch</h4>
+        <un>
+          <li>É um simples interruptor boolean</li>
+        </un>
+
+        <h4>Touchables</h4>
+        <un>
+          <li>Transforma qualquer coisa em clicável quando envolvido com tags Touchables, através do evento onPress</li>
+          <li>TouchableHighlight -> Ao pressionar mostra efeito de escurecer por alguns ms.</li>
+          <li>TouchableOpacity -> Ao pressionar mostra efeito de reduzir opacidade. Propriedades: "activeOpacity={number}" define o tanto de opacidade que muda</li>
+          <li>TouchableWithouFeedback -> Podemos adicionar função, porém não tem nenhum efeito.</li>
+          <li>TouchableNativeFeedback -> Ao pressionar mostra efeito de onda. (Android apenas)</li>
+        </un>
+
+        <h4>Pressable</h4>
+        <un>
+          <li>É como um botão pressionável.</li>
+        </un>
+        
         <h4>Button</h4>
         <un>
           <li>Adiciona um botão na tela</li>
@@ -154,10 +230,27 @@
           <li>alert("") funciona igual no javascript, que é diferente da API Alert.</li>
           <li>Alert.alert("Título", "Mensagem", [{textoBotao: "yes", onPress={() => {}}}, {textoBotao2: "no", onPress={() => {}}}])</li>
           <li>Alert.prompt("Título", "Mensagem", (inserir) => {})</li>
-          <li></li>
+          <li>Não é muito utilizado pois é muito pouco personalizável</li>
           <li></li>
         </un>
+        
+        <h4>VirtualizedList</h4>
+        <un>
+          <li>Provavelmente nunca será utilizado, mas serve como componente base para FlatLists e SectionList</li>
 
+        </un>
+
+        <h4>DrawerLayoutAndroid</h4>
+        <un>
+          <li>É aquela telinha que aparece ao puxar para o lado</li>
+        </un>
+
+        <h4>InputAcessoryView</h4>
+        <un>
+          <li>Coloca uma View em cima do teclado</li>
+          <li>Somente para IoS</li>
+        </un>
+        
         <h4>Componentes externos</h4>
         <un>
           <li>Podemos também baixar componentes externos. Por exemplo um slider.</li>
@@ -178,6 +271,34 @@
         <h2>Stylesheets</h2>
 
         <p>Os styles em react-native são passados como puro javascript. Podemos passar um inline style ou como uma variável assim: const styles = StyleSheet.create({styles})</p>
+      </section>
+      <section>
+        <h2>MAPA DE ESTUDOS REACT NATIVE</h2>
+        <un>
+          <li>PRINCÍPIOS BÁSICOS DE ARQUITETURA REACT NATIVE</li>
+          <li>ESTUDAR COMPONENTES COMUNS EM REACT NATIVE</li>
+          <li>EXPLORAR BIBLIOTECAS DE NAVEGAÇÃO</li>
+          <li>APRENDER A ACESSAR APIs NATIVAS</li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </un>
+      </section>
+
+      <section id="styledComponents">
+        <h2>Styled Components</h2>
+
+        <h3>O que é</h3>
+
+        <p>Styled components é uma lib react, react-native que serve para estilizar componentes da mesma forma que é feito em css, porém com javascript, permitindo a reutilização de conhecimenos.</p>
+        <p>Esta lib é uma forma alternativa à o StyleSheet nativo do react native.</p>
+
+        <h3>Instalação:</h3>
+
+        <un>
+          <li>No terminal: npm install styled-components</li>
+          <li></li>
+        </un>
       </section>
     </main>
 

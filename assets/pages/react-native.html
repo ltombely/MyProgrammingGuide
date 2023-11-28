@@ -50,9 +50,17 @@
         <h3>Instalação e Configuração</h3>
         <un>
           <li>Ter instalado Node e NPM</li>
-          <li>Podemos utilizar Android Studio para Emular. <a href="https://www.youtube.com/watch?v=1Bwp1BzYLx0">Ver Configurações Android Studio</a></li>
+          <li>
+            Podemos utilizar Android Studio para Emular.
+            <a href="https://www.youtube.com/watch?v=1Bwp1BzYLx0"
+              >Ver Configurações Android Studio</a
+            >
+          </li>
           <li>No Terminal (para javascript): npx create-expo-app nomedoapp</li>
-          <li>No Terminal (para typescript):npx create-expo-app -t expo-template-blank-typescript</li>
+          <li>
+            No Terminal (para typescript):npx create-expo-app -t
+            expo-template-blank-typescript
+          </li>
           <li>cd nomedapp</li>
           <li>npx expo start</li>
           <li>
@@ -101,50 +109,85 @@
       <section id="reactNativeComponents">
         <h2>Componentes nativos React Native</h2>
         <h3>Componentes Básicos</h3>
-        
+
         <h4>View</h4>
         <un>
           <li>Funciona como uma div html comum.</li>
         </un>
-        
+
         <h4>Text</h4>
         <un>
           <li>Imprime Textos</li>
           <li>Propriedades:</li>
           <li>onPress={function} -> Adiciona função ao pressionar</li>
-          <li>numberOfLines={number} -> Quantas linhas pode ocupar no máximo.</li>
+          <li>
+            numberOfLines={number} -> Quantas linhas pode ocupar no máximo.
+          </li>
         </un>
 
         <h4>TextInput</h4>
         <un>
           <li>É o meio que o usuário insere dados no app.</li>
-          <li>O valor sempre retornará uma string. Caso queiramos um números temos que usar o parse.</li>
+          <li>
+            O valor sempre retornará uma string. Caso queiramos um números temos
+            que usar o parse.
+          </li>
           <li>PROPRIEDADES:</li>
           <li>autocorrect={true/false} -> Corretor Automático</li>
           <li>placholder="" -> placholder</li>
           <li>value={this.state.value}</li>
         </un>
-        
+
         <h4>ScrollView</h4>
         <un>
-          <li>Na internet, qualquer conteúdo que seja maior que a tela automaticamente gera um scroll.</li>
-          <li>Em Mobile não é assim, temos que usar ScrollView para criar um scroll.</li>
-          <li>ScrollView renderiza tudo de uma vez, isso significa que se for uma lista muito grande pode ter problemas de performance. Para isso existe FlatList</li>
+          <li>
+            Na internet, qualquer conteúdo que seja maior que a tela
+            automaticamente gera um scroll.
+          </li>
+          <li>
+            Em Mobile não é assim, temos que usar ScrollView para criar um
+            scroll.
+          </li>
+          <li>
+            ScrollView renderiza tudo de uma vez, isso significa que se for uma
+            lista muito grande pode ter problemas de performance. Para isso
+            existe FlatList
+          </li>
         </un>
 
         <h4>FlatList</h4>
         <un>
           <li>Serve para Listas</li>
-          <li>Caso qualquer prop seja atualizada, FlatList atualiza automaticamente.</li>
-          <li>PROPRIEDADES:</li>
-          <li>data={[]} -> Decide os itens da lista</li>
-          <li>extraData={} -> </li>
+          <li>
+            Caso qualquer prop seja atualizada, FlatList atualiza
+            automaticamente.
+          </li>
+          <un>Tem que receber 3 propriedades:</un>li>
+          <li></li>
+          <li>data={} -> O que será imprimido, que variável, que array</li>
+          <li>keyExtractor={(item) => item.list} -> Indica qual será a key</li>
+          <li>
+            render={({item}) => &lt;View&gt;&lt;Text&gtO que será
+            retornado&lt;/Text&gt;&lt;/View&gt;}
+          </li>
         </un>
 
         <h4>SectionList</h4>
         <un>
-          <li>É como uma FlatList, só que cada item da lista é organizado em secções</li>
-          <li>Como por exemplo para organizar em secções de ordem alfabetica</li>
+          <li>
+            É como uma FlatList, só que cada item da lista é organizado em
+            secções
+          </li>
+          <li>Propriedades:</li>
+          <li>sections={} => Recebe a variável, os dados</li>
+          <li>renerItem={} -> Recebe a função que imprimirá os itens</li>
+          <li>
+            renderSectionHeader={} -> Função que retorna o cabeçalho da section
+          </li>
+          <li>
+            keyExtractor={} -> Recebe a key única de cada objeto, tem que ser
+            string
+          </li>
         </un>
 
         <h4>ActivityIndicator</h4>
@@ -157,22 +200,40 @@
         <un>
           <li>Imprime Imagens</li>
           <li>source={require("path")} -> Propriedade para caminho da foto.</li>
-          <li>source={{uri: "URL", width: number, height: number}} -> Propriedade para fotos por URL, deve conter tamanho.</li>
+          <li>
+            source={{uri: "URL", width: number, height: number}} -> Propriedade
+            para fotos por URL, deve conter tamanho.
+          </li>
           <li>blurRadius={number} -> Adiciona blur na imagem.</li>
-          <li>fadeDuration={number} -> Adiciona fade na imagem. O número é a duração em ms.</li>
-          <li>loadingIndicatorSource={require("path")} -> Mostra isso enquanto a imagem carrega.</li>
-        </un> 
+          <li>
+            fadeDuration={number} -> Adiciona fade na imagem. O número é a
+            duração em ms.
+          </li>
+          <li>
+            loadingIndicatorSource={require("path")} -> Mostra isso enquanto a
+            imagem carrega.
+          </li>
+        </un>
 
         <h4>ImageBackground</h4>
         <un>
+          <li>Funciona como um container que terá o fundo com aquela imagem</li>
           <li>Coloca uma imagem como fundo, quenem em CSS</li>
         </un>
-        
+
         <h4>KeyboardAvoidingView</h4>
         <un>
-          <li>Faz com que o teclado empurre o conteúdo da tela para cima, sem cobrir a tela.</li>
+          <li>
+            Faz com que o teclado empurre o conteúdo da tela para cima, sem
+            cobrir a tela.
+          </li>
           <li>Funciona somente em Android</li>
           <li>Muito útil com inputs</li>
+          <li>
+            Este funciona como um container, deve envolver tudo que queremos que
+            não seja tampado, necessita receber a propriedade behavior='padding'
+            ou outra tipo.
+          </li>
         </un>
 
         <h4>Modal</h4>
@@ -182,39 +243,68 @@
 
         <h4>RefreshControl</h4>
         <un>
-          <li>Usado dentro de uma ScrollView ou Lista, então ele pode recarregar rápido itens.</li>
+          <li>Usado dentro de uma ScrollView ou Listas.</li>
+          <li>É o refresh de quando se arrasta a tela pra baixo</li>
+          <li>Coloca-se como parâmetro da list refreshControl={&lt;RefreshControl/&gt;}</li>
+          <li>O RefreshControl tem que receber 2 propriedades</li>
+          <li>refreshing={} -> Recebe um state boolean. Enquanto for true ele mostrará o feedback do refresh</li>
+          <li>onRefresh={boolean_state} -> Recebe uma função, que é o que fará quando atualizar </li>
         </un>
 
         <h4>SafeAreaView</h4>
         <un>
-          <li>Igual View, porém caso esteja em uma area da tela que não de para ver o conteúdo, ele reorganiza o conteúdo.</li>
+          <li>
+            Igual View, porém caso esteja em uma area da tela que não de para
+            ver o conteúdo, ele reorganiza o conteúdo.
+          </li>
         </un>
 
         <h4>StatusBar</h4>
         <un>
           <li>Controla a barra de status do celular no aplicativo</li>
+          <li>Propriedades:</li>
+          <li>barStyle="dark-content" -> Define estilo</li>
+          <li>backgroundColor="#F0F0F0" -> Define Cor (Somente Android)</li>
         </un>
-
 
         <h4>Switch</h4>
         <un>
           <li>É um simples interruptor boolean</li>
+          <li>PROPRIEDADES:</li>
+          <li>Usa-se um useState para pegar o valor.</li>
+          <li>value={state} onValueChange={setState}</li>
         </un>
 
         <h4>Touchables</h4>
         <un>
-          <li>Transforma qualquer coisa em clicável quando envolvido com tags Touchables, através do evento onPress</li>
-          <li>TouchableHighlight -> Ao pressionar mostra efeito de escurecer por alguns ms.</li>
-          <li>TouchableOpacity -> Ao pressionar mostra efeito de reduzir opacidade. Propriedades: "activeOpacity={number}" define o tanto de opacidade que muda</li>
-          <li>TouchableWithouFeedback -> Podemos adicionar função, porém não tem nenhum efeito.</li>
-          <li>TouchableNativeFeedback -> Ao pressionar mostra efeito de onda. (Android apenas)</li>
+          <li>
+            Transforma qualquer coisa em clicável quando envolvido com tags
+            Touchables, através do evento onPress
+          </li>
+          <li>
+            TouchableHighlight -> Ao pressionar mostra efeito de escurecer por
+            alguns ms.
+          </li>
+          <li>
+            TouchableOpacity -> Ao pressionar mostra efeito de reduzir
+            opacidade. Propriedades: "activeOpacity={number}" define o tanto de
+            opacidade que muda
+          </li>
+          <li>
+            TouchableWithouFeedback -> Podemos adicionar função, porém não tem
+            nenhum efeito.
+          </li>
+          <li>
+            TouchableNativeFeedback -> Ao pressionar mostra efeito de onda.
+            (Android apenas)
+          </li>
         </un>
 
         <h4>Pressable</h4>
         <un>
           <li>É como um botão pressionável.</li>
         </un>
-        
+
         <h4>Button</h4>
         <un>
           <li>Adiciona um botão na tela</li>
@@ -227,17 +317,25 @@
         <h4>Alert (ioS)</h4>
         <un>
           <li>Alert é uma API, é um objeto.</li>
-          <li>alert("") funciona igual no javascript, que é diferente da API Alert.</li>
-          <li>Alert.alert("Título", "Mensagem", [{textoBotao: "yes", onPress={() => {}}}, {textoBotao2: "no", onPress={() => {}}}])</li>
+          <li>
+            alert("") funciona igual no javascript, que é diferente da API
+            Alert.
+          </li>
+          <li>
+            Alert.alert("Título", "Mensagem", [{textoBotao: "yes", onPress={()
+            => {}}}, {textoBotao2: "no", onPress={() => {}}}])
+          </li>
           <li>Alert.prompt("Título", "Mensagem", (inserir) => {})</li>
           <li>Não é muito utilizado pois é muito pouco personalizável</li>
           <li></li>
         </un>
-        
+
         <h4>VirtualizedList</h4>
         <un>
-          <li>Provavelmente nunca será utilizado, mas serve como componente base para FlatLists e SectionList</li>
-
+          <li>
+            Provavelmente nunca será utilizado, mas serve como componente base
+            para FlatLists e SectionList
+          </li>
         </un>
 
         <h4>DrawerLayoutAndroid</h4>
@@ -250,27 +348,72 @@
           <li>Coloca uma View em cima do teclado</li>
           <li>Somente para IoS</li>
         </un>
-        
+
         <h4>Componentes externos</h4>
         <un>
-          <li>Podemos também baixar componentes externos. Por exemplo um slider.</li>
-          <li>Há uma biblioteca de componentes externos no site docs.expo.dev</li>
-          <li>Temos que pegar o comando para instalar o componente e instalar no terminal</li>
+          <li>
+            Podemos também baixar componentes externos. Por exemplo um slider.
+          </li>
+          <li>
+            Há uma biblioteca de componentes externos no site docs.expo.dev
+          </li>
+          <li>
+            Temos que pegar o comando para instalar o componente e instalar no
+            terminal
+          </li>
           <li>Então temos que importá-lo</li>
         </un>
 
         <h4>Navigation</h4>
         <un>
-          <li>Podemos encontrar e baixar componentes que servem para criar diversas telas.</li>
+          <li>
+            Podemos encontrar e baixar componentes que servem para criar
+            diversas telas.
+          </li>
           <li>Site: <a href="reactnavigation.org">reactnavigation.org</a></li>
           <li></li>
         </un>
       </section>
+      
+      <section id="psc">
+        <h2>Plataform Specific Code</h2>
+
+        <p>React Native serve tanto para Android como para IoS, porém algumas linhas servem para apenas alguma das palataformas, então podemos detectar qual plataforma o usuário utiliza</p>
+
+        <un>
+          <li>import { Plataform } from "react-native";</li>
+          <li>Plataform.OS -> Retorna o sistema operacional. ('ios' | 'android' | 'windows' | 'macos' | 'web')</li>
+          <li>Podemos colocar estilos específicos para um das plataformas utilizando Plataform.OS</li>
+          <li>Podemos fazer o mesmo com Styled Components, porém temos que colocar o código inteiro entre ${}</li>
+        </un>
+        <img src="../img/react-native-page-img/Platform.OS.png" alt="platformos">
+
+        <un>
+          <li>Há outro jeito de fazer também.</li>
+          <li>Nos styles podemos digitar ...Platform.select({ ios: { . }, android: { . } }) para colocarmos styles para várias plataformas</li>
+        </un>
+
+        <img src="../img/react-native-page-img/spreadPlatform.png" alt="spreadPlatform">
+
+        <un>
+          <li>Podemos também criar componentes separados em que apenas um deles será utilizado dependendo do OS</li>
+          <li>Temos que criar dois componentes na pasta componentes e o nome dos arquivos tem que ser o mesmo, porém mudando o nome do sistema operacional</li>
+          <li>ButtonComponent.android.tsx</li>
+          <li>ButtonComponent.ios.tsx</li>
+          <li>Basta importar o componente sem colocar o nome 'ios.tsx' ou 'androis.tsx' e o React Native identifica qual utilizar automaticamente.</li>.
+        </un>
+
+      </section>
+
 
       <section id="stylesheets">
         <h2>Stylesheets</h2>
 
-        <p>Os styles em react-native são passados como puro javascript. Podemos passar um inline style ou como uma variável assim: const styles = StyleSheet.create({styles})</p>
+        <p>
+          Os styles em react-native são passados como puro javascript. Podemos
+          passar um inline style ou como uma variável assim: const styles =
+          StyleSheet.create({styles})
+        </p>
       </section>
       <section>
         <h2>MAPA DE ESTUDOS REACT NATIVE</h2>
@@ -279,24 +422,310 @@
           <li>ESTUDAR COMPONENTES COMUNS EM REACT NATIVE</li>
           <li>EXPLORAR BIBLIOTECAS DE NAVEGAÇÃO</li>
           <li>APRENDER A ACESSAR APIs NATIVAS</li>
-          <li></li>
-          <li></li>
-          <li></li>
+
         </un>
       </section>
+
+      <section id="armazenamento">
+        <h2>Armazenamento React Native</h2>
+        <h3>Estratégias de Armazenamento:</h3>  
+        <img src="../img/react-native-page-img/formasDeArmazenamento.jpg" alt="Formas de armazenamento react native">
+
+        <h3>Async Storage</h3>
+        
+        <h4>Considerações Gerais</h4>
+
+        <un>
+          <li>Async storage não é um banco criptografado, então é importante utilizar algum jeito de criptografar caso seja algum tipo de senha ou inforamação delicada</li>
+          <li>É um banco de dados não relacional.</li>
+          <li>Não é bom para dados com estruturas complexas ou dados que tem relação entre si.</li>
+          <li>Armazena no formato de uma string, por isso tem uma ótima performance.</li>
+          <li>Funciona muito similar ao localStorage do navegador, recebendo 2 parâmetros, um sendo a chave e o outro uma string JSON, e utiliza setItem() e getItem()</li>
+          <li>Async Storage é assíncrono, apesar de muito rápido exige um tempo para salvar. Podemos colocá-lo dentro de uma funçã async e utilizar ele com await.</li>
+          <li>Sugestão: É interessante fazer as chaves de modo a se identificar que é o seu aplicativo que utiliza ela. Exemplo de chave: "@nome_do_app:tipo_de_informação" -> "@savepass:passwords/li>
+
+          <h4>Utilização de Async Storage</h4>
+        <un>
+          </un>           
+
+          <li>No Terminal: npx expo install @react-native-async-storage/async-storage</li>
+          <li>import AsyncStorage from "@react-native-async-storage/async-storage";</li>
+          <li>AsyncStorage.setItem("chave", JSON.strinify(dados))</li>
+          <li>AsyncStorage.getItem("chave")</li>
+          <li>AsyncStorage.getAllKeys() -> Retorna todas as keys salvas no celular de todos os apps.</li>
+        </un>
+
+
+      </section>
+
+
+      <section id="accessibility">
+        <h2>Acessibilidade</h2>
+        
+        <p>A Acessibilidade é importante para pessoas que utilizam celular e tem algum tipo de deficiencia</p>
+        <p>No Android, o app de acessibilidade é o Talkback, em iOS é o VoiceOver</p>
+        <p>Para tornar algo acessível para o leitor, basta colocar a propriedade accessible, ou accessibility={true}, então o aplicativo consegue selecionar este componente.</p>
+        <p>Caso coloquemos como accessible o componente pai, não conseguimos acessar o componente filho.</p>
+        <p>Inputs são accessíveis normalmente já, porém podemos passar o que será lido pelo leitor através do placeholder</p>
+        <p>Podemos passar variáveis para os textos passando com <code>{`${variável}`}</code></p>
+        <p>O aplicativo "accessibility scanner da app store serve para scanear nosso aplicativo e nos sugerir as mudanças que podemos fazer para melhorar a accessibilidade, como melhoria de contraste e adicionar novas informações</p>
+
+        <un>
+          <li>accessible -> Torna componente acessível</li>
+          <li>accessibilityLabel="" -> É o que o leitor lerá.</li>
+          <li>placeholder="" -> É lido como um accessibilityLabel pelo leitor</li>
+          <li>accessiblityHint="" -> Coloca-se em botoões e clicáveis para dizer o que acontece ao interagir com o cponente</li>
+          <li>accessibilityState="" -> Diz para o usuário o estado atual da aplicação.</li>
+          <li>accessiblityValue="" -> Diz para o usuário o valor atual do componente. É como o accessibilityLabel, porém dinâmico, como em states.</li>
+          <li>accessibilityActions={[{name: 'activate', label: 'Ver detalhes do jogo'}]} -> Serve quando um componente tem mais de uma função ao ser clicado, então passamos um array com todas as ações possíveis. Activate = clique normal, label = o que será lido. É necessário o evento "onAccessibilityAction" para coletar os dados de qual foi a ação do usuário</li>
+
+
+      </section>
+
+
+
+
+
+
+
+
 
       <section id="styledComponents">
         <h2>Styled Components</h2>
 
         <h3>O que é</h3>
 
-        <p>Styled components é uma lib react, react-native que serve para estilizar componentes da mesma forma que é feito em css, porém com javascript, permitindo a reutilização de conhecimenos.</p>
-        <p>Esta lib é uma forma alternativa à o StyleSheet nativo do react native.</p>
+        <p>
+          Styled components é uma lib react, react-native que serve para
+          estilizar componentes da mesma forma que é feito em css, porém com
+          javascript, permitindo a reutilização de conhecimenos.
+        </p>
+        <p>
+          Esta lib é uma forma alternativa à o StyleSheet nativo do react
+          native.
+        </p>
 
         <h3>Instalação:</h3>
 
         <un>
           <li>No terminal: npm install styled-components</li>
+          <li>Baixar Extensão vscode-styled-components</li>
+          <li>No src criar um arquivo chamado styled.js</li>
+          <li>importar: import styled from "styled-components/native"</li>
+        </un>
+
+        <h3>Funcionamento</h3>
+
+        <un>
+          <li>
+            Os styles são declarados como variáveis const que recebe o nome do
+            componente que queremos e será exportada.
+          </li>
+          <li>
+            Essa const recebe a palavra styled.nome do componente, seguido de
+            crase e terminada em ponto e vírgula. O código será escrito entre as
+            Crases e será idêntico a CSS.
+          </li>
+          <li>
+            Basta importar este componente no arquivo que iremos utilizar, e
+            usá-lo como se fosse um componente.
+          </li>
+        </un>
+        <br />
+        <span>styled.js:</span><br />
+        <img
+          src="../img/react-native-page-img/styled.png"
+          alt="Arquivo Styled"
+        />
+        <br />
+        <span>App.tsx:</span><br />
+        <img src="../img/react-native-page-img/styledApp.png" alt="" />
+      </section>
+
+
+      <section id="animations">
+        <h2>React Native animations</h2>
+
+        <un>
+          <li>Lib: Reanimated serve para animações react native</li>
+          <li>No terminal: npx expo install react-native-reanimated</li>
+          <li>babel.config.js: module.exports = function (api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: ['react-native-reanimated/plugin'],
+  };
+};
+</li>
+      <li>import Animated from "react-native-reanimtaed"</li>
+        </un>
+
+
+        <h3>Efeitos</h3>
+        <un>
+          <li>Animated.View é uma view animada</li>
+          <li>A propriedade entering recebe um efeito de entrada, e exiting de saída</li>
+        </un>
+
+        <h4>Propriedades Prontas</h4>
+
+        <p>Propriedades In são de entrada, e Out são de saída, basta trocar o in por out.</p>
+        <un>
+          <li>FadeIn</li>
+          <li>BounceIn</li>
+          <li>ZoomIn</li>
+          <li>RoolIn</li>
+          <li>SlideIn</li>
+          <li>StretchIn</li>
+          <li>RotateIn</li>
+          <li>FlipInEasy</li>
+        </un>
+
+        <p>Essas propriedades possuem algumas propriedades também</p>
+        <un>
+          <li>.duration(ms)</li>
+          <li>.delay(ms)</li>
+          <li></li>
+        </un>
+      </section>
+
+      <section id="modernUI">
+        <h2>Interfaces Modernas</h2>
+
+        <p>Para ter Interfaces modernas tem algumas características muito úteis de se saber</p>
+
+        <un>
+          <li>Criar no src uma pasta theme, que possue um arquivo index.ts. Dentro deste arquivo vai ter um export default de um objeto com que possui as cores e fontes usadas como base em todo o projeto.</li>
+          <li>Site Adobe Color Wheel nos gera paletas de cores que combinam e pegar paleta de cores de uma imagem.</li>
+          <li>Não utilizar a fonte padrão do dispositivo. Cada OS tem uma diferente.</li>
+          <li>Aprender o básico de circulo de cores e combinações</li>
+          <li>Aprender o básico de tipografia. O que cada tipo de fonte transmite. Cores impactam com sentimentos.</li>
+          <li>Site Google Fonts tem muitas fontes</li>
+        </un>
+      </section>
+      <section>
+        <h2>Libs Úteis React Native</h2>
+
+        <h3>uuid</h3>
+
+        <un>
+          <li>É uma lib que serve para gerar ids automaticamente.</li>
+          <li>npm install react-native-uuid</li>
+        </un>
+
+        <h3>Toast</h3>
+
+        <un>
+          <li>Serve para gerar toasts. Utilizando Toast.show({type: "aa"})</li>
+          <li>npm install react-native-toast-message</li>
+        </un>
+
+        <h3>React Context</h3>
+        <un>
+          <li>Serve para compartilhar variáveis de estado global na aplicação. Útil para informações de autenticação e informações que precisam ser utilizadas no app inteiro.</li>
+          <li></li>
+        </un>
+
+        <h3>Installations:</h3>
+a
+        <un>
+          <li>npm install styled-components</li>
+          <li>npm install @types/styled-components-react-native - D</li>
+          <li>npm install react-native-toast-message</li>
+          <li>npm install react-native-uuid</li>
+          <li>npm install @react-navigation/native</li>
+          <li>npm install @react-navigation/stack</li>
+          <li>npm install @react-navigation/bottom-tabs</li>
+          <li>npx expo install expo-app-loading</li>
+          <li>npx expo install expo-font @expo-google-fonts/inter</li>
+          <li>npx expo install react-native-screens react-native-safe-area-context</li>
+          <li>npx expo install @react-native-async-storage/async-storage</li>
+          <li>npx expo install react-native-reanimated</li>
+          <li>npx expo install react-native-animatable</li>
+          <li>npx expo install react-native-gesture-handler</li>
+        </un>
+      </section>
+
+
+
+
+
+
+
+
+      <section id="nativeBase">
+        <h2>Native Base com gluestack-ui</h2>
+        <p>
+          Native Base é uma biblioteca de componentes de React Native. Native
+          base Possui diversos componentes pré-prontos e altamente
+          personalizáveis.
+        </p>
+
+        <h3>Intalação</h3>
+
+        <h3>Components Native-Base</h3>
+
+        <h4>Layout</h4>
+
+        <h5>Box</h5>
+        <un>
+          <li>Serve como um contaainer flexível, como uma</li>
+        </un>
+
+        <h5>Center</h5>
+        <un>
+          <li>Alinha tudo Horizontalmente e Verticalmente no centro.</li>
+        </un>
+
+        <h5>HStack</h5>
+        <un>
+          <li>Serve para alinhar os elementos filhos horizontalmente</li>
+          <li>Serve como se fosse um flex-direction: row.</li>
+        </un>
+
+        <h5>VStack</h5>
+        <un>
+          <li>Serve para alinhar os elementos filhos verticalmente</li>
+          <li>Serve como se fosse um flex-direction: column.</li>
+        </un>
+
+        <h5>Divider</h5>
+
+        <un>
+          <li>
+            Divider serve igual uma div, porém coloca uma linha como se fosse um
+            hr do html no topo, dividindo o conteúdo
+          </li>
+        </un>
+
+        <h4>Tipografia</h4>
+
+        <h5>Text</h5>
+        <un>
+          <li>Maneira de imprimir textos na tela</li>
+          <li></li>
+        </un>
+
+        <h5>Heading</h5>
+        <un>
+          <li>Fonte um pouco maior e em negrito</li>
+        </un>
+
+        <h4>Formulários</h4>
+
+        <h5>FormControl</h5>
+        <un>
+          <li>Serve como</li>
+        </un>
+        <h5>Button</h5>
+        <un>
+          <li>Adiciona um Botão</li>
+          <li>ButtonText -> Adiciona Texto ao botão</li>
+        </un>
+
+        <h5>Checkbox</h5>
+        <un>
+          <li></li>
           <li></li>
         </un>
       </section>
@@ -304,6 +733,6 @@
 
     <footer>
       <p>&copy;LucasTombely</p>
-    </footer> 
+    </footer>
   </body>
 </html>

@@ -1,97 +1,110 @@
-@import url('style.css');
+@import url("style.css");
 
 /*CLASSES*/
 
-.card{
-    background-color: #191919;
-    margin: 0.7rem;
+.card {
+  background-color: #191919;
+  margin: 0.7rem;
 }
-.card > article > img{
-    width:100%;
+.card > article > img {
+  width: 100%;
 }
 
 /*MAIN*/
 
-body > main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+body > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*SECTION*/
 
-body > main > section{
-    margin: 1rem;
-    border-radius: 1rem;
+body > main > section {
+  margin: 1rem;
+  border-radius: 1rem;
 }
-body > main > section > p{
-    text-align: justify;
-    margin: 1.1rem;
-    text-indent: 1.5rem;
+body > main > section > p {
+  text-align: justify;
+  margin: 1.1rem;
+  text-indent: 1.5rem;
 }
-body > main > section > a{
-    text-decoration: none;
+body > main > section > a {
+  text-decoration: none;
 }
 
 /*ARTICLE*/
 
-body > main > section > a > article{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 15rem;
-    background-position: center ;
-    background-size: cover;
+body > main > section > a > article {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 15rem;
+  background-position: center;
+  background-size: cover;
 }
-body > main > section:nth-child(1) > a > article{
-    background-image: url('../img/html.jpg');
-}
-body > main > section:nth-child(2) > a > article{
-    background-image: url('../img/css.jpg');
-}
-body > main > section:nth-child(3) > a > article{
-    background-image: url('../img/javascript.jpg');
-}
-body > main > section:nth-child(4) > a > article{
-  background-image: url('../img/ts-page-img/ts.jpg');
-}
-body > main > section:nth-child(5) > a > article{
-  background-image: url('../img/react-page-img/react.jpg');
-}
-body > main > section:nth-child(6) > a > article{
-    background-image: url('../img/node.jpg');
-}
-body > main > section:nth-child(7) > a > article{
-    background-image: url('../img/mongodb.jpg');
-}
-body > main > section:nth-child(8) > a > article{
-    background-image: url('../img/mardown.jpg');
-}
-body > main > section:nth-child(9) > a > article{
-    background-image: url('../img/sql.jpg');
-}
-body > main > section:nth-child(10) > a > article{
-    background-image: url('../img/visual-studio.jpg');
+#html5 a article {
+  background-image: url("../img/html.jpg");
 }
 
-body > main > section > a > article > header{
-    background-color: #3b3b3bab;
-    width:100%;
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.2rem;
+#css3 a article {
+  background-image: url("../img/css.jpg");
+}
+
+#javascript a article {
+  background-image: url("../img/javascript.jpg");
+}
+
+#typescript a article {
+  background-image: url("../img/ts-page-img/ts.jpg");
+}
+
+#react a article {
+  background-image: url("../img/react-page-img/react.jpg");
+}
+
+#react-native a article {
+  background-image: url("../img/react-native-page-img/react-native.jpg");
+}
+
+#node a article {
+  background-image: url("../img/node.jpg");
+}
+
+#mongodb a article {
+  background-image: url("../img/mongodb.jpg");
+}
+
+#markdown a article {
+  background-image: url("../img/markdown.jpg");
+}
+
+#sql a article {
+  background-image: url("../img/sql.jpg");
+}
+
+#visual-studio a article {
+  background-image: url("../img/visual-studio.jpg");
+}
+
+body > main > section > a > article > header {
+  background-color: #3b3b3bab;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.2rem;
 }
 /*DIV*/
 
-body > main > section > div{
-    display: flex;
-    align-items: center;
+body > main > section > div {
+  display: flex;
+  align-items: center;
 
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
-body > main > section > div > img{
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 0.3rem;
+body > main > section > div > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.3rem;
 }

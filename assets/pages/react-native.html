@@ -24,7 +24,7 @@
       <a href="#"><span>React Native</span></a>
     </nav>
     <main>
-      <section>
+      <section id="cli-expo">
         <h2>React Native</h2>
 
         <h3>Sobre</h3>
@@ -94,7 +94,6 @@
           <li>Metro Bundler é uma ferramenta do React Native</li>
         </un>
       </section>
-
       <section id="basics">
         <p>
           Funções em ReactNative não retornam HTML como em React, elas retornam
@@ -105,7 +104,6 @@
           importar vários componentes de "react-native"
         </p>
       </section>
-
       <section id="reactNativeComponents">
         <h2>Componentes nativos React Native</h2>
         <h3>Componentes Básicos</h3>
@@ -374,7 +372,6 @@
           <li></li>
         </un>
       </section>
-      
       <section id="psc">
         <h2>Plataform Specific Code</h2>
 
@@ -404,8 +401,6 @@
         </un>
 
       </section>
-
-
       <section id="stylesheets">
         <h2>Stylesheets</h2>
 
@@ -415,17 +410,6 @@
           StyleSheet.create({styles})
         </p>
       </section>
-      <section>
-        <h2>MAPA DE ESTUDOS REACT NATIVE</h2>
-        <un>
-          <li>PRINCÍPIOS BÁSICOS DE ARQUITETURA REACT NATIVE</li>
-          <li>ESTUDAR COMPONENTES COMUNS EM REACT NATIVE</li>
-          <li>EXPLORAR BIBLIOTECAS DE NAVEGAÇÃO</li>
-          <li>APRENDER A ACESSAR APIs NATIVAS</li>
-
-        </un>
-      </section>
-
       <section id="armazenamento">
         <h2>Armazenamento React Native</h2>
         <h3>Estratégias de Armazenamento:</h3>  
@@ -457,8 +441,42 @@
 
 
       </section>
+      <section id="firebase"> 
+        
+        <h2>Firebase</h2>
 
+        <h3>Sobre</h3>
 
+        <p>Firebase é uma plataforma de <abbr title="Backend as a Service">BaaS</abbr> da google que oferece serviços onlie para desenvolvedores.</p>
+        <p>O Site do Firebase é: <a href="firebase.google.com">firebase.google.com</a></p>
+        <un>
+          <li>Firebase Realtime Database -> Armazena dados em tempo real, sincronizando entre clientes.</li>
+          <li>Firestore -> Banco de dados NoSQL com consultas avançadas e escalabilidade.</li>
+          <li>Firebase Authentication -> Simplifica autenticação com métodos como e-mail/senha e autenticação social.</li>
+          <li>Firebase Cloud Messaging -> Envia notificações push para dispositivos móveis.</li>
+          <li>Firebase Cloud Functions -> Cria funções na nuvem em resposta a eventos.</li>
+          <li>Firebase Hosting -> Hospeda conteúdo estático e web para aplicativos.</li>
+          <li>Firebase Storage -> Armazena e serve arquivos, como imagens e vídeos.</li>
+          <li>Firebase Performance Monitoring e Analytics -> Monitora desempenho e coleta dados analíticos.</li>
+          <li>Firebase Remote Config -> Modifica aparência e comportamento do aplicativo em tempo real.</li>
+          <li>Firebase Test Lab -> Executa testes em dispositivos reais para garantir qualidade.</li>
+        </un>
+
+        <h3>In
+          stalação</h3>
+        <un>
+          <li>Criar um projeto</li>
+          <li>Criar um Projeto no console do firebase.google.com</li>
+          <li></li>
+        <h3>Instalação</h3>
+        <un>
+          <li>Criar um projeto</li>
+          <li>Criar um Projeto no console do firebase.google.com</li>
+          <li></li>
+          <li></li>
+        </un>
+
+      </section>
       <section id="accessibility">
         <h2>Acessibilidade</h2>
         
@@ -481,15 +499,6 @@
 
 
       </section>
-
-
-
-
-
-
-
-
-
       <section id="styledComponents">
         <h2>Styled Components</h2>
 
@@ -541,23 +550,14 @@
         <span>App.tsx:</span><br />
         <img src="../img/react-native-page-img/styledApp.png" alt="" />
       </section>
-
-
       <section id="animations">
         <h2>React Native animations</h2>
 
         <un>
           <li>Lib: Reanimated serve para animações react native</li>
           <li>No terminal: npx expo install react-native-reanimated</li>
-          <li>babel.config.js: module.exports = function (api) {
-  api.cache(true);
-  return {
-    presets: ['babel-preset-expo'],
-    plugins: ['react-native-reanimated/plugin'],
-  };
-};
-</li>
-      <li>import Animated from "react-native-reanimtaed"</li>
+          <li>Adicionar plugin babel: plugins: ['react-native-reanimated/plugin']</li>
+        b  <li>import Animated from "react-native-reanimtaed"</li>
         </un>
 
 
@@ -585,10 +585,25 @@
         <un>
           <li>.duration(ms)</li>
           <li>.delay(ms)</li>
-          <li></li>
         </un>
-      </section>
 
+        <h4>Efeitos ao clique</h4>
+        
+        <h5>useSharedValue</h5>
+
+        <p>useSharedValue é um hook do reanimanted que define um valor para um estilo e esse estilo pode ser variável. Para acessar o valor usa-se o nome da variável declarada .value</p>
+
+        <h5>useAnimatedStyle</h5>
+        <p>useAnimatedStyle é um hook do reanimated para definir um estilo variável animado em uma Animated.View. Recebe uma callback function. O nome da variável deve ser colocado dentro do style do componente. Usa-se junto com o useSharedValue</p>
+
+        <h5>Propriedades de efeito</h5>
+        <un>
+          <li>withTiming(number)</li>
+          <li>withSpring(number)</li>
+        </un>
+        <img src="../img/react-native-page-img/useShared.png" alt="useShared imagem">
+
+      </section>
       <section id="modernUI">
         <h2>Interfaces Modernas</h2>
 
@@ -603,7 +618,39 @@
           <li>Site Google Fonts tem muitas fontes</li>
         </un>
       </section>
-      <section>
+      <section id="microInteractions">
+        <h2>Micro Interações</h2>
+
+        <p>Micro Interações e Gesture Handler são detalhes funcionais e interativos de um produto. Tem um papel funcional no App.</p>
+        <un>
+          <li>Tipos de Microinteraçõces:</li>
+          <li>Sonora</li>
+          <li>Visual</li>
+          <li>Tátil -> Gestos, toques, pinçar.</li>
+        </un>
+
+        <h3>Gestos</h3>
+        <un>
+          <li>Clique Simples</li>
+          <li>Clique Duplo</li>
+          <li>Clique Longo</li>
+          <li>Arrastar</li>
+          <li>Pinçar</li>
+          <li>Rotação</li>
+          <li>Arrastar com 2 dedos</li>
+        </un>
+
+        <h3>React Native Gesture Handler</h3>
+
+        <un>
+          <li>É a bibiloteca para manejar os diferentes tipos de toques do usuário</li>
+          <li>npx expo install react-native-gesture-handler</li>
+          <li>npx expo install react-reanimated</li>
+          <li></li>
+        </un>
+      </section>
+
+      <section id='utilities'>
         <h2>Libs Úteis React Native</h2>
 
         <h3>uuid</h3>
@@ -627,7 +674,7 @@
         </un>
 
         <h3>Installations:</h3>
-a
+
         <un>
           <li>npm install styled-components</li>
           <li>npm install @types/styled-components-react-native - D</li>
@@ -640,11 +687,14 @@ a
           <li>npx expo install expo-font @expo-google-fonts/inter</li>
           <li>npx expo install react-native-screens react-native-safe-area-context</li>
           <li>npx expo install @react-native-async-storage/async-storage</li>
-          <li>npx expo install react-native-reanimated</li>
+          <li>npx expo install react-native-gesture-handler</li>
+          <li>npx expo install react-native-reanimated</li> 
           <li>npx expo install react-native-animatable</li>
           <li>npx expo install react-native-gesture-handler</li>
+          <li>npx expo install react-native-web@~0.19.6 @expo/webpack-config@^19.0.0</li>
         </un>
       </section>
+
 
 
 

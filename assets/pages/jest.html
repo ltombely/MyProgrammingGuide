@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Olá, este é meu site teste" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, programação, programar, programas, web, front-end"
+    />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Guia de Programação - Jest</title>
+  </head>
+  <body>
+    <header>
+      <img src="../img/favicon.png" alt="Logo do site" />
+      <h1>Programmer Guide - Jest</h1>
+    </header>
+    <nav>
+      <a href="../index.html"><span>Página Inicial</span></a>
+      <span>>Jest</span>
+      <a href="#"><span>Jest</span></a>
+    </nav>
+
+    <section id="basics">
+      <h2>Jest</h2>
+
+      <p>
+        Jest é uma lib de testes javascript, também utilizada com react native,
+        react e outros.
+      </p>
+
+      <h3>Instalar</h3>
+
+      <un>
+        <li>npm install --save-dev jest</li>
+      </un>
+    </section>
+
+    <section>
+      <h2>Testes</h2>
+
+      <h3>Forma</h3>
+      <un>
+        <li>Os testes se fazem num arquivo __nome.test.ts ou __nome.test.js</li>
+      </un>
+
+      <h3>Forma de testar</h3>
+
+      <h4>it</h4>
+      <un>
+        <li>it -> declara uma função de teste. Com 2 parâmetros.</li>
+        <li>O primeiro parâmetro recebe um texto descrevendo o teste</li>
+        <li>
+          Segundo parâmetro recebe uma função, dentro dela receberá o teste
+        </li>
+      </un>
+
+      <h4>expect toBe toEqual</h4>
+
+      <un>
+        <li>expect() -> recebe uma função que retorna algum valor</li>
+        <li>.toBe() -> O valor que a função deve retornar</li>
+        <li>
+          .toEqual() -> Quando comparamos arrays ou objetos, é necessário usar
+          .toEqual(), pois em javascript {} === {} retorna false
+        </li>
+      </un>
+
+      <h4>describe</h4>
+
+      <un>
+        <li>describe é como se agrupa varios testes em um só lugar</li>
+      </un>
+      <img src="../img/jest-page-img/itExpectToBe.png" alt="Função Jest" />
+
+
+      <h4>Async Functions</h4>
+      <un>
+        <li>É praticamente a mesma coisa, porém temos que usar async await ou .then</li>
+      </un>
+      <img src="" alt="">
+    </section>
+    <section id="table">
+      <h2>Table</h2>
+
+      <table>
+        <tr>
+          <th>COMANDO</th>
+          <th>Função</th>
+        </tr>
+        <tr>
+          <td>it("", () => { })</td>
+          <td>Cria um novo Teste</td>
+        </tr>
+        <tr>
+          <td>expect(valor)</td>
+          <td>Determina qual valor sera avaliado</td>
+        </tr>
+        <tr>
+          <td>.toBe(valor)</td>
+          <td>Determina o que deve resultar o expect</td>
+        </tr>
+        <tr>
+          <td>.toEqual(valor)</td>
+          <td>
+            Determina o que deve resultar o expect, porém nesse caso objetos e
+            arrays podem ser igualados
+          </td>
+        </tr>
+        <tr>
+          <td>.toBeTruthy()</td>
+          <td>Determina que deve resultar true</td>
+        </tr>
+        <tr>
+          <td>.toBeFalsy()</td>
+          <td>Determina que deve resultar false</td>
+        </tr>
+        <tr>
+          <td>.toBeUndefined()</td>
+          <td>Determina que deve resultar undefined</td>
+        </tr>
+        <tr>
+          <td>.toBeNull()</td>
+          <td>Determina que deve resultar null</td>
+        </tr>
+        <tr>
+          <td>.toBeGreaterThan(numero)</td>
+          <td>Determina que deve resultar maior que este número</td>
+        </tr>
+        <tr>
+          <td>.toBeGreaterThanOrEqual(numero)</td>
+          <td>Determina que deve resultar maior ou igual que este número</td>
+        </tr>
+        <tr>
+          <td>.toBeLessThan(numero)</td>
+          <td>Determina que deve ser menor que este número</td>
+        </tr>
+        <tr>
+          <td>.toBeLessThanOrEqual(numero)</td>
+          <td>Determina que deve ser menor que este número</td>
+        </tr>
+        <tr>
+          <td>.toBeCloseTo(numero)</td>
+          <td>Determina que deve ser aproximadamente este valor</td>
+        </tr>
+        <tr>
+          <td>.toMatch(/RegEx/)</td>
+          <td>Determina que deve ser compatível com a RegEx, podemos comparar strings.</td>
+        </tr>
+        <tr>
+          <td>.toContain(valor)</td>
+          <td>Determina que um array deve conter este valor, seja string, seja number</td>
+        </tr>
+        <tr>
+          <td>.not</td>
+          <td>
+            Determina que o próximo deve ser negativo:
+            expect(null).not.toBeTruthy()
+          </td>
+        </tr>
+        <tr>
+          <td>.toThrow(error)</td>
+          <td>Determina que deve retornar um Throw new Error()</td>
+        </tr>
+      </table>
+    </section>
+    <main></main>
+
+    <footer>
+      <p>&copy;LucasTombely</p>
+    </footer>
+  </body>
+</html>

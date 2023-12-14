@@ -604,6 +604,7 @@
         <img src="../img/react-native-page-img/useShared.png" alt="useShared imagem">
 
       </section>
+      sec
       <section id="modernUI">
         <h2>Interfaces Modernas</h2>
 
@@ -650,6 +651,28 @@
         </un>
       </section>
 
+      <section id="RNTestingLibrary">
+
+        <h2>React Native Testing Library</h2>
+
+        <p>React Native Testing Library é uma biblioteca de testes de componentes react native</p>
+
+        <h3>Instalação</h3>
+        <p>Documentação Jest Exp -> https://docs.expo.dev/develop/unit-testing/?redirected</p>
+        <p>No transform ignore patterns podemos fazer com que ignore libs, para que não mostre erro onde não tem. Coloca-se no final, antes do último parenteses uma barra vertical e o nome da lib</p>
+        <un>
+          <li>npx expo install jest-expo jest</li>
+          <li>package.json -> "scripts" : { "test": "jest"}</li>
+          <li>package.json -> "jest": { "preset": "jest-expo", "transformIgnorePatterns": [
+            "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+          ] }</li>
+          <li>npm install react-test-renderer@versão_do_react</li>
+          <li>npm install --save-dev @types/jest @types/react-test-renderer</li>
+          <li></li>
+        </un>
+      </section>
+
+
       <section id='utilities'>
         <h2>Libs Úteis React Native</h2>
 
@@ -683,6 +706,10 @@
           <li>npm install @react-navigation/native</li>
           <li>npm install @react-navigation/stack</li>
           <li>npm install @react-navigation/bottom-tabs</li>
+          <li>npm install --save-dev jest</li>
+          <li>npm install --save-dev @types/jest</li>
+          <li>npm install --save-dev react-test-renderer@18.2.0</li>
+          <li>npm install --save-dev @testing-library/react-native</li>
           <li>npx expo install expo-app-loading</li>
           <li>npx expo install expo-font @expo-google-fonts/inter</li>
           <li>npx expo install react-native-screens react-native-safe-area-context</li>
@@ -692,6 +719,7 @@
           <li>npx expo install react-native-animatable</li>
           <li>npx expo install react-native-gesture-handler</li>
           <li>npx expo install react-native-web@~0.19.6 @expo/webpack-config@^19.0.0</li>
+          <li>npx expo install jest-expo jest</li>
         </un>
       </section>
 

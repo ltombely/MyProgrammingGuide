@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Olá, este é meu site teste" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, programação, programar, programas, web, front-end"
+    />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Guia de Programação - Realm DB</title>
+  </head>
+  <body>
+    <header>
+      <img src="../img/favicon.png" alt="Logo do site" />
+      <h1>Programmer Guide - Realm DB</h1>
+    </header>
+    <nav>
+      <a href="../index.html"><span>Página Inicial</span></a>
+      <span>></span>
+      <a href="#"><span>Realm DB</span></a>
+    </nav>
+
+    <main>
+      <section id="roadMap">
+        <h2>Mapa de Estudos REALM DB</h2>
+
+        <h3>Introdução ao Realm:</h3>
+        <li>Compreenda os conceitos fundamentais do Realm Database.</li>
+        <li>
+          Leia a documentação oficial do Realm para obter uma visão geral do
+          funcionamento básico.
+        </li>
+
+        <h3>Instalação e Configuração:</h3>
+        <li>
+          Instale a biblioteca Realm em seu projeto React Native usando npm ou
+          yarn.
+        </li>
+        <li>
+          Consulte a documentação do Realm para obter instruções detalhadas
+          sobre como configurar o Realm no seu ambiente.
+        </li>
+
+        <h3>Modelagem de Dados:</h3>
+        <li>
+          Aprenda a modelar dados usando o Realm. Entenda como criar esquemas de
+          objetos e relações entre eles.
+        </li>
+        <li>Pratique criando modelos de dados simples e complexos.</li>
+
+        <h3>Operações Básicas:</h3>
+        <li>
+          Explore operações básicas como adição, leitura, atualização e exclusão
+          de dados no Realm.
+        </li>
+        <li>Familiarize-se com consultas e filtros de dados.</li>
+
+        <h3>Transações e Atomicidade:</h3>
+        <li>
+          Compreenda o conceito de transações e como garantir atomicidade em
+          operações no Realm.
+        </li>
+        <li>Pratique transações para garantir a consistência dos dados.</li>
+
+        <h3>Relacionamentos e Referências:</h3>
+        <li>Aprenda a lidar com relacionamentos entre objetos no Realm.</li>
+        <li>Explore o uso de referências e chaves estrangeiras.</li>
+
+        <h3>Sincronização em Tempo Real (Opcional):</h3>
+        <li>
+          Caso esteja interessado em recursos de sincronização em tempo real,
+          explore a documentação do Realm Sync.
+        </li>
+        <li>
+          Aprenda a sincronizar dados entre dispositivos e servidores usando
+          Realm Sync.
+        </li>
+
+        <h3>Integração com React Native:</h3>
+        <li>
+          Entenda como integrar o Realm Database em um projeto React Native.
+        </li>
+        <li>Explore a API do Realm no contexto do React Native.</li>
+
+        <h3>Boas Práticas e Otimizações:</h3>
+        <li>
+          Familiarize-se com as boas práticas para otimizar o desempenho do
+          Realm Database.
+        </li>
+        <li>Aprenda sobre índices e outras técnicas de otimização.</li>
+
+        <h3>Projetos Práticos:</h3>
+
+        <li>Aplique seus conhecimentos em projetos práticos do mundo real.</li>
+        <li>
+          Construa um aplicativo React Native que utilize o Realm como banco de
+          dados.
+        </li>
+      </section>
+      <section id="introduction">
+        <h2>Introdução a Realm DB</h2>
+
+        <p>
+          O Realm Database é um banco de dados orientado a objetos para
+          plataformas móveis.
+        </p>
+        <un>
+          <li>Realm -> O banco de Dados</li>
+          <li>Class -> A Tabela</li>
+          <li>Objetos -> Documento</li>
+          <li>Propriedades -> Campos</li>
+        </un>
+
+          <h3>Estrutura</h3>
+          <un>
+            <li>-- databases</li>
+            <li>---- schemas</li>
+            <li>------ UserSchema.tsx -> importar tipo { ObjectSchema}, export default Scheme: ObjectSchema = {name: 'nome', properties: {_id: 'int', name: 'string'}, primaryKey: '_id'}</li>
+            <li>-- realm.ts -> Declara-se getRealm(): export default const getRealm = async () => { Realm.open({path: 'nome', schema: []})}</li>
+          </un>
+
+        </un>
+      </section>
+      <section>
+        <h2>Comandos</h2>
+
+        <table>
+          <tr>
+            <th>COMANDO</th>
+            <th>Função</th>
+          </tr>
+          <tr>
+            <td>realm.write(() => {})</td>
+            <td>Diz ao banco que enviaremos algo para ele</td>
+          </tr>
+          <tr>
+            <td>realm.create("schema", {propriedades})</td>
+            <td>É a forma de criar um novo objeto na tabela. Caso passemos como terceiro argumento Realm.UpdateMode.Modified ele sobreescreve, não cria</td>
+          </tr>
+          <tr>
+            <td>realm.objects&lt;typescript&gt;('nome_tabela')</td>
+            <td>Retorna os objetos do banco</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Tipos</h2>
+
+        <h3>Primitivos</h3>
+        <un>
+          <li>int -> numero inteiro</li>
+          <li>string -> texto</li>
+          <li>float -> numero com vírgula</li>
+          <li>double -> número com vírgula mais preciso</li>
+          <li>data -> dados em binário</li>
+          <li>date -> data, dia, mes, ano</li>
+          <li>object</li>
+          <li>objectId</li>
+          <li>mixed -> qualquer tipo de dado realm</li>
+          <li>decimal128 -> numero decimal de alta precisão</li>
+          <li>list -> array</li>
+          <li>[] -> coloca-se depois de qualquer primitivo para indicar que é um array</li>
+        </un>
+
+        <h3></h3>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy;LucasTombely</p>
+    </footer>
+  </body>
+</html>
